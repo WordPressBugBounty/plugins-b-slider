@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: B Slider 1.1.19\n"
+"Project-Id-Version: B Slider 1.1.20\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-08-18T03:46:17+00:00\n"
+"POT-Creation-Date: 2024-10-06T13:29:26+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: slider\n"
@@ -70,610 +70,610 @@ msgid "Copy To Clipboard"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11464
+#: dist/editor.js:11465
 msgid "Pro Feature"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11466
+#: dist/editor.js:11467
 msgid "Explore new features in Pro"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11469
+#: dist/editor.js:11470
 msgid " There are two layout options horizontal and vertical."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11470
+#: dist/editor.js:11471
 msgid "Title, description, and button set this."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11471
+#: dist/editor.js:11472
 msgid "Set indicator image option."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11474
+#: dist/editor.js:11475
 msgid "Slide on Mousewheel option."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11475
+#: dist/editor.js:11476
 msgid "Slide on the arrow follow option."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11476
+#: dist/editor.js:11477
 msgid "Slide on mouse drag."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11479
+#: dist/editor.js:11480
 msgid " Shortcode option to use anywhere."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11480
+#: dist/editor.js:11481
 msgid "Slider height can be set according to the device."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11481
+#: dist/editor.js:11482
 msgid "Allows dragging and dropping of slide items."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11485
+#: dist/editor.js:11486
 msgid "To unlock those features! Upgrade to Pro"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11490
+#: dist/editor.js:11491
 msgid "Upgrade Now"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11554
+#: dist/editor.js:11555
 msgid "H1"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11555
+#: dist/editor.js:11556
 msgid "H2"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11556
+#: dist/editor.js:11557
 msgid "H3"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11557
+#: dist/editor.js:11558
 msgid "H4"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11558
+#: dist/editor.js:11559
 msgid "H5"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11559
+#: dist/editor.js:11560
 msgid "H6"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11560
+#: dist/editor.js:11561
 msgid "P"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11561
+#: dist/editor.js:11562
 msgid "Div"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11565
+#: dist/editor.js:11566
 msgid "Horizontal"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11566
-#: dist/editor.js:11609
+#: dist/editor.js:11567
+#: dist/editor.js:11610
 msgid "Vertical"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11570
+#: dist/editor.js:11571
 msgid "Style 1"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11571
+#: dist/editor.js:11572
 msgid "Style 2"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11572
+#: dist/editor.js:11573
 msgid "Style 3"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11573
+#: dist/editor.js:11574
 msgid "Style 4"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11574
+#: dist/editor.js:11575
 msgid "Style 5"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11575
+#: dist/editor.js:11576
 msgid "Style 6"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11579
+#: dist/editor.js:11580
 msgid "Bottom Center"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11580
+#: dist/editor.js:11581
 msgid "Center Center"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11584
+#: dist/editor.js:11585
 msgid "Fade In Left"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11585
+#: dist/editor.js:11586
 msgid "Fade In Right"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11586
+#: dist/editor.js:11587
 msgid "Fade In Up"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11587
+#: dist/editor.js:11588
 msgid "Fade In Down"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11588
+#: dist/editor.js:11589
 msgid "Fade In"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11589
+#: dist/editor.js:11590
 msgid "Zoom In"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11590
+#: dist/editor.js:11591
 msgid "Slide In Down"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11591
+#: dist/editor.js:11592
 msgid "Slide In Up"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11592
+#: dist/editor.js:11593
 msgid "Slide In Left"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11593
+#: dist/editor.js:11594
 msgid "Slide In Right"
-msgstr ""
-
-#: dist/editor.js:1
-#: dist/editor.js:11597
-#: dist/editor.js:11603
-#: dist/editor.js:11608
-#: dist/editor.js:11613
-#: dist/editor.js:11641
-msgid "Default"
 msgstr ""
 
 #: dist/editor.js:1
 #: dist/editor.js:11598
 #: dist/editor.js:11604
-msgid "Fade"
+#: dist/editor.js:11609
+#: dist/editor.js:11614
+#: dist/editor.js:11642
+msgid "Default"
 msgstr ""
 
 #: dist/editor.js:1
 #: dist/editor.js:11599
+#: dist/editor.js:11605
+msgid "Fade"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:11600
 msgid "Flip"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11614
+#: dist/editor.js:11615
 msgid "Image"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11620
+#: dist/editor.js:11621
 msgid "General"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11625
-#: dist/editor.js:12598
+#: dist/editor.js:11626
+#: dist/editor.js:12599
 msgid "Style"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11630
+#: dist/editor.js:11631
 msgid "Patterns"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11636
+#: dist/editor.js:11637
 msgid "Show"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11637
+#: dist/editor.js:11638
 msgid "Hide"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11642
+#: dist/editor.js:11643
 msgid "Dot"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12264
+#: dist/editor.js:12265
 msgid "Slide Image:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12266
+#: dist/editor.js:12267
 msgid "Enter Image URL"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12268
+#: dist/editor.js:12269
 msgid "Image Alt"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12268
-#: dist/editor.js:12270
-#: dist/editor.js:12272
-#: dist/editor.js:12274
-#: dist/editor.js:12276
+#: dist/editor.js:12269
+#: dist/editor.js:12271
+#: dist/editor.js:12273
+#: dist/editor.js:12275
+#: dist/editor.js:12277
 msgid "top"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12268
+#: dist/editor.js:12269
 msgid "Enter Image Alt Text"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12270
-#: dist/editor.js:12370
-#: dist/editor.js:12508
+#: dist/editor.js:12271
+#: dist/editor.js:12371
+#: dist/editor.js:12509
 msgid "Title"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12270
+#: dist/editor.js:12271
 msgid "Enter Title"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12272
-#: dist/editor.js:12522
+#: dist/editor.js:12273
+#: dist/editor.js:12523
 msgid "Description"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12272
+#: dist/editor.js:12273
 msgid "Enter desc"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12274
+#: dist/editor.js:12275
 msgid "Button label"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12274
+#: dist/editor.js:12275
 msgid "Enter Label"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12276
+#: dist/editor.js:12277
 msgid "Button Url"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12276
+#: dist/editor.js:12277
 msgid "Enter Url"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12278
+#: dist/editor.js:12279
 msgid "Open in new tab"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12343
+#: dist/editor.js:12344
 msgid "Slides"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12358
+#: dist/editor.js:12359
 msgid "Remove"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12360
+#: dist/editor.js:12361
 msgid "Duplicate"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12365
+#: dist/editor.js:12366
 msgid "Add New Slide"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12373
+#: dist/editor.js:12374
 msgid "Import Title From Media Caption"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12383
+#: dist/editor.js:12384
 msgid "Gap:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12387
+#: dist/editor.js:12388
 msgid "Left/Right Inner Gap"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12389
+#: dist/editor.js:12390
 msgid "Slide Direction"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12393
+#: dist/editor.js:12394
 msgid "Height:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12397
+#: dist/editor.js:12398
 msgid "Slider Height"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12413
-#: dist/editor.js:12416
+#: dist/editor.js:12414
+#: dist/editor.js:12417
 msgid "Content Position:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12420
+#: dist/editor.js:12421
 msgid "Arrow Style:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12423
+#: dist/editor.js:12424
 msgid "Slider Options"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12426
-#: dist/editor.js:12430
+#: dist/editor.js:12427
+#: dist/editor.js:12431
 msgid "Animation/Effect:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12436
+#: dist/editor.js:12437
 msgid "Autoplay"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12439
+#: dist/editor.js:12440
 msgid "Interval(ms)"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12441
+#: dist/editor.js:12442
 msgid "Pause on Mouse over"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12446
+#: dist/editor.js:12447
 msgid "Show Arrow/Navigation"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12448
+#: dist/editor.js:12449
 msgid "Show Indicators/Pagination"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12450
+#: dist/editor.js:12451
 msgid "Slide On MouseWheel"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12452
+#: dist/editor.js:12453
 msgid "Arrow Follow Mouse"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12455
+#: dist/editor.js:12456
 msgid "Slide on Mouse Drag"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12458
+#: dist/editor.js:12459
 msgid "Lazy Load Enable"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12461
-#: dist/editor.js:12596
+#: dist/editor.js:12462
+#: dist/editor.js:12597
 msgid "Indicators"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12462
+#: dist/editor.js:12463
 msgid "Type"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12474
+#: dist/editor.js:12475
 msgid "Position:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12486
+#: dist/editor.js:12487
 msgid "Direction"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12490
+#: dist/editor.js:12491
 msgid "Move From Edge"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12491
+#: dist/editor.js:12492
 msgid "Use a negative or positive value to move in or out."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12500
+#: dist/editor.js:12501
 msgid "Slider"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12501
+#: dist/editor.js:12502
 msgid "Overly Color"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12503
-#: dist/editor.js:12527
+#: dist/editor.js:12504
+#: dist/editor.js:12528
 msgid "Margin"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12505
-#: dist/editor.js:12592
+#: dist/editor.js:12506
+#: dist/editor.js:12593
 msgid "Border Radius"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12509
-#: dist/editor.js:12523
-#: dist/editor.js:12540
+#: dist/editor.js:12510
+#: dist/editor.js:12524
+#: dist/editor.js:12541
 msgid "Typography:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12511
-#: dist/editor.js:12525
-#: dist/editor.js:12568
-#: dist/editor.js:12613
+#: dist/editor.js:12512
+#: dist/editor.js:12526
+#: dist/editor.js:12569
+#: dist/editor.js:12614
 msgid "Color"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12513
-#: dist/editor.js:12546
+#: dist/editor.js:12514
+#: dist/editor.js:12547
 msgid "Padding"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12515
-#: dist/editor.js:12529
-#: dist/editor.js:12554
+#: dist/editor.js:12516
+#: dist/editor.js:12530
+#: dist/editor.js:12555
 msgid "Animation"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12517
-#: dist/editor.js:12533
-#: dist/editor.js:12558
+#: dist/editor.js:12518
+#: dist/editor.js:12534
+#: dist/editor.js:12559
 msgid "Delay(s)"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12519
-#: dist/editor.js:12535
-#: dist/editor.js:12560
+#: dist/editor.js:12520
+#: dist/editor.js:12536
+#: dist/editor.js:12561
 msgid "Duration(s)"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12538
+#: dist/editor.js:12539
 msgid "Button"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12542
+#: dist/editor.js:12543
 msgid "Colors"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12544
+#: dist/editor.js:12545
 msgid "Hover Colors"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12563
+#: dist/editor.js:12564
 msgid "Arrow"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12564
+#: dist/editor.js:12565
 msgid "Icon Size"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12577
-#: dist/editor.js:12618
+#: dist/editor.js:12578
+#: dist/editor.js:12619
 msgid "Width"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12587
-#: dist/editor.js:12620
+#: dist/editor.js:12588
+#: dist/editor.js:12621
 msgid "Height"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12589
+#: dist/editor.js:12590
 msgid "Background"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12615
+#: dist/editor.js:12616
 msgid "Active Color"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12633
+#: dist/editor.js:12634
 msgid "it's only available on pro version"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:12647
+#: dist/editor.js:12648
 msgid "Apply"
 msgstr ""
 

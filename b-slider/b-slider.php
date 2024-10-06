@@ -2,7 +2,7 @@
 /**
  * Plugin Name: B Slider
  * Description: Simple slider with bootstrap.
- * Version: 1.1.19
+ * Version: 1.1.20
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -17,11 +17,11 @@ if (!defined('ABSPATH')) {exit;}
 if ('localhost' === $_SERVER['HTTP_HOST']) {
     $plugin_version = time();
 } else {
-    $plugin_version = '1.1.19';
+    $plugin_version = '1.1.20';
 }
 define('BSB_PLUGIN_VERSION', $plugin_version);
 
-// define('BSB_PLUGIN_VERSION', 'localhost' === $_SERVER['HTTP_HOST']  time() : '1.1.19');
+// define('BSB_PLUGIN_VERSION', 'localhost' === $_SERVER['HTTP_HOST']  time() : '1.1.20');
 define('BSB_DIR', plugin_dir_url(__FILE__));
 define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
 
@@ -54,7 +54,7 @@ class BSBSlider
         wp_register_script('bootstrap', BSB_ASSETS_DIR . 'js/bootstrap.min.js', [], BSB_PLUGIN_VERSION);
         wp_register_script('lazyLoad', BSB_ASSETS_DIR . 'js/lazyLoad.js', [], BSB_PLUGIN_VERSION);
 
-        wp_register_script('bsb-slider-script', plugins_url('dist/script.js', __FILE__), ['react', 'react-dom', 'jquery', 'bootstrap', 'lazyLoad'], BSB_PLUGIN_VERSION);
+        wp_register_script('bsb-slider-script', plugins_url('dist/script.js', __FILE__), ['react', 'react-dom', 'jquery', 'bootstrap', 'lazyLoad' ], BSB_PLUGIN_VERSION);
 
         wp_register_style('bsb-slider-style', plugins_url('dist/style.css', __FILE__), ['bsb-style'], BSB_PLUGIN_VERSION); // Style
 
