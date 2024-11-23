@@ -2,7 +2,7 @@
 /**
  * Plugin Name: B Slider
  * Description: Simple slider with bootstrap.
- * Version: 1.1.20
+ * Version: 1.1.21
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -14,14 +14,7 @@
 if (!defined('ABSPATH')) {exit;}
 
 // Constant
-if ('localhost' === $_SERVER['HTTP_HOST']) {
-    $plugin_version = time();
-} else {
-    $plugin_version = '1.1.20';
-}
-define('BSB_PLUGIN_VERSION', $plugin_version);
-
-// define('BSB_PLUGIN_VERSION', 'localhost' === $_SERVER['HTTP_HOST']  time() : '1.1.20');
+define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.21' );
 define('BSB_DIR', plugin_dir_url(__FILE__));
 define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
 
