@@ -1,16 +1,17 @@
 <?php
+namespace BSB_SLIDER;
+
+if (!defined('ABSPATH')) {exit;}
+
 class LPBCustomPost{
 	public $post_type = 'bsb';
 
 	public function __construct(){
-		global $bsb_bs;
-		if($bsb_bs->can_use_premium_feature()){
-			add_action( 'init', [$this, 'onInit'], 20 );
-			add_shortcode( 'bsb-slider', [$this, 'onAddShortcode'], 20 );
-			add_filter( 'manage_bsb_posts_columns', [$this, 'manageLPBPostsColumns'], 10 );
-			add_action( 'manage_bsb_posts_custom_column', [$this, 'manageBSBPostsCustomColumns'], 10, 2 );
-			add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );
-		}
+		add_action( 'init', [$this, 'onInit'], 20 );
+		add_shortcode( 'bsb-slider', [$this, 'onAddShortcode'], 20 );
+		add_filter( 'manage_bsb_posts_columns', [$this, 'manageLPBPostsColumns'], 10 );
+		add_action( 'manage_bsb_posts_custom_column', [$this, 'manageBSBPostsCustomColumns'], 10, 2 );
+		add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );	
 	}
 
 	function onInit(){
@@ -77,4 +78,3 @@ class LPBCustomPost{
 		return $use;
 	}
 }
-new LPBCustomPost();

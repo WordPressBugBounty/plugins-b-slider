@@ -2,7 +2,7 @@
 /**
  * Plugin Name: B Slider
  * Description: Simple slider with bootstrap.
- * Version: 1.1.21
+ * Version: 1.1.22
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -12,11 +12,6 @@
  
 // ABS PATH
 if (!defined('ABSPATH')) {exit;}
-
-// Constant
-define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.21' );
-define('BSB_DIR', plugin_dir_url(__FILE__));
-define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
 
 if (!function_exists('bsb_init')) {
     function bsb_init()
@@ -30,19 +25,81 @@ if (!function_exists('bsb_init')) {
     $bsb_bs->uninstall_plugin(__FILE__);
 }
 
-// Block Directory
-class BSBSlider
-{
-    public function __construct()
-    {
+
+class BSB_Slider{
+
+    private static $instance;
+
+    private function __construct(){
+
+        global $bsb_bs;
+        $this->define_constants();
+        $this->load_classes();
+
+        
         add_action('enqueue_block_assets', [$this, 'enqueueBlockAssets']);
         add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
         add_action('init', [$this, 'onInit']);
+        if(!$bsb_bs->can_use_premium_feature()){
+            add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2 ); 
+        }
+
+        add_filter('plugin_row_meta', array($this, 'insert_plugin_row_meta'), 10, 2);
+
     }
 
+    public static function get_instance() {
+        if ( self::$instance ){
+            return self::$instance;
+        }
+
+        self::$instance =  new self();
+
+        return self::$instance;
+    }
+
+
+    public function define_constants () {
+        define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.22' );
+        define('BSB_DIR', plugin_dir_url(__FILE__));
+        define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
+    }
+
+
+    public function load_classes () {
+        global $bsb_bs;
+        require_once plugin_dir_path(__FILE__) . '/custom-post.php';
+        if($bsb_bs->can_use_premium_feature()){
+            new BSB_SLIDER\LPBCustomPost();
+        }
+    }
+
+    public function plugin_action_links($links, $file) {
+        
+        if( plugin_basename( __FILE__ ) == $file ) {
+            $links['go_pro'] = sprintf( '<a href="%s" style="%s" target="__blank">%s</a>', 'https://bplugins.com/products/b-slider/#pricing', 'color:#4527a4;font-weight:bold', __( 'Go Pro!', 'slider' ) );
+        }
+
+        return $links;
+    }
+
+    // Extending row meta 
+    public function insert_plugin_row_meta($links, $file)
+    {
+        if (plugin_basename( __FILE__ ) == $file) {
+            // docs & faq
+            $links[] = sprintf('<a href="https://bplugins.com/docs/b-slider/" target="_blank">' . __('Docs & FAQs', 'slider') . '</a>');
+
+            // Demos
+            $links[] = sprintf('<a href="https://bplugins.com/products/b-slider/#demos" target="_blank">' . __('Demos', 'slider') . '</a>');
+        }
+
+        return $links;
+    }
+
+    // Enqueue Block assets 
     public function enqueueBlockAssets()
     {
-
         wp_register_style('bsb-style', BSB_ASSETS_DIR . 'css/bootstrap.min.css', [], BSB_PLUGIN_VERSION);
         wp_register_script('bootstrap', BSB_ASSETS_DIR . 'js/bootstrap.min.js', [], BSB_PLUGIN_VERSION);
         wp_register_script('lazyLoad', BSB_ASSETS_DIR . 'js/lazyLoad.js', [], BSB_PLUGIN_VERSION);
@@ -104,7 +161,7 @@ class BSBSlider
 
 		<?php return ob_get_clean();
     } // Render
-}
-new BSBSlider();
 
-require_once plugin_dir_path(__FILE__) . '/custom-post.php';
+}
+BSB_Slider::get_instance();
+
