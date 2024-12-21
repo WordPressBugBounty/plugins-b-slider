@@ -2,7 +2,7 @@
 /**
  * Plugin Name: B Slider
  * Description: Simple slider with bootstrap.
- * Version: 1.1.22
+ * Version: 1.1.23
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -36,10 +36,10 @@ class BSB_Slider{
         $this->define_constants();
         $this->load_classes();
 
-        
         add_action('enqueue_block_assets', [$this, 'enqueueBlockAssets']);
         add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
         add_action('init', [$this, 'onInit']);
+        // check premium 
         if(!$bsb_bs->can_use_premium_feature()){
             add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2 ); 
         }
@@ -48,27 +48,28 @@ class BSB_Slider{
 
     }
 
+    // Check instance 
     public static function get_instance() {
         if ( self::$instance ){
             return self::$instance;
         }
 
-        self::$instance =  new self();
-
+        self::$instance = new self();
         return self::$instance;
     }
 
-
+    // define constant 
     public function define_constants () {
-        define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.22' );
+        define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.23' );
         define('BSB_DIR', plugin_dir_url(__FILE__));
         define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     }
 
-
+    //Class loaded
     public function load_classes () {
         global $bsb_bs;
         require_once plugin_dir_path(__FILE__) . '/custom-post.php';
+        // check premium 
         if($bsb_bs->can_use_premium_feature()){
             new BSB_SLIDER\LPBCustomPost();
         }
@@ -161,7 +162,6 @@ class BSB_Slider{
 
 		<?php return ob_get_clean();
     } // Render
-
 }
 BSB_Slider::get_instance();
 
