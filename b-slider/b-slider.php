@@ -2,7 +2,7 @@
 /**
  * Plugin Name: B Slider
  * Description: Simple slider with bootstrap.
- * Version: 1.1.23
+ * Version: 1.1.24
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -60,7 +60,7 @@ class BSB_Slider{
 
     // define constant 
     public function define_constants () {
-        define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.23' );
+        define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.24' );
         define('BSB_DIR', plugin_dir_url(__FILE__));
         define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     }
@@ -152,7 +152,7 @@ class BSB_Slider{
             $sliders[] = $slider;
             $sliders[$index]['title'] = wp_kses_post($slider['title']);
             $sliders[$index]['desc'] = wp_kses_post($slider['desc']);
-            $sliders[$index]['btnLabel'] = wp_kses_post($slider['btnLabel']);
+            $sliders[$index]['btnLabel'] = isset( $slider['btnLabel'] ) ? wp_kses_post( $slider['btnLabel'] ) : '';
         }
 
         $attributes['sliders'] = $sliders;

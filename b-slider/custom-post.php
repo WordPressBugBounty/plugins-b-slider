@@ -19,13 +19,16 @@ class LPBCustomPost{
 
 		register_post_type( $this->post_type, [
 			'labels'				=> [
-				'name'			=> __( 'B Slider', 'slider'),
+				'name'			=> __( 'B Slider', 'slider' ),
 				'singular_name'	=> __( 'B Slider', 'slider' ),
-				'add_new'		=> __( 'Add New', 'slider' ),
-				'add_new_item'	=> __( 'Add New', 'slider' ),
+				'add_new'		=> __( 'Add New Slider', 'slider' ),
+				'add_new_item'	=> __( 'Add New Slider', 'slider' ),
 				'edit_item'		=> __( 'Edit', 'slider' ),
 				'new_item'		=> __( 'New', 'slider' ),
 				'view_item'		=> __( 'View', 'slider' ),
+				'item_published' => __('Publish Slider', 'slider'),
+				'item_updated'	=> __('Update Slider', 'slider'),
+				'item_trashed'  => __('Slider trashed', 'slider'),
 				'search_items'	=> __( 'Search', 'slider'),
 				'not_found'		=> __( 'Sorry, we couldn\'t find the that you are looking for.', 'slider' )
 			],
@@ -46,14 +49,39 @@ class LPBCustomPost{
 		]); // Register Post Type
 	}
 
-	function onAddShortcode( $atts ) {
-		$post_id = $atts['id'];
-		$post = get_post( $post_id );
-
-		$blocks = parse_blocks( $post->post_content );
-
-		return render_block( $blocks[0] );
-	}
+	public function onAddShortcode( $atts ) {
+        $post_id = $atts['id'];
+        $post = get_post( $post_id );
+        if ( !$post ) {
+            return '';
+        }
+        if ( post_password_required( $post ) ) {
+            return get_the_password_form( $post );
+        }
+        switch ( $post->post_status ) {
+            case 'publish':
+                return $this->displayContent( $post );
+            case 'private':
+                if (current_user_can('read_private_posts')) {
+                    return $this->displayContent( $post );
+                }
+                return '';
+            case 'draft':
+            case 'pending':
+            case 'future':
+                if ( current_user_can( 'edit_post', $post_id ) ) {
+                    return $this->displayContent( $post );
+                }
+                return '';
+            default:
+                return '';
+        }
+    }
+	
+    public function displayContent( $post ){
+        $blocks = parse_blocks( $post->post_content );
+        return render_block( $blocks[0] );
+    }
 
 	function manageLPBPostsColumns( $defaults ) {
 		unset( $defaults['date'] );
