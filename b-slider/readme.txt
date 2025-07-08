@@ -1,10 +1,10 @@
 === B Slider- Gutenberg Slider Block for WP ===
-Contributors: bplugins, abuhayat, btechnologies
+Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg-block
 Requires at least: 6.5+
-Tested up to: 6.8
-Stable tag: 1.1.27
+Tested up to: 6.8.1
+Stable tag: 1.1.28
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -68,6 +68,8 @@ With shortcode integration, you can easily embed sliders anywhere on your websit
 - **Shortcode:** Shortcode option to use anywhere.
 - **Slider Height:** Slider height can be set according to the device.
 - **Slide Drag and Drop:** Allows dragging and dropping of slide items.
+- **Added four source types:** Image, Posts, WooCommerce, and Video.
+- **Added four layout types:** Slider, Carousel, Grid, and Thumbnails
 
 ### How to use B Slider
 - Go to the Plugins Menu in WordPress
@@ -186,6 +188,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 9. Vertical Slide
  
 == Changelog ==
+
+= 1.1.28 - 8 July, 2025 =
+* Added four source types: Image, Posts, WooCommerce, and Video;
+* Added four layout types: Slider, Carousel, Grid, and Thumbnails;
 
 = 1.1.27 - 18 April, 2025 =
 * Compatible with WordPress 6.8;
@@ -312,6 +318,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Initial Release
 
 == Upgrade Notice ==
+
+= 1.1.28 - 8 July, 2025 =
+* Added four source types: Image, Posts, WooCommerce, and Video;
+* Added four layout types: Slider, Carousel, Grid, and Thumbnails;
 
 = 1.1.27 - 18 April, 2025 =
 * Compatible with WordPress 6.8;

@@ -4,20 +4,20 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! defined( 'WP_B__SLUG' ) ) {
-    define( 'WP_B__SLUG', 'bblocksdk' );
+if ( ! defined( 'FS_LITE_SLUG' ) ) {
+    define( 'FS_LITE_SLUG', 'bblocksdk' );
 }
 
-if ( ! defined( 'WP_B__VERSION' ) ) {
-    define( 'WP_B__VERSION', time() );
+if ( ! defined( 'FS_LITE_VERSION' ) ) {
+    define( 'FS_LITE_VERSION', time() );
 }
 
-if ( ! defined( 'WP_B__DIR' ) ) {
-    define( 'WP_B__DIR', plugin_dir_path( __FILE__ ) );
+if ( ! defined( 'FS_LITE_DIR' ) ) {
+    define( 'FS_LITE_DIR', plugin_dir_path( __FILE__ ) );
 }
 
-if ( ! defined( 'WP_B__CONFIG' ) ) {
-    define( 'WP_B__CONFIG', [
+if ( ! defined( 'FS_LITE_CONFIG' ) ) {
+    define( 'FS_LITE_CONFIG', [
         'prefix' => '',
         'blockHandler' => false,
         'permalinks' => [],

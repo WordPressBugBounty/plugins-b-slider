@@ -1,10 +1,10 @@
 {
-  "prefix": "ddd",
+  "prefix": "ach",
   "blockHandler": false,
   "permalinks": [],
   "features": {
     "license": false,
-    "optIn": false
+    "optIn": true
   },
   "isBlock": false
 }
