@@ -10,7 +10,7 @@ class UpgradePage{
 
 	function adminMenu(){
 		add_submenu_page(
-            'b-slider',
+            'b-slider-dashboard',
 			__( 'B Slider - Upgrade', 'slider' ),
 			__( 'Upgrade', 'slider' ),
 			'manage_options',

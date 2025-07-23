@@ -1,10 +1,8 @@
 {
-  "prefix": "bspro",
-  "permalinks": {
-    "bspro": "UelXi3KCDl7P3-Bvgv9rlA=="
-  },
+  "prefix": "",
+  "permalinks": [],
   "features": {
-    "license": true,
+    "license": false,
     "optIn": true
   }
 }

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: B Slider
  * Description: Simple slider with bootstrap.
- * Version: 1.1.28
+ * Version: 1.1.29
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -58,7 +58,8 @@ if (function_exists('bs_fs')) {
                     'is_require_payment' => false,
                 ),
                 'menu' => array(
-                    'slug'           => 'b-slider',
+                    'slug'           => 'b-slider-dashboard',
+                    'first-path'     => 'admin.php?page=b-slider-dashboard#/welcome',
                     'support'        => false,
                 ),
             ));
@@ -115,7 +116,7 @@ if (function_exists('bs_fs')) {
 
         // define constant 
         public function define_constants () {
-            define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.28' );
+            define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.29' );
             define('BSB_DIR', plugin_dir_url(__FILE__));
             define('BSB_DIR_PATH', plugin_dir_path(__FILE__));
             define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');

@@ -2,22 +2,22 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: B Slider 1.1.28\n"
+"Project-Id-Version: B Slider 1.1.29\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-08T10:10:00+00:00\n"
+"POT-Creation-Date: 2025-07-23T10:34:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: slider\n"
 
 #. Plugin Name of the plugin
 #: b-slider.php
+#: adminMenu.php:33
 #: adminMenu.php:34
-#: adminMenu.php:35
 #: custom-post.php:22
 #: custom-post.php:23
 msgid "B Slider"
@@ -38,24 +38,24 @@ msgstr ""
 msgid "http://bplugins.com"
 msgstr ""
 
+#: adminMenu.php:45
 #: adminMenu.php:46
-#: adminMenu.php:47
 msgid "ShortCode"
 msgstr ""
 
-#: b-slider.php:141
+#: b-slider.php:142
 msgid "Go Pro!"
 msgstr ""
 
-#: b-slider.php:151
+#: b-slider.php:152
 msgid "Docs & FAQs"
 msgstr ""
 
-#: b-slider.php:154
+#: b-slider.php:155
 msgid "Demos"
 msgstr ""
 
-#: b-slider.php:193
+#: b-slider.php:194
 msgid "Invalid Request"
 msgstr ""
 
@@ -110,6 +110,54 @@ msgstr ""
 
 #: assets/js/admin.js:9
 msgid "Copy To Clipboard"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Our All Plugins"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Download"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Free vs Pro Comparison"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Upgrade to Pro Now"
+msgstr ""
+
+#: build/admin.js:171
+msgid "FEATURES"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Free"
+msgstr ""
+
+#: build/admin.js:171
+msgid "PRO"
+msgstr ""
+
+#: build/admin.js:171
+msgid "NEW"
+msgstr ""
+
+#: build/admin.js:171
+msgid "HOT"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Upgrade to Pro Now!"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Live Demo"
+msgstr ""
+
+#: build/admin.js:171
+msgid "Support"
 msgstr ""
 
 #: build/view.js:1

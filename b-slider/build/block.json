@@ -523,7 +523,6 @@
     "attributes": {}
   },
   "editorScript": [
-    "file:./admin/admin.js",
     "file:./index.js",
     "bootstrap",
     "lazyLoad",

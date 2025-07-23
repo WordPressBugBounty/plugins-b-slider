@@ -5,22 +5,21 @@ if(!class_exists('bsbAdminMenu')) {
     class bsbAdminMenu {
 
         public function __construct() {
-            add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
+            add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
             add_action( 'admin_menu', [$this, 'adminMenu'] );
 
-            add_action('wp_ajax_get_popular_plugins', [$this, 'get_popular_plugins']);
-            add_action('wp_ajax_get_active_plugins', [$this, 'get_active_plugins']);
-            add_action('admin_notices', [$this, 'display_activation_notice']);
-            add_action('wp_ajax_activated_plugin', [$this, 'activated_plugin']);
-             
+            add_action( 'wp_ajax_get_popular_plugins', [$this, 'get_popular_plugins'] );
+            add_action( 'wp_ajax_get_active_plugins', [$this, 'get_active_plugins'] );
+            add_action( 'admin_notices', [$this, 'display_activation_notice'] );
+            add_action( 'wp_ajax_activated_plugin', [$this, 'activated_plugin'] );
         }
 
         public function adminEnqueueScripts($hook) {
-            if ('toplevel_page_b-slider' === $hook) {
-                wp_enqueue_style( 'bsb-admin-style', BSB_DIR . 'build/admin/admin.css', false, BSB_PLUGIN_VERSION );
-                wp_enqueue_script( 'bsb-admin-script', BSB_DIR . 'build/admin/admin.js', ['react', 'react-dom', 'wp-data', "wp-api", "wp-util"], BSB_PLUGIN_VERSION, true );
+            if ('toplevel_page_b-slider-dashboard' === $hook) {
+                wp_enqueue_style( 'bsb-admin-style', BSB_DIR . 'build/admin.css', false, BSB_PLUGIN_VERSION );
+                wp_enqueue_script( 'bsb-admin-script', BSB_DIR . 'build/admin.js', ['react', 'react-dom', 'wp-data', "wp-api", "wp-util", "wp-i18n"], BSB_PLUGIN_VERSION, true );
 
-                 wp_localize_script('bsb-admin-script', 'pluginAction', [
+                wp_localize_script('bsb-admin-script', 'pluginAction', [
                     'ajaxUrl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('wp_rest'),
                 ]);
@@ -34,7 +33,7 @@ if(!class_exists('bsbAdminMenu')) {
                 __('B Slider', 'slider'),
                 __('B Slider', 'slider'),
                 'manage_options',
-                'b-slider',
+                'b-slider-dashboard',
                 [$this, 'bsbHelpPage'],
                 'data:image/svg+xml;base64,' . base64_encode($menuIcon),
                 6
@@ -42,7 +41,7 @@ if(!class_exists('bsbAdminMenu')) {
 
             if(  BSB_IS_PRO && bsbIsPremium() ){
                 add_submenu_page(
-                    'b-slider',
+                    'b-slider-dashboard',
                     __('ShortCode', 'slider'),
                     __('ShortCode', 'slider'),
                     'manage_options',
@@ -53,7 +52,7 @@ if(!class_exists('bsbAdminMenu')) {
 
         public function bsbHelpPage(){
             ?>
-                <div id='bsbAdminHelpPage'></div>
+                <div id='bsbAdminHelpPage' class="bpluginsDashboad"></div>
             <?php 
         }
 
