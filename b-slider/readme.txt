@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg-block
 Requires at least: 6.5+
 Tested up to: 6.8.1
-Stable tag: 1.1.29
+Stable tag: 1.1.30
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -189,6 +189,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
  
 == Changelog ==
 
+= 1.1.30 - 24 July, 2025 =
+* fixed defaultProps;
+
 = 1.1.29 - 23 July, 2025 =
 * Resolved dashboard target element issue;
 
@@ -321,6 +324,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Initial Release
 
 == Upgrade Notice ==
+
+= 1.1.30 - 24 July, 2025 =
+* fixed defaultProps;
 
 = 1.1.29 - 23 July, 2025 =
 * Resolved dashboard target element issue;
