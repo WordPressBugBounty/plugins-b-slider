@@ -5,3 +5,5 @@
  * Available via the MIT or new BSD license.
  * see: http://github.com/jrburke/requirejs for details
  */
+
+/*! License details at fancyapps.com/license */
