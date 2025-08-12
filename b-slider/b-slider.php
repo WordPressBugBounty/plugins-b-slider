@@ -2,7 +2,7 @@
 /**
  * Plugin Name: B Slider
  * Description: Simple slider with bootstrap.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -34,8 +34,8 @@ if (function_exists('bs_fs')) {
 
         if ( !isset( $bs_fs ) ) {
             // Include Freemius SDK.
-            if (file_exists(dirname(__FILE__) . '/bplugins_sdk/init.php')) {
-                require_once dirname(__FILE__) . '/bplugins_sdk/init.php';
+            if (file_exists(dirname(__FILE__) . '/freemius-lite/start.php')) {
+                require_once dirname(__FILE__) . '/freemius-lite/start.php';
             }
             if (file_exists(dirname(__FILE__) . '/freemius/start.php')) {
                 require_once dirname(__FILE__) . '/freemius/start.php';
@@ -116,7 +116,7 @@ if (function_exists('bs_fs')) {
 
         // define constant 
         public function define_constants () {
-            define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.0' );
+            define( 'BSB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.1' );
             define('BSB_DIR', plugin_dir_url(__FILE__));
             define('BSB_DIR_PATH', plugin_dir_path(__FILE__));
             define('BSB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
@@ -170,10 +170,6 @@ if (function_exists('bs_fs')) {
                 'patternsImagePath' => BSB_DIR . 'assets/images/patterns/',
             ]);
 
-            wp_localize_script('bootstrap', 'bsbWoocommerce', [
-                'ajaxUrl' => admin_url('admin-ajax.php'),
-                'nonce' => wp_create_nonce('wp_rest'),
-            ]);
         }
 
         // Short code style
