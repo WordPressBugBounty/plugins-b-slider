@@ -135,9 +135,9 @@ if(!class_exists('bsbAdminMenu')) {
 
         public function activated_plugin() {
 
-            if ( ! current_user_can( 'activate_plugins' ) ) {
-                wp_send_json_error( [ 'message' => 'You are not allowed to perform this action.' ], 403 );
-            }
+            // if ( ! current_user_can( 'activate_plugins' ) ) {
+            //     wp_send_json_error( [ 'message' => 'You are not allowed to perform this action.' ], 403 );
+            // }
 
             // Verify nonce
             if (!isset($_GET['nonce']) || !wp_verify_nonce(sanitize_text_field($_GET['nonce']), 'bsb_dashboard_nonce')) {
