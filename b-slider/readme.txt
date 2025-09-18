@@ -1,81 +1,88 @@
-=== B Slider – Responsive Image Slider ===
+=== B Slider – Create Responsive Image, Post, Product, and Video Sliders ===
 Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, carousel, slider, bootstrap, Gutenberg-block
+Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5+
-Tested up to: 6.8.1
-Stable tag: 2.0.2
+Tested up to: 6.8.2
+Stable tag: 2.0.3
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Create stunning images and text sliders effortlessly with B Slider Gutenberg Block. Perfect for any theme, it's ideal for you and your customers!
+B Slider is a WordPress slider plugin that lets you create responsive image, post, product, and video carousels using the Gutenberg block & shortcode.
 
 == Description ==
-B Slider is Gutenberg Block an image and text slider. Using this slider you can create your slider very easily and in a short time. B Slider is the best match for you and your customers. You can use any theme.
 
-Whether you're highlighting products, sharing testimonials, or showcasing portfolio items, you can add as many slides as you need to convey your message effectively.
+**Create responsive sliders for images, posts, WooCommerce products, and videos with multiple layouts, animations, and customization options in WordPress. Design and display carousels, grids, and thumbnail sliders directly in the block editor with simple block and shortcode support.**
 
-B Slider offers intuitive controls for managing your slides, including easily duplicating or removing slides. Say goodbye to tedious manual adjustments – with B Slider, creating and managing your slideshow is a breeze.
+[B Slider](https://bplugins.com/products/b-slider/) | [Documentation](https://bplugins.com/docs/b-slider) | [Pricing](https://bplugins.com/products/b-slider/pricing/) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/b-slider/#demos)
 
-Customize your slides to perfection with a range of styling options. From title and description styles to right and left button designs, you have full control over the appearance of your slides. 
+[B Slider](https://bplugins.com/products/b-slider/) makes it easy to build engaging sliders without coding. Choose from smooth transitions like fade, slide, or flip, and customize titles, buttons, indicators, and arrows. Add slides quickly, reorder them with drag-and-drop, and adjust settings per device for fully responsive layouts.
 
-Choose from various button styles, slide indicator designs, and overlay colors to create a slideshow that matches your brand's aesthetic seamlessly.
+You can use B Slider for product showcases, portfolios, testimonials, or hero sections. It works with any WordPress theme. You can add sliders using the Gutenberg block or place them anywhere with a shortcode.
 
-Take your slideshows to the next level with B Slider's advanced features. You can tailor the slideshow behavior to suit your needs with options for autoplay, duration settings, and hover pause. 
+=== Key Features –  Free Version ===
+- **Unlimited Slides**: Create as many slides as you need for products, portfolios, or content highlights.
+- **Easy Slide Management**: Quickly duplicate or remove slides for faster editing and organization.
+- **Customizable Content Styles**: Style titles and descriptions with flexible typography and design controls.
+- **Navigation Buttons**: Add left and right arrows with customizable size, color, and border radius.
+- **Slide Indicators**: Choose from different styles and positions to help users navigate easily.
+- **Autoplay Controls**: Turn autoplay on or off, set custom duration, and adjust timing per slide.
+- **Hover Pause**: Pause the slider when users hover, improving interactivity and focus.
+- **Overlay Colors**: Add color overlays on slides for better contrast and text visibility.
+- **Slide Animations**: Apply smooth transitions like fade, slide, or flip to catch attention.
+- **Content Positioning**: Align text and elements at the default or middle area of the slide.
+- **Arrow Styling**: Customize arrow size, height, width, border, and color to match your theme.
+- **Carousel Layout**: Create looping, autoplay carousels with horizontal or vertical direction.
+- **Grid Layout**: Display sliders in responsive grids with adjustable column and row gaps.
+- **Thumbnails Layout**: Add thumbnail navigation with overlay, autoplay, and border options.
+- **Post Slider Options**: Query posts by category or tag, show excerpts, and limit content length.
+- **WooCommerce Slider**: Highlight products with content length and excerpt display controls.
+- **Video Slider Options**: Enable popup playback with repeat, mute, autoplay, reset, or hide controls.
+- **Basic Video Controls**: Show a large play button and restart option for easier interaction.
+- **Gutenberg Block**: Add sliders directly in the block editor with full customization.
 
-Add a touch of elegance with slider animations and choose from multiple transition modes such as fade, slide, and flip to create visually stunning effects.
+=== B Slider Pro – Unlock Premium Features ===
+[B Slider Pro](https://bplugins.com/products/b-slider/pricing/) gives you more design power and control. Add advanced effects, flexible layouts, and interactive options to create engaging, professional sliders.
 
-With B Slider Pro, unlock even more customization options and flexibility. Add buttons directly within slide content, choose from horizontal or vertical layout options, and fine-tune animation settings for titles, descriptions, and buttons. 
+==What’s New in the Pro Version?==
 
-Set images as slider indicators, select arrow icons from a variety of options, and customize content positions according to each slide.
+- **Shortcode Support**: Place sliders anywhere on your site using shortcodes.
+- **Advanced Carousel Styles**: Create unique carousels with ticker, grid, and 3D effects.
+- **Creative Effects**: Use coverflow and card-style transitions for modern visual appeal.
+- **Buttons in Content**: Add clickable buttons inside slides for CTAs and product links.
+- **Advanced Animations**: Control timing, delay, and duration for text and button animations.
+- **Custom Image Indicators**: Replace default indicators with images for a more branded look.
+- **Multiple Arrow Icons**: Select from different arrow styles to fit your design.
+- **Flexible Content Positioning**: Place content anywhere within each slide for more control.
+- **Drag-and-Drop Reordering**: Organize slides easily by dragging and dropping items.
+- **Mouse Controls**: Navigate with the mouse wheel, dragging, or grab the cursor for better usability.
+- **Arrow Follow Mouse**: Enable arrows that follow mouse movement for dynamic navigation.
+- **Responsive Slider Height**: Adjust slider height per device for better responsiveness.
+- **Advanced Post Controls**: Set posts per page, change order, exclude/include posts, or skip current post.
+- **WooCommerce Advanced Options**: Apply the same filters and display controls to products.
+- **Full Video Controls**: Unlock rewind, fast forward, progress bar, time display, mute, volume, PIP, AirPlay, download, and full screen.
+- **Grid Pagination**: Add pagination with options for load more or numbered pages, aligned left, right, or center.
+- **Pagination Styling**: Customize buttons with typography, colors, padding, and borders.
+- **Enhanced Thumbnails**: Control navigation arrows, overlays, cursor options, and direction for thumbnails.
+- **Multiple Layouts**: Switch between slider, carousel, grid, or thumbnails for flexible presentations.
 
-B Slider also offers seamless integration with your website's design and layout. Set slider height according to device specifications, enable slide navigation via mouse wheel or arrow keys, and define custom positions for slider indicators to ensure optimal display on any screen size.
+[Upgrade to Pro](https://bplugins.com/products/b-slider/pricing/) to unlock all premium features.
 
-With shortcode integration, you can easily embed sliders anywhere on your website, giving you the maximum flexibility in content placement and presentation.
+=== How to Use B Slider – Quick Start Guide ===
 
-**[Demos](https://bplugins.com/products/b-slider/#demos)** | **[Documentation](https://bplugins.com/docs/b-slider)** | **[Pricing](https://bplugins.com/products/b-slider/#pricing)**
+Follow these steps:
 
-### Gutenberg Slider Free Features
-- Unlimited slides can be added.
-- Slide duplicate.
-- Slide Remove.
-- Title and description styles can be added.
-- Right and Left button styles can be added.
-- Slide indicator styles can be added.
-- Sliders AutoPlay on/off option.
-- Sliders duration time set.
-- Slider hover pause on/off.
-- Slide Overly Color option.
-- Slider Animation option.
-- Slider Content Default/Middle option.
-- Slider Arrow size option added.
-- Slider Arrow height and width, Border Radius, color option added
+===Step-by-Step Setup===
+1. Go to **Plugins → Add New**.
+2. Search for **B Slider**.
+3. Click **Install Now**, then **Activate**.
+4. In the block editor, add the **B Slider block**, choose a slider type and layout, configure settings, and publish.
+5. Or insert the provided **shortcode** anywhere to show your slider.
 
-### B Gutenberg Slider Pro Features
-- **Button in content**
-- **Layout:** There are two layout options horizontal and vertical.
-- **Animation, delay, and duration:** Title, description, and button set this.
-- **Indicator image:** Set indicator image option.
-- **Multiple Arrow icon**
-- **Transition modes:** Fade, Slide, Flip
-- **Content position**
-- **Slide on Mousewheel:** Slide on Mousewheel option.
-- **Arrow Follow Mouse:** Slide on the arrow follow option.
-- **Slide on mouse drag:** Slide on mouse drag.
-- **Indicators custom position**
-- **Slider Margin**
-- **Shortcode:** Shortcode option to use anywhere.
-- **Slider Height:** Slider height can be set according to the device.
-- **Slide Drag and Drop:** Allows dragging and dropping of slide items.
-- **Added four source types:** Image, Posts, WooCommerce, and Video.
-- **Added four layout types:** Slider, Carousel, Grid, and Thumbnails
+Enjoy smooth, responsive sliders on your site!
 
-### How to use B Slider
-- Go to the Plugins Menu in WordPress
-- Search for “b-Slider”
-- Click “Install”
-- Activate the b-Slider Plugin on your Plugins Menu
+[Live Demo](https://bplugins.com/products/b-slider/#demos) | [Try the Pro Version](https://bplugins.com/products/b-slider/pricing/)
 
 * For installation help click on Installation Tab
 
@@ -114,25 +121,11 @@ With shortcode integration, you can easily embed sliders anywhere on your websit
 
 #### - Did you like this plugin? Dislike it? Have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
 
-
-### ⭐ Check out the Parent Plugin of this plugin-
-
-🔥 **[b Blocks](https://bblockswp.com/)** – Best gutenberg blocks collections for WordPress.
-
-
-### ⭐ Check out our other WordPress Plugins-
-
-🔥 **[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
-
-🔥 **[Html5 Video Player](https://bplugins.com/products/html5-video-player)** – Best video player plugin for WordPress.
-
-🔥 **[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
-
-🔥 **[Document Embedder](https://bplugins.com/products/document-embedder)** – Best WordPress Document Embeder Plugin.
-
-🔥 **[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
-
-🔥 **[Advanced Post Block](https://bplugins.com/products/advanced-post-block/)** – Best Post Display Plugin for WordPress.
+=== Check out our other WordPress Plugins ===
+- [HTML5 Audio Player](https://bplugins.com/products/html5-audio-player/) – Best audio player plugin for WordPress.
+- [PDF Poster](https://bplugins.com/products/pdf-poster/) – A fully-featured PDF Viewer Plugin for WordPress.
+- [StreamCast](https://bplugins.com/products/streamcast-radio-player/) – A fully-featured Radio Player Plugin for WordPress.
+- [3D Viewer](https://bplugins.com/products/3d-viewer/) – Display interactive 3D models on the webs.
 
 == Installation ==
 
@@ -174,20 +167,52 @@ You can use unlimited times as you want.
 
 You can post your questions on the [support forum here](https://wordpress.org/support/plugin/b-slider/)
 
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the B Slider plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fbc26-c6d5-4897-9a0e-866ad3861bd5). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+
 
 == Screenshots ==
 
-1. Settings
-2. Default
-3. Customize
-4. Content Slider
-5. Full-Width Slider
-6. Image Indicators Slider
-7. Indicators Slider Left
-8. Indicators Slider Right
-9. Vertical Slide
+1. Choose Source Type
+2. Select Layout Type
+3. Settings 1
+4. Settings 2
+5. Settings 3
+6. Posts Carousel Layout Center Style
+7. Posts Carousel Layout 3D Style
+8. Posts Carousel Layout grid Style
+9. Posts Carousel Layout
+10. Woo Carousel Layout Center Style
+11. Post Thumbnails Layout
+12. Woo Carousel Layout Grid Style
+13. Woo Carousel Layout Ticker Style
+14. Woo Carousel Layout
+15. Woo Thumbnails Layout
+16. Video Carousel Layout 3D Style
+17. Video Carousel Layout
+18. Video Thumbnails Layout
+19. Video Default Layout Fade Effect
+20. Video Default Layout Image Indicators
+21. Video Default Layout
+22. Video Grid layout
+23. Posts Carousel Layout Ticker Style
+24. Default
+25. Default Content
+26. Customization
+27. Content Slider
+28. Full Width
+29. Image Indicator Right
+30. Image Slider
+31. Image Indicators 
+32. Image Indicators Left
+33. Vertical
+34. Shortcode Generator
  
 == Changelog ==
+
+= 2.0.3 - 18 Sept, 2025 =
+* Solved the image max-width and margin. 
 
 = 2.0.2 - 23 Aug, 2025 =
 * Resolved the conflict between Modula Image Gallery and B Slider.
@@ -333,6 +358,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Initial Release
 
 == Upgrade Notice ==
+
+= 2.0.3 - 18 Sept, 2025 =
+* Solved the image max-width and margin. 
 
 = 2.0.2 - 23 Aug, 2025 =
 * Resolved the conflict between Modula Image Gallery and B Slider.
