@@ -51,12 +51,12 @@ class FSActivate extends FS_Lite
     {
         $fs_accounts = $this->get_fs_accounts();
         $notice = $fs_accounts['admin_notices'][$this->config->slug]['activation_pending'] ?? [];
-        echo "<div class='fs_notice_board' data-nonce='" . esc_attr(wp_create_nonce('wp_ajax')) . "' data-slug='" . esc_attr($this->config->slug) . "' data data-notice='" . esc_attr(wp_json_encode($notice)) . "'></div>";
+        echo "<div class='fs_notice_board' data-nonce='" . esc_attr(wp_create_nonce('fs_lite_nonce')) . "' data-slug='" . esc_attr($this->config->slug) . "' data data-notice='" . esc_attr(wp_json_encode($notice)) . "'></div>";
     }
 
     function fs_notice_dismiss()
     {
-        if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'] ?? '')), "wp_ajax")) {
+        if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'] ?? '')), "fs_lite_nonce") || current_user_can('manage_options') === false) {
             wp_send_json_error();
         }
         $fs_accounts = $this->get_fs_accounts();
@@ -67,7 +67,7 @@ class FSActivate extends FS_Lite
 
     function fs_init()
     {
-        if (!wp_verify_nonce(sanitize_text_field(wp_unslash(isset($_POST['nonce']) ? $_POST['nonce'] : '')), "wp_ajax")) {
+        if (!wp_verify_nonce(sanitize_text_field(wp_unslash(isset($_POST['nonce']) ? $_POST['nonce'] : '')), "fs_lite_nonce") || current_user_can('manage_options') === false) {
             wp_send_json_error();
         }
         try {
@@ -166,7 +166,7 @@ class FSActivate extends FS_Lite
     function fetch_info()
     {
         $nonce = isset($_POST['nonce']) ? sanitize_text_field(wp_unslash($_POST['nonce'])) : '';
-        if (!wp_verify_nonce($nonce, "wp_ajax")) {
+        if (!wp_verify_nonce($nonce, "fs_lite_nonce") || current_user_can('manage_options') === false) {
             wp_send_json_error();
         }
 
@@ -287,7 +287,7 @@ class FSActivate extends FS_Lite
                         ?>
 
         <div
-            data-nonce="<?php echo esc_attr(wp_create_nonce('wp_ajax')) ?>"
+            data-nonce="<?php echo esc_attr(wp_create_nonce('fs_lite_nonce')) ?>"
             data-plugin-id="<?php echo esc_attr($this->config->id) ?>"
             data-slug="<?php echo esc_attr($this->config->slug) ?>"
             id="<?php echo esc_attr($this->prefix); ?>OptInForm">
@@ -321,7 +321,7 @@ class FSActivate extends FS_Lite
             <div
                 id="<?php echo esc_attr($this->prefix) ?>OptInModal"
                 data-slug="<?php echo esc_attr($this->config->slug) ?>"
-                data-nonce="<?php echo esc_attr(wp_create_nonce('wp_ajax')) ?>"
+                data-nonce="<?php echo esc_attr(wp_create_nonce('fs_lite_nonce')) ?>"
                 data-plugin-id="<?php echo esc_attr($this->config->id) ?>">
             </div>
 <?php

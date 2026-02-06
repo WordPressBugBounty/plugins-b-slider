@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Plugin Name: B Slider
+ * Plugin Name: bSlider
  * Description: Simple slider with bootstrap.
- * Version: 2.0.3
+ * Version: 2.0.8
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -25,7 +25,7 @@ if ( function_exists( 'bs_fs' ) ) {
         }
     } );
 } else {
-    define( 'BSB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.3' ) );
+    define( 'BSB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.8' ) );
     define( 'BSB_DIR', plugin_dir_url( __FILE__ ) );
     define( 'BSB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'BSB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
@@ -47,7 +47,7 @@ if ( function_exists( 'bs_fs' ) ) {
                 'premium_slug'        => 'b-slider-pro',
                 'type'                => 'plugin',
                 'public_key'          => 'pk_b24b0b3f21a9dbfaff418c0c40fc1',
-                'is_premium'          => true,
+                'is_premium'          => false,
                 'premium_suffix'      => 'Pro',
                 'has_premium_version' => true,
                 'has_addons'          => false,
@@ -57,9 +57,8 @@ if ( function_exists( 'bs_fs' ) ) {
                     'is_require_payment' => false,
                 ),
                 'menu'                => ( BSB_IS_PRO ? array(
-                    'slug'       => 'b-slider-dashboard',
-                    'first-path' => 'admin.php?page=b-slider-dashboard#/pricing',
-                    'support'    => false,
+                    'slug'    => 'b-slider-dashboard',
+                    'support' => false,
                 ) : array(
                     'slug'       => 'b-slider-dashboard',
                     'first-path' => 'tools.php?page=b-slider-dashboard#/pricing',
@@ -89,6 +88,7 @@ if ( function_exists( 'bs_fs' ) ) {
 
         private function __construct() {
             $this->load_classes();
+            add_action( 'enqueue_block_editor_assets', [$this, 'enqueueBlockEditorAssets'] );
             add_action( 'enqueue_block_assets', [$this, 'enqueueBlockAssets'] );
             add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
             add_action( 'init', [$this, 'onInit'] );
@@ -107,10 +107,6 @@ if ( function_exists( 'bs_fs' ) ) {
                 10,
                 2
             );
-            add_action( 'wp_ajax_bsbPipeChecker', [$this, 'bsbPipeChecker'] );
-            add_action( 'wp_ajax_nopriv_bsbPipeChecker', [$this, 'bsbPipeChecker'] );
-            add_action( 'admin_init', [$this, 'registerSettings'] );
-            add_action( 'rest_api_init', [$this, 'registerSettings'] );
         }
 
         // Check instance
@@ -140,7 +136,7 @@ if ( function_exists( 'bs_fs' ) ) {
             if ( plugin_basename( __FILE__ ) == $file ) {
                 $links['go_pro'] = sprintf(
                     '<a href="%s" style="%s" target="__blank">%s</a>',
-                    'https://bplugins.com/products/b-slider/#pricing',
+                    'https://bplugins.com/products/b-slider/pricing',
                     'color:#4527a4;font-weight:bold',
                     __( 'Go Pro!', 'slider' )
                 );
@@ -150,11 +146,14 @@ if ( function_exists( 'bs_fs' ) ) {
 
         // Extending row meta
         public function insert_plugin_row_meta( $links, $file ) {
-            if ( plugin_basename( __FILE__ ) == $file ) {
+            if ( $file == 'b-slider/b-slider.php' ) {
                 // docs & faq
                 $links[] = sprintf( '<a href="https://bplugins.com/docs/b-slider/" target="_blank">' . __( 'Docs & FAQs', 'slider' ) . '</a>' );
                 // Demos
                 $links[] = sprintf( '<a href="https://bplugins.com/products/b-slider/#demos" target="_blank">' . __( 'Demos', 'slider' ) . '</a>' );
+                if ( time() < strtotime( '2025-12-06' ) ) {
+                    $links[] = "<a href='https://bplugins.com/coupons/?from=plugins.php&plugin=b-slider' target='_blank' style='font-weight: 600; color: #146ef5;'>🎉 Black Friday Sale - Get up to 40% OFF Now!</a>";
+                }
             }
             return $links;
         }
@@ -215,33 +214,8 @@ if ( function_exists( 'bs_fs' ) ) {
             }
         }
 
-        public function bsbPipeChecker() {
-            // Get and sanitize the nonce
-            $nonce = ( isset( $_POST['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) : '' );
-            // Verify the nonce for security
-            if ( !wp_verify_nonce( $nonce, 'wp_ajax' ) ) {
-                wp_send_json_error( __( 'Invalid Request', 'slider' ) );
-            }
-            // Prepare the response data
-            wp_send_json_success( [
-                'isPipe' => bsbIsPremium(),
-            ] );
-        }
-
-        public function registerSettings() {
-            register_setting( 'bsbUtils', 'bsbUtils', [
-                'show_in_rest'      => [
-                    'name'   => 'bsbUtils',
-                    'schema' => [
-                        'type' => 'string',
-                    ],
-                ],
-                'type'              => 'string',
-                'default'           => wp_json_encode( [
-                    'nonce' => wp_create_nonce( 'wp_ajax' ),
-                ] ),
-                'sanitize_callback' => 'sanitize_text_field',
-            ] );
+        public function enqueueBlockEditorAssets() {
+            wp_add_inline_script( 'bsb-slider-editor-script', "const bsbpipecheck=" . wp_json_encode( bsbIsPremium() ) . ';', 'before' );
         }
 
         public function onInit() {

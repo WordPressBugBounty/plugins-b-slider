@@ -1,25 +1,27 @@
-=== B Slider – Create Responsive Image, Post, Product, and Video Sliders ===
-Contributors: bplugins, abuhayat, btechnologies, freemius
+=== bSlider – Create Responsive Image, Post, Product, and Video Sliders ===
+Contributors: bplugins, abuhayat, btechnologies, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5+
-Tested up to: 6.8.2
-Stable tag: 2.0.3
+Tested up to: 6.9
+Stable tag: 2.0.8
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-B Slider is a WordPress slider plugin that lets you create responsive image, post, product, and video carousels using the Gutenberg block & shortcode.
+bSlider is a WordPress slider plugin that lets you create responsive image, post, product, and video carousels using the Gutenberg block & shortcode.
 
 == Description ==
 
 **Create responsive sliders for images, posts, WooCommerce products, and videos with multiple layouts, animations, and customization options in WordPress. Design and display carousels, grids, and thumbnail sliders directly in the block editor with simple block and shortcode support.**
 
-[B Slider](https://bplugins.com/products/b-slider/) | [Documentation](https://bplugins.com/docs/b-slider) | [Pricing](https://bplugins.com/products/b-slider/pricing/) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/b-slider/#demos)
+[bSlider](https://bplugins.com/products/b-slider/) | [Documentation](https://bplugins.com/docs/b-slider) | [Pricing](https://bplugins.com/products/b-slider/pricing/) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/b-slider/#demos)
 
-[B Slider](https://bplugins.com/products/b-slider/) makes it easy to build engaging sliders without coding. Choose from smooth transitions like fade, slide, or flip, and customize titles, buttons, indicators, and arrows. Add slides quickly, reorder them with drag-and-drop, and adjust settings per device for fully responsive layouts.
+https://www.youtube.com/watch?v=DOvUG5ArWHE
 
-You can use B Slider for product showcases, portfolios, testimonials, or hero sections. It works with any WordPress theme. You can add sliders using the Gutenberg block or place them anywhere with a shortcode.
+[bSlider](https://bplugins.com/products/b-slider/) makes it easy to build engaging sliders without coding. Choose from smooth transitions like fade, slide, or flip, and customize titles, buttons, indicators, and arrows. Add slides quickly, reorder them with drag-and-drop, and adjust settings per device for fully responsive layouts.
+
+You can use bSlider for product showcases, portfolios, testimonials, or hero sections. It works with any WordPress theme. You can add sliders using the Gutenberg block or place them anywhere with a shortcode.
 
 === Key Features –  Free Version ===
 - **Unlimited Slides**: Create as many slides as you need for products, portfolios, or content highlights.
@@ -42,8 +44,8 @@ You can use B Slider for product showcases, portfolios, testimonials, or hero se
 - **Basic Video Controls**: Show a large play button and restart option for easier interaction.
 - **Gutenberg Block**: Add sliders directly in the block editor with full customization.
 
-=== B Slider Pro – Unlock Premium Features ===
-[B Slider Pro](https://bplugins.com/products/b-slider/pricing/) gives you more design power and control. Add advanced effects, flexible layouts, and interactive options to create engaging, professional sliders.
+=== bSlider Pro – Unlock Premium Features ===
+[bSlider Pro](https://bplugins.com/products/b-slider/pricing/) gives you more design power and control. Add advanced effects, flexible layouts, and interactive options to create engaging, professional sliders.
 
 ==What’s New in the Pro Version?==
 
@@ -69,15 +71,19 @@ You can use B Slider for product showcases, portfolios, testimonials, or hero se
 
 [Upgrade to Pro](https://bplugins.com/products/b-slider/pricing/) to unlock all premium features.
 
-=== How to Use B Slider – Quick Start Guide ===
+=== How to Use bSlider – Quick Start Guide ===
+
+Getting started is easy!
+
+https://www.youtube.com/watch?v=qgSBHjGdegg
 
 Follow these steps:
 
 ===Step-by-Step Setup===
 1. Go to **Plugins → Add New**.
-2. Search for **B Slider**.
+2. Search for **bSlider**.
 3. Click **Install Now**, then **Activate**.
-4. In the block editor, add the **B Slider block**, choose a slider type and layout, configure settings, and publish.
+4. In the block editor, add the **bSlider block**, choose a slider type and layout, configure settings, and publish.
 5. Or insert the provided **shortcode** anywhere to show your slider.
 
 Enjoy smooth, responsive sliders on your site!
@@ -169,7 +175,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = Where do I report security bugs found in this plugin? =
 
-Please report security bugs found in the source code of the B Slider plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fbc26-c6d5-4897-9a0e-866ad3861bd5). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+Please report security bugs found in the source code of the bSlider plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fbc26-c6d5-4897-9a0e-866ad3861bd5). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 
 == Screenshots ==
@@ -211,11 +217,26 @@ Please report security bugs found in the source code of the B Slider plugin thro
  
 == Changelog ==
 
+= 2.0.8 - 22 Jan, 2026 =
+* There were some minor issues with the title and the query, but I have resolved them.
+
+= 2.0.7 - 18 Jan, 2026 =
+* Patchstack ( Cross Site Scripting) problem solved;
+
+= 2.0.6 - 1 Dec, 2025 =
+* offer link added;
+
+= 2.0.5 - 27 Nov, 2025 =
+* Some issues have been resolved.
+
+= 2.0.4 - 11 Nov, 2025 =
+* freemius sdk updated;
+
 = 2.0.3 - 18 Sept, 2025 =
 * Solved the image max-width and margin. 
 
 = 2.0.2 - 23 Aug, 2025 =
-* Resolved the conflict between Modula Image Gallery and B Slider.
+* Resolved the conflict between Modula Image Gallery and bSlider.
 
 = 2.0.1 - 12 Aug, 2025 =
 * Resolved all security vulnerabilities identified by Wordfence;
@@ -359,11 +380,26 @@ Please report security bugs found in the source code of the B Slider plugin thro
 
 == Upgrade Notice ==
 
+= 2.0.8 - 22 Jan, 2026 =
+* There were some minor issues with the title and the query, but I have resolved them.
+
+= 2.0.7 - 18 Jan, 2026 =
+* Patchstack ( Cross Site Scripting) problem solved;
+
+= 2.0.6 - 1 Dec, 2025 =
+* offer link added;
+
+= 2.0.5 - 27 Nov, 2025 =
+* Some issues have been resolved.
+
+= 2.0.4 - 11 Nov, 2025 =
+* freemius sdk updated;
+
 = 2.0.3 - 18 Sept, 2025 =
 * Solved the image max-width and margin. 
 
 = 2.0.2 - 23 Aug, 2025 =
-* Resolved the conflict between Modula Image Gallery and B Slider.
+* Resolved the conflict between Modula Image Gallery and bSlider.
 
 = 2.0.1 - 12 Aug, 2025 =
 * Resolved all security vulnerabilities identified by Wordfence;

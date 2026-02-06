@@ -21,8 +21,8 @@ if(!class_exists('bsbAdminMenu')) {
 
             add_submenu_page(
                 'tools.php',
-                __('B Slider', 'slider'),
-                __('B Slider', 'slider'),
+                __('bSlider', 'slider'),
+                __('bSlider', 'slider'),
                 'manage_options',
                 'b-slider-dashboard',
                 [$this, 'bsbHelpPage']

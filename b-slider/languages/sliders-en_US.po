@@ -1,15 +1,15 @@
-# Copyright (C) 2025 bPlugins
+# Copyright (C) 2026 bPlugins
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: B Slider 2.0.3\n"
+"Project-Id-Version: bSlider 2.0.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-18T05:09:18+00:00\n"
+"POT-Creation-Date: 2026-01-25T03:40:10+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: slider\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: includes/admin-menu-free.php:25
 #: includes/admin-menu-pro.php:24
 #: includes/admin-menu-pro.php:25
-msgid "B Slider"
+msgid "bSlider"
 msgstr ""
 
 #. Description of the plugin
@@ -40,20 +40,16 @@ msgstr ""
 msgid "http://bplugins.com"
 msgstr ""
 
-#: b-slider.php:153
+#: b-slider.php:148
 msgid "Go Pro!"
 msgstr ""
 
-#: b-slider.php:163
+#: b-slider.php:159
 msgid "Docs & FAQs"
 msgstr ""
 
-#: b-slider.php:166
+#: b-slider.php:162
 msgid "Demos"
-msgstr ""
-
-#: b-slider.php:200
-msgid "Invalid Request"
 msgstr ""
 
 #: custom-post.php:24
@@ -95,7 +91,7 @@ msgstr ""
 
 #: includes/admin-menu-pro.php:36
 #: includes/admin-menu-pro.php:37
-msgid "ShortCode"
+msgid "Demo and Help"
 msgstr ""
 
 #: assets/js/admin.js:7
@@ -112,7 +108,7 @@ msgstr ""
 
 #: build/block.json
 msgctxt "block title"
-msgid "B Slider"
+msgid "Slider"
 msgstr ""
 
 #: build/block.json
