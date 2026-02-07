@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: bSlider 2.0.8\n"
+"Project-Id-Version: bSlider 2.0.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-25T03:40:10+00:00\n"
+"POT-Creation-Date: 2026-02-07T06:32:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: slider\n"
@@ -18,10 +18,7 @@ msgstr ""
 #: b-slider.php
 #: custom-post.php:22
 #: custom-post.php:23
-#: includes/admin-menu-free.php:24
-#: includes/admin-menu-free.php:25
-#: includes/admin-menu-pro.php:24
-#: includes/admin-menu-pro.php:25
+#: custom-post.php:24
 msgid "bSlider"
 msgstr ""
 
@@ -40,58 +37,69 @@ msgstr ""
 msgid "http://bplugins.com"
 msgstr ""
 
-#: b-slider.php:148
+#: b-slider.php:138
 msgid "Go Pro!"
 msgstr ""
 
-#: b-slider.php:159
+#: b-slider.php:141
+msgid "Dashboard!"
+msgstr ""
+
+#: b-slider.php:154
 msgid "Docs & FAQs"
 msgstr ""
 
-#: b-slider.php:162
+#: b-slider.php:157
 msgid "Demos"
 msgstr ""
 
-#: custom-post.php:24
 #: custom-post.php:25
-msgid "Add New Slider"
+msgid "All Sliders"
 msgstr ""
 
 #: custom-post.php:26
-msgid "Edit"
+msgid "Add New"
 msgstr ""
 
 #: custom-post.php:27
-msgid "New"
+msgid " &#8627; Add New Slider"
 msgstr ""
 
 #: custom-post.php:28
-msgid "View"
+msgid "Edit"
 msgstr ""
 
 #: custom-post.php:29
-msgid "Publish Slider"
+msgid "New"
 msgstr ""
 
 #: custom-post.php:30
-msgid "Update Slider"
+msgid "View"
 msgstr ""
 
 #: custom-post.php:31
-msgid "Slider trashed"
+msgid "Publish Slider"
 msgstr ""
 
 #: custom-post.php:32
-msgid "Search"
+msgid "Update Slider"
 msgstr ""
 
 #: custom-post.php:33
+msgid "Slider trashed"
+msgstr ""
+
+#: custom-post.php:34
+msgid "Search"
+msgstr ""
+
+#: custom-post.php:35
 msgid "Sorry, we couldn't find the that you are looking for."
 msgstr ""
 
-#: includes/admin-menu-pro.php:36
-#: includes/admin-menu-pro.php:37
-msgid "Demo and Help"
+#: includes/admin-menu.php:24
+#: includes/admin-menu.php:25
+msgid "Demo & Help"
 msgstr ""
 
 #: assets/js/admin.js:7

@@ -3,13 +3,13 @@
 /**
  * Plugin Name: bSlider
  * Description: Simple slider with bootstrap.
- * Version: 2.0.8
+ * Version: 2.0.9
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: slider
- * @fs_free_only, bsdk_config.json, /includes/admin-menu-free.php, /freemius-lite
+ * @fs_free_only, bsdk_config.json, /freemius-lite
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) {
@@ -25,7 +25,7 @@ if ( function_exists( 'bs_fs' ) ) {
         }
     } );
 } else {
-    define( 'BSB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.8' ) );
+    define( 'BSB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.9' ) );
     define( 'BSB_DIR', plugin_dir_url( __FILE__ ) );
     define( 'BSB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'BSB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
@@ -56,17 +56,11 @@ if ( function_exists( 'bs_fs' ) ) {
                     'days'               => 7,
                     'is_require_payment' => false,
                 ),
-                'menu'                => ( BSB_IS_PRO ? array(
-                    'slug'    => 'b-slider-dashboard',
-                    'support' => false,
-                ) : array(
-                    'slug'       => 'b-slider-dashboard',
-                    'first-path' => 'tools.php?page=b-slider-dashboard#/pricing',
+                'menu'                => array(
+                    'slug'       => 'edit.php?post_type=bsb',
+                    'first-path' => 'edit.php?post_type=bsb&page=b-slider#/pricing',
                     'support'    => false,
-                    'parent'     => array(
-                        'slug' => 'tools.php',
-                    ),
-                ) ),
+                ),
             );
             $bs_fs = ( BSB_IS_PRO ? fs_dynamic_init( $bsbConfig ) : fs_lite_dynamic_init( $bsbConfig ) );
         }
@@ -93,14 +87,12 @@ if ( function_exists( 'bs_fs' ) ) {
             add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
             add_action( 'init', [$this, 'onInit'] );
             // check premium
-            if ( BSB_IS_FREE ) {
-                add_filter(
-                    'plugin_action_links',
-                    [$this, 'plugin_action_links'],
-                    10,
-                    2
-                );
-            }
+            add_filter(
+                'plugin_action_links',
+                [$this, 'plugin_action_links'],
+                10,
+                2
+            );
             add_filter(
                 'plugin_row_meta',
                 array($this, 'insert_plugin_row_meta'),
@@ -121,24 +113,29 @@ if ( function_exists( 'bs_fs' ) ) {
         //Class loaded
         public function load_classes() {
             // check premium
-            if ( BSB_IS_PRO ) {
-                require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu-pro.php';
-            } else {
-                require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu-free.php';
-            }
-            if ( BSB_IS_PRO && bsbIsPremium() ) {
-                require_once plugin_dir_path( __FILE__ ) . '/custom-post.php';
-                new BSB_SLIDER\LPBCustomPost();
-            }
+            require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu.php';
+            // if ( BSB_IS_PRO && bsbIsPremium()) {
+            require_once plugin_dir_path( __FILE__ ) . '/custom-post.php';
+            new BSB_SLIDER\LPBCustomPost();
+            // }
         }
 
         public function plugin_action_links( $links, $file ) {
             if ( plugin_basename( __FILE__ ) == $file ) {
-                $links['go_pro'] = sprintf(
+                $dashboardLink = admin_url( 'edit.php?post_type=bsb&page=b-slider' );
+                if ( BSB_IS_FREE ) {
+                    $links['go_pro'] = sprintf(
+                        '<a href="%s" style="%s" target="__blank">%s</a>',
+                        'https://bplugins.com/products/b-slider/pricing',
+                        'color:#4527a4;font-weight:bold',
+                        __( 'Go Pro!', 'slider' )
+                    );
+                }
+                $links['dashboard'] = sprintf(
                     '<a href="%s" style="%s" target="__blank">%s</a>',
-                    'https://bplugins.com/products/b-slider/pricing',
+                    $dashboardLink,
                     'color:#4527a4;font-weight:bold',
-                    __( 'Go Pro!', 'slider' )
+                    __( 'Dashboard!', 'slider' )
                 );
             }
             return $links;
@@ -146,14 +143,12 @@ if ( function_exists( 'bs_fs' ) ) {
 
         // Extending row meta
         public function insert_plugin_row_meta( $links, $file ) {
-            if ( $file == 'b-slider/b-slider.php' ) {
+            $demosLine = admin_url( 'edit.php?post_type=bsb&page=b-slider#/demos' );
+            if ( $file == 'b-slider/b-slider.php' || $file == 'b-slider-pro/b-slider.php' ) {
                 // docs & faq
                 $links[] = sprintf( '<a href="https://bplugins.com/docs/b-slider/" target="_blank">' . __( 'Docs & FAQs', 'slider' ) . '</a>' );
                 // Demos
-                $links[] = sprintf( '<a href="https://bplugins.com/products/b-slider/#demos" target="_blank">' . __( 'Demos', 'slider' ) . '</a>' );
-                if ( time() < strtotime( '2025-12-06' ) ) {
-                    $links[] = "<a href='https://bplugins.com/coupons/?from=plugins.php&plugin=b-slider' target='_blank' style='font-weight: 600; color: #146ef5;'>🎉 Black Friday Sale - Get up to 40% OFF Now!</a>";
-                }
+                $links[] = sprintf( '<a href="%s" target="_blank">' . __( 'Demos', 'slider' ) . '</a>', $demosLine );
             }
             return $links;
         }

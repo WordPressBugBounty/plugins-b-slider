@@ -19,10 +19,12 @@ class LPBCustomPost{
 
 		register_post_type( $this->post_type, [
 			'labels'				=> [
-				'name'			=> __( 'B Slider', 'slider' ),
-				'singular_name'	=> __( 'B Slider', 'slider' ),
-				'add_new'		=> __( 'Add New Slider', 'slider' ),
-				'add_new_item'	=> __( 'Add New Slider', 'slider' ),
+				'name'			=> __( 'bSlider', 'slider' ),
+				'singular_name'	=> __( 'bSlider', 'slider' ),
+				'menu_name'     => __( 'bSlider', 'slider' ),
+				'all_items'     => __( 'All Sliders', 'slider' ),
+				'add_new'		=> __( 'Add New', 'slider' ),
+				'add_new_item'	=> __( ' &#8627; Add New Slider', 'slider' ),
 				'edit_item'		=> __( 'Edit', 'slider' ),
 				'new_item'		=> __( 'New', 'slider' ),
 				'view_item'		=> __( 'View', 'slider' ),
