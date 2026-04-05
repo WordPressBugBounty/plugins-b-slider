@@ -3,8 +3,8 @@ Contributors: bplugins, abuhayat, btechnologies, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5+
-Tested up to: 6.9 
-Stable tag: 2.0.9
+Tested up to: 6.9
+Stable tag: 2.0.10
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -217,6 +217,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
  
 == Changelog ==
 
+= 2.0.10 - 5 April, 2026 =
+* Added a new modern dashboard;
+
 = 2.0.9 - 7 Feb, 2026 =
 * The free plugin now supports shortcodes.
 
@@ -382,6 +385,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Initial Release
 
 == Upgrade Notice ==
+
+= 2.0.10 - 5 April, 2026 =
+* Added a new modern dashboard;
 
 = 2.0.9 - 7 Feb, 2026 =
 * The free plugin now supports shortcodes.

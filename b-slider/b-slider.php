@@ -3,7 +3,7 @@
 /**
  * Plugin Name: bSlider
  * Description: Simple slider with bootstrap.
- * Version: 2.0.9
+ * Version: 2.0.10
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -25,7 +25,7 @@ if ( function_exists( 'bs_fs' ) ) {
         }
     } );
 } else {
-    define( 'BSB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.9' ) );
+    define( 'BSB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.10' ) );
     define( 'BSB_DIR', plugin_dir_url( __FILE__ ) );
     define( 'BSB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'BSB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
@@ -38,6 +38,7 @@ if ( function_exists( 'bs_fs' ) ) {
             // Include Freemius SDK.
             if ( BSB_IS_PRO ) {
                 require_once dirname( __FILE__ ) . '/freemius/start.php';
+                require_once dirname( __FILE__ ) . '/includes/LicenseActivation.php';
             } else {
                 require_once dirname( __FILE__ ) . '/freemius-lite/start.php';
             }
@@ -47,7 +48,7 @@ if ( function_exists( 'bs_fs' ) ) {
                 'premium_slug'        => 'b-slider-pro',
                 'type'                => 'plugin',
                 'public_key'          => 'pk_b24b0b3f21a9dbfaff418c0c40fc1',
-                'is_premium'          => false,
+                'is_premium'          => true,
                 'premium_suffix'      => 'Pro',
                 'has_premium_version' => true,
                 'has_addons'          => false,

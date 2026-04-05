@@ -37,7 +37,9 @@ if(!class_exists('bsbAdminMenu')) {
                 data-info='<?php echo esc_attr( wp_json_encode( [
                     'version' => BSB_PLUGIN_VERSION,
                     'isPremium' => bsbIsPremium(),
-                    'hasPro' => BSB_IS_PRO
+                    'hasPro' => BSB_IS_PRO,
+                    'nonce' => wp_create_nonce( 'apbCreatePage' ),
+		            'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' )
                 ] ) ); ?>'
             >
             </div>
