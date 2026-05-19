@@ -1,9 +1,9 @@
 <?php
-namespace BSB_SLIDER;
+namespace B_SLIDER;
 
 if (!defined('ABSPATH')) {exit;}
-
-class LPBCustomPost{
+ 
+class CustomPost{
 	public $post_type = 'bsb';
 
 	public function __construct(){
@@ -19,20 +19,20 @@ class LPBCustomPost{
 
 		register_post_type( $this->post_type, [
 			'labels'				=> [
-				'name'			=> __( 'bSlider', 'slider' ),
-				'singular_name'	=> __( 'bSlider', 'slider' ),
-				'menu_name'     => __( 'bSlider', 'slider' ),
-				'all_items'     => __( 'All Sliders', 'slider' ),
-				'add_new'		=> __( 'Add New', 'slider' ),
-				'add_new_item'	=> __( ' &#8627; Add New Slider', 'slider' ),
-				'edit_item'		=> __( 'Edit', 'slider' ),
-				'new_item'		=> __( 'New', 'slider' ),
-				'view_item'		=> __( 'View', 'slider' ),
-				'item_published' => __('Publish Slider', 'slider'),
-				'item_updated'	=> __('Update Slider', 'slider'),
-				'item_trashed'  => __('Slider trashed', 'slider'),
-				'search_items'	=> __( 'Search', 'slider'),
-				'not_found'		=> __( 'Sorry, we couldn\'t find the that you are looking for.', 'slider' )
+				'name'			=> __( 'bSlider', 'b-slider' ),
+				'singular_name'	=> __( 'bSlider', 'b-slider' ),
+				'menu_name'     => __( 'bSlider', 'b-slider' ),
+				'all_items'     => __( 'All Sliders', 'b-slider' ),
+				'add_new'		=> __( 'Add New', 'b-slider' ),
+				'add_new_item'	=> __( ' &#8627; Add New Slider', 'b-slider' ),
+				'edit_item'		=> __( 'Edit', 'b-slider' ),
+				'new_item'		=> __( 'New', 'b-slider' ),
+				'view_item'		=> __( 'View', 'b-slider' ),
+				'item_published' => __('Publish Slider', 'b-slider'),
+				'item_updated'	=> __('Update Slider', 'b-slider'),
+				'item_trashed'  => __('Slider trashed', 'b-slider'),
+				'search_items'	=> __( 'Search', 'b-slider'),
+				'not_found'		=> __( 'Sorry, we couldn\'t find the that you are looking for.', 'b-slider' )
 			],
 			'public'				=> false,
 			'show_ui'				=> true, 		
@@ -52,7 +52,10 @@ class LPBCustomPost{
 	}
 
 	public function onAddShortcode( $atts ) {
-        $post_id = $atts['id'];
+        if ( empty( $atts['id'] ) ) {
+            return '';
+        }
+        $post_id = (int) $atts['id'];
         $post = get_post( $post_id );
         if ( !$post ) {
             return '';
@@ -94,10 +97,12 @@ class LPBCustomPost{
 
 	function manageBSBPostsCustomColumns( $column_name, $post_ID ) {
 		if ( $column_name == 'shortcode' ) {
-			echo "<div class='bsbFrontShortcode' id='bsbFrontShortcode-$post_ID'>
-				<input value='[bsb-slider id=$post_ID]' onclick='bsbHandleShortcode( $post_ID )'>
-				<span class='tooltip'>Copy To Clipboard</span>
-			</div>";
+			?>
+			<div class="bsbFrontShortcode" id="bsbFrontShortcode-<?php echo esc_attr( $post_ID ); ?>">
+				<input value="[bsb-slider id=<?php echo esc_attr( $post_ID ); ?>]" onclick="bsbHandleShortcode( <?php echo intval( $post_ID ); ?> )">
+				<span class="tooltip"><?php echo esc_html__( 'Copy To Clipboard', 'b-slider' ); ?></span>
+			</div>
+			<?php
 		}
 	}
 

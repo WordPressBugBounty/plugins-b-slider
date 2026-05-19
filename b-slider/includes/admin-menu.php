@@ -1,8 +1,10 @@
 <?php
-if (!defined('ABSPATH')) {exit;}
-if(!class_exists('bsbAdminMenu')) {
+namespace B_SLIDER;
 
-    class bsbAdminMenu {
+if (!defined('ABSPATH')) {exit;}
+if(!class_exists(__NAMESPACE__ . '\AdminMenu')) {
+
+    class AdminMenu {
 
         public function __construct() {
             add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
@@ -11,9 +13,9 @@ if(!class_exists('bsbAdminMenu')) {
 
         public function adminEnqueueScripts($hook) {
             if( strpos( $hook, 'b-slider' ) ){
-                wp_enqueue_style( 'bsb-admin-dashboard', BSB_DIR . 'build/admin-dashboard.css', [], BSB_PLUGIN_VERSION );
-                wp_enqueue_script( 'bsb-admin-dashboard', BSB_DIR . 'build/admin-dashboard.js', [ 'react', 'react-dom', 'wp-data', "wp-api", "wp-util", "wp-i18n" ], BSB_PLUGIN_VERSION, true );
-                wp_set_script_translations( 'bsb-admin-dashboard', 'slider', BSB_DIR_PATH . 'languages' );   
+                wp_enqueue_style( 'bsb-admin-dashboard', B_SLIDER_DIR . 'build/admin-dashboard.css', [], B_SLIDER_PLUGIN_VERSION );
+                wp_enqueue_script( 'bsb-admin-dashboard', B_SLIDER_DIR . 'build/admin-dashboard.js', [ 'react', 'react-dom', 'wp-data', "wp-api", "wp-util", "wp-i18n" ], B_SLIDER_PLUGIN_VERSION, true );
+                wp_set_script_translations( 'bsb-admin-dashboard', 'b-slider', B_SLIDER_DIR_PATH . 'languages' ); 
             }
         }
 
@@ -21,13 +23,12 @@ if(!class_exists('bsbAdminMenu')) {
              
             add_submenu_page(
                 'edit.php?post_type=bsb',
-                __('Demo & Help', 'slider'),
-                __('Demo & Help', 'slider'),
+                __('Demo & Help', 'b-slider'),
+                __('Demo & Help', 'b-slider'),
                 'manage_options',
                 'b-slider',
-                [$this, 'bsbHelpPage'],
-            );   
-            
+                [$this, 'bsbHelpPage']
+            );
         }
 
         public function bsbHelpPage()
@@ -35,15 +36,11 @@ if(!class_exists('bsbAdminMenu')) {
             <div
                 id='bsbDashboard'
                 data-info='<?php echo esc_attr( wp_json_encode( [
-                    'version' => BSB_PLUGIN_VERSION,
-                    'isPremium' => bsbIsPremium(),
-                    'hasPro' => BSB_IS_PRO,
-                    'nonce' => wp_create_nonce( 'apbCreatePage' ),
-		            'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' )
+                    'version' => B_SLIDER_PLUGIN_VERSION,
                 ] ) ); ?>'
             >
             </div>
-        <?php } 
+        <?php }
     }
-    new bsbAdminMenu();
+    new AdminMenu();
 }

@@ -1,8 +1,8 @@
 <?php
-namespace BSB\PostsAjax;
+namespace B_SLIDER;
 
 if ( ! defined( 'ABSPATH' ) ) exit;
-if(!class_exists( 'PostsAjax' )){
+if(!class_exists( __NAMESPACE__ . '\PostsAjax' )){
     class PostsAjax{
         public function __construct(){
             add_action( 'wp_ajax_bsbPosts', [$this, 'bsbPosts'] );
@@ -10,15 +10,15 @@ if(!class_exists( 'PostsAjax' )){
         }
 
         public function bsbPosts(){
-            $nonce = sanitize_text_field( $_POST['_wpnonce'] ) ?? null;
+            $nonce = isset( $_POST['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) : '';
 
             if( !wp_verify_nonce( $nonce, 'wp_ajax' )){
                 wp_send_json_error( 'Invalid Request' );
             }
 
-            $postsQuery = \BSB\Posts\Posts::sanitize_array( $_POST['queryAttr'] ) ?? [];
-            $pageNumber = (int) sanitize_text_field( $_POST['pageNumber'] ) ?? 1;
-            wp_send_json_success( \BSB\Posts\Posts::getPosts( [ 'postsQuery' => $postsQuery ], $pageNumber ) );
+            $postsQuery = isset( $_POST['queryAttr'] ) ? Posts::sanitize_array( map_deep( wp_unslash( $_POST['queryAttr'] ), 'sanitize_text_field' ) ) : [];
+            $pageNumber = isset( $_POST['pageNumber'] ) ? (int) sanitize_text_field( wp_unslash( $_POST['pageNumber'] ) ) : 1;
+            wp_send_json_success( Posts::getPosts( [ 'postsQuery' => $postsQuery ], $pageNumber ) );
         }
     }
     new PostsAjax();

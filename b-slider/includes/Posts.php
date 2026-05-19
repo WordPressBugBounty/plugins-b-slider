@@ -1,10 +1,9 @@
 <?php
-
-namespace BSB\Posts;
+namespace B_SLIDER;
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-if(!class_exists( 'Posts' )){
+if(!class_exists( __NAMESPACE__ . '\Posts' )){
     class Posts{
         static function sanitize_array($array){
             if( !is_array( $array ) ) {
@@ -48,9 +47,9 @@ if(!class_exists( 'Posts' )){
             $innerAllowedHTML = array_merge( [ 'span' => [ $textAllowedHTML ] ], $textAllowedHTML );
             $allowedHTML = array_merge( [ 'p' => [ $innerAllowedHTML ] ], $innerAllowedHTML );
             $content = wp_kses( $rawContent, $allowedHTML );
-            $plainText = trim( wp_strip_all_tags( $content ?? '' ) );
+            $plainText = trim( wp_strip_all_tags( $content ?: '' ) );
 
-            return apply_filters( 'bsb_posts_excerpt_filter', $plainText, $content );
+            return apply_filters( 'b_slider_posts_excerpt_filter', $plainText, $content );
         }
 
         static function arrangedPosts( $posts, $post_type='post', $fImgSize = 'full', $metaDateFormat = 'M j, Y', $isExcerptFromContent=true, $excerptLength = 25 ) {
@@ -104,7 +103,6 @@ if(!class_exists( 'Posts' )){
                         'name' => get_the_author_meta( 'display_name', isset($post->post_author) ? sanitize_text_field($post->post_author) : '' ),
                         'link' => get_author_posts_url( isset( $post->post_author ) ? sanitize_text_field( $post->post_author ):'' )
                     ],
-                    'date' => isset($post->post_date) ? sanitize_text_field($post->post_date) : '',
                     'date' => get_the_date( $metaDateFormat, $id ),
                     'dateGMT' => isset($post->post_date_gmt) ? sanitize_text_field($post->post_date_gmt):'',
                     'modifiedDate' => isset($post->post_modified) ? sanitize_text_field($post->post_modified):'',
@@ -128,11 +126,17 @@ if(!class_exists( 'Posts' )){
         }
 
         static function query( $attributes ){
-            extract( $attributes );
-            extract( $postsQuery );
+            $postsQuery           = $attributes['postsQuery'] ?? [];
+            $post_type            = $attributes['post_type'] ?? 'post';
+            $per_page             = $attributes['per_page'] ?? 10;
+            $orderby              = $attributes['orderby'] ?? 'date';
+            $order                = $attributes['order'] ?? 'DESC';
+            $offset               = $attributes['offset'] ?? 0;
+            $isExcludeCurrent     = $attributes['isExcludeCurrent'] ?? false;
+            $include              = $attributes['include'] ?? [];
 
-            $selectedTaxonomies = $selectedTaxonomies ?? [];
-            $selectedCategories = $postsQuery['selectedCategories'] ?? [];
+            $selectedTaxonomies   = $postsQuery['selectedTaxonomies'] ?? [];
+            $selectedCategories   = $postsQuery['selectedCategories'] ?? [];
 
             $termsQuery = ['relation' => 'AND'];
             foreach ( $selectedTaxonomies as $taxonomy => $terms ){
@@ -159,8 +163,10 @@ if(!class_exists( 'Posts' )){
                 'posts_per_page'	=> $per_page,
                 'orderby'			=> $orderby,
                 'order'				=> $order,
+                // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
                 'tax_query'			=> $termsQuery,
                 'offset'			=> $offset,
+                // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_post__not_in
                 'post__not_in'		=> $isExcludeCurrent ? array_merge( [ get_the_ID() ], $postsExclude ) : $postsExclude,
                 'has_password'		=> false,
                 'post_status'		=> 'publish'
@@ -169,11 +175,17 @@ if(!class_exists( 'Posts' )){
             return $query;
         }
 
-        static function getPosts( $attributes = [], $pageNumber = 1 ){            
-            extract( $attributes );
-            extract( $postsQuery );
-             
-            $isExcludeCurrent = $isExcludeCurrent || 'true' === $isExcludeCurrent;
+        static function getPosts( $attributes = [], $pageNumber = 1 ){
+            $postsQuery           = $attributes['postsQuery'] ?? [];
+            $post_type            = $attributes['post_type'] ?? 'post';
+            $per_page             = $postsQuery['per_page'] ?? $attributes['per_page'] ?? 10;
+            $offset               = $postsQuery['offset'] ?? $attributes['offset'] ?? 0;
+            $fImgSize             = $postsQuery['fImgSize'] ?? $attributes['fImgSize'] ?? 'full';
+            $metaDateFormat       = $postsQuery['metaDateFormat'] ?? $attributes['metaDateFormat'] ?? 'M j, Y';
+            $isExcerptFromContent = $postsQuery['isExcerptFromContent'] ?? $attributes['isExcerptFromContent'] ?? true;
+            $excerptLength        = $postsQuery['excerptLength'] ?? $attributes['excerptLength'] ?? 25;
+            $isExcludeCurrent     = $postsQuery['isExcludeCurrent'] ?? $attributes['isExcludeCurrent'] ?? false;
+            $isExcludeCurrent     = $isExcludeCurrent || 'true' === $isExcludeCurrent;
             $newArgs = wp_parse_args( [ 'offset' => ( $per_page * ( $pageNumber - 1 ) ) + $offset ], self::query( $attributes ) );
             $posts = self::arrangedPosts(
                 get_posts( $newArgs ),

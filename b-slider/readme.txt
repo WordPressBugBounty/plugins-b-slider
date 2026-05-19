@@ -2,10 +2,10 @@
 Contributors: bplugins, abuhayat, btechnologies, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
-Requires at least: 6.5+
+Requires at least: 6.5
 Tested up to: 6.9
-Stable tag: 2.0.10
-Requires PHP: 7.1
+Stable tag: 2.0.12
+Requires PHP: 7.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,6 +24,7 @@ https://www.youtube.com/watch?v=DOvUG5ArWHE
 You can use bSlider for product showcases, portfolios, testimonials, or hero sections. It works with any WordPress theme. You can add sliders using the Gutenberg block or place them anywhere with a shortcode.
 
 === Key Features –  Free Version ===
+- **Shortcode Support** – Insert sliders anywhere on your site, even outside Gutenberg, using shortcodes.
 - **Unlimited Slides**: Create as many slides as you need for products, portfolios, or content highlights.
 - **Easy Slide Management**: Quickly duplicate or remove slides for faster editing and organization.
 - **Customizable Content Styles**: Style titles and descriptions with flexible typography and design controls.
@@ -43,31 +44,47 @@ You can use bSlider for product showcases, portfolios, testimonials, or hero sec
 - **Video Slider Options**: Enable popup playback with repeat, mute, autoplay, reset, or hide controls.
 - **Basic Video Controls**: Show a large play button and restart option for easier interaction.
 - **Gutenberg Block**: Add sliders directly in the block editor with full customization.
+- **Custom Slider Height**: Easily define and set the perfect height for your sliders.
+- **Dynamic Indicators**: Fully customize indicator types, positioning, and direction (Horizontal or Vertical).
+- **Carousel Enhancements**: Toggle visibility for Navigation Arrows and Pagination Indicators with a single click.
+- **Grid Flexibility**: Set items per page and choose your preferred pagination style (Standard Button or Load More).
+- **Post Per Page**: Control the exact density of your content.
+- **Advanced Sorting**: Organize content by specific criteria (Order By) and direction (ASC/DESC).
+- **Post Offset**: Skip specific posts to create unique layouts and avoid duplication.
+- **Playback Settings**: New options for Auto-play, Loop/Repeat, and Muted starts.
+- **Comprehensive Player Controls**: Empower users with a full suite of controls including Play/Pause, Mute, Rewind/Fast-Forward, and real-time displays for Progress, Current Time, and Duration.
 
 === bSlider Pro – Unlock Premium Features ===
 [bSlider Pro](https://bplugins.com/products/b-slider/pricing/) gives you more design power and control. Add advanced effects, flexible layouts, and interactive options to create engaging, professional sliders.
 
 ==What’s New in the Pro Version?==
 
-- **Shortcode Support**: Place sliders anywhere on your site using shortcodes.
+- **Custom HTML Wrapper Tags**: Options to use specific tags like h1-h6 for better structure and SEO.
+- **Slider Transition Effects**: Professional animation effects for seamless slide transitions.
+- **Left/Right Inner Gap**: Customizable internal spacing between slider items.
+- **Dual Slide Direction**: Support for both horizontal and vertical movement paths.
+- **Custom Arrow Styles**: Unique navigation arrow designs to match your branding.
+- **Slide on Mouse Wheel**: Ability to navigate through slides using the mouse scroll wheel.
+- **Arrow Follow Mouse**: Interactive navigation arrows that dynamically follow the cursor.
+- **Slide on Mouse Drag**: Smooth drag-to-slide functionality for a tactile user experience.
+- **Lazy Load Enable**: Optimizes performance by deferring the loading of offscreen images.
+- **Move From Edge**: Precise control over the spacing of content from the slider edges.
+- **Video Reset On End**: Automatically restarts videos from the beginning once they finish.
+- **Video Auto Hide Controls**: Automatically hides playback UI during periods of inactivity.
+- **Advanced Video Tools**: Includes Mute, PIP (Picture-in-Picture), AirPlay, Download, and Fullscreen.
+- **Pagination Position**: Flexible alignment for pagination buttons within grid layouts.
+- **Include/Exclude Posts & Products**: Manually select exactly which items to display or hide.
+- **Exclude Current Post**: Prevents the post being currently viewed from appearing in the feed.
+- **Grab Cursor Interaction**: Displays a "grab" icon to improve carousel usability.
+- **Thumbnail Direction & Navigation**: Controls for thumbnail flow and dedicated navigation arrows.
+- **Thumbnail Styling**: Custom settings for thumbnail position, dimensions, borders, and color overlays.
+- **Box Model Controls**: Full management of Margin, Padding, Border, and Border Radius.
+- **Advanced Typography**: Comprehensive styling for fonts, sizes, and text behavior.
+- **Interactive Color States**: Set specific colors for both standard and hover states.
+- **Animation Timing**: Granular control over animation duration and start delays.
+- **Clickable CTA Buttons**: Add custom button labels and URLs directly into slide content.
+- **Smart Link Behavior**: Option to open button links in a new browser tab automatically.
 - **Advanced Carousel Styles**: Create unique carousels with ticker, grid, and 3D effects.
-- **Creative Effects**: Use coverflow and card-style transitions for modern visual appeal.
-- **Buttons in Content**: Add clickable buttons inside slides for CTAs and product links.
-- **Advanced Animations**: Control timing, delay, and duration for text and button animations.
-- **Custom Image Indicators**: Replace default indicators with images for a more branded look.
-- **Multiple Arrow Icons**: Select from different arrow styles to fit your design.
-- **Flexible Content Positioning**: Place content anywhere within each slide for more control.
-- **Drag-and-Drop Reordering**: Organize slides easily by dragging and dropping items.
-- **Mouse Controls**: Navigate with the mouse wheel, dragging, or grab the cursor for better usability.
-- **Arrow Follow Mouse**: Enable arrows that follow mouse movement for dynamic navigation.
-- **Responsive Slider Height**: Adjust slider height per device for better responsiveness.
-- **Advanced Post Controls**: Set posts per page, change order, exclude/include posts, or skip current post.
-- **WooCommerce Advanced Options**: Apply the same filters and display controls to products.
-- **Full Video Controls**: Unlock rewind, fast forward, progress bar, time display, mute, volume, PIP, AirPlay, download, and full screen.
-- **Grid Pagination**: Add pagination with options for load more or numbered pages, aligned left, right, or center.
-- **Pagination Styling**: Customize buttons with typography, colors, padding, and borders.
-- **Enhanced Thumbnails**: Control navigation arrows, overlays, cursor options, and direction for thumbnails.
-- **Multiple Layouts**: Switch between slider, carousel, grid, or thumbnails for flexible presentations.
 
 [Upgrade to Pro](https://bplugins.com/products/b-slider/pricing/) to unlock all premium features.
 
@@ -214,8 +231,25 @@ Please report security bugs found in the source code of the bSlider plugin throu
 32. Image Indicators Left
 33. Vertical
 34. Shortcode Generator
- 
+
+
 == Changelog ==
+
+= 2.0.12 - 13 May, 2026 =
+* Update: Fixed a security vulnerability through responsible disclosure.
+
+= 2.0.11 - 9 May, 2026 =
+* Update: Removed restricted "Locked Fields" to improve user flexibility
+* New: Custom Slider Height: Easily define and set the perfect height for your sliders.
+* New: Dynamic Indicators: Fully customize indicator types, positioning, and direction (Horizontal or Vertical).
+* New: Carousel Enhancements: Toggle visibility for Navigation Arrows and Pagination Indicators with a single click.
+* New: Grid Flexibility: Set items per page and choose your preferred pagination style (Standard Button or Load More).
+* New: Post Per Page: Control the exact density of your content.
+* New: Advanced Sorting: Organize content by specific criteria (Order By) and direction (ASC/DESC).
+* New: Post Offset: Skip specific posts to create unique layouts and avoid duplication.
+* New: Playback Settings: New options for Auto-play, Loop/Repeat, and Muted starts.
+* New: Comprehensive Player Controls: Empower users with a full suite of controls including Play/Pause, Mute, Rewind/Fast-Forward, and real-time displays for Progress, Current Time, and Duration.
+* Improved: Overall code quality and strengthened security protocols.
 
 = 2.0.10 - 5 April, 2026 =
 * Added a new modern dashboard;
@@ -384,7 +418,7 @@ Please report security bugs found in the source code of the bSlider plugin throu
 = 1.0.0 =
 * Initial Release
 
-== Upgrade Notice ==
+== Upgrade Notice == 
 
 = 2.0.10 - 5 April, 2026 =
 * Added a new modern dashboard;
@@ -552,3 +586,57 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 = 1.0.0 =
 * Initial Release
+
+
+== Source Code ==
+
+You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository:
+[**BSlider on GitHub**](https://github.com/bPlugins/bslider-free)
+
+== Third-Party Libraries ==
+
+This plugin bundles the following third-party JavaScript/PHP libraries.
+
+= Bootstrap = 
+* **Source:** https://getbootstrap.com/
+* **GitHub:** https://github.com/twbs/bootstrap
+* **License:** MIT – https://github.com/twbs/bootstrap/blob/main/LICENSE
+* **Purpose:** Provides responsive carousel/slider functionality, grid layout, and UI components used in the slider interface.
+
+= Plyr = 
+* **Source:** https://plyr.io/
+* **GitHub:** https://github.com/sampotts/plyr
+* **License:** MIT – https://github.com/sampotts/plyr/blob/master/LICENSE.md
+* **Purpose:** A simple, accessible HTML5 media player used for video slide playback with customizable controls.
+
+= LazyLoad = 
+* **Source:** https://github.com/verlok/vanilla-lazyload
+* **GitHub:** https://github.com/verlok/vanilla-lazyload
+* **License:** MIT – https://github.com/verlok/vanilla-lazyload/blob/master/LICENSE
+* **Purpose:** Enables lazy loading of slide images to improve page performance by deferring off-screen image loading.
+
+= Font Awesome = 
+* **Source:** https://fontawesome.com/
+* **GitHub:** https://github.com/FortAwesome/Font-Awesome
+* **License:** SIL OFL 1.1 (Fonts), MIT (CSS) – https://fontawesome.com/license/free
+* **Purpose:** Provides scalable vector icons used for slider navigation arrows and UI elements.
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
+= Freemius Lite SDK =
+
+* **Source:** [https://bplugins.com/](https://bplugins.com/)
+* **GitHub:** [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
+* **License:** GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+* **Purpose:** Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
+* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+
+= External Link (Placeholder Image) =
+* **Source:** https://bblockswp.com/wp-content/demo/img/green-hill.jpg
+* **Source:** https://templates.bplugins.com/wp-content/uploads/2025/02/n-39.jpg
+* **Source:** https://templates.bplugins.com/wp-content/uploads/2025/02/n-37.jpg
+* **Purpose:** This image is hosted on our own server and is strictly used as a fallback/dummy placeholder in the editor preview when a user has not yet selected or uploaded their own image content. It is not loaded on the frontend for site visitors. 

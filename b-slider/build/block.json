@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "bsb/slider",
   "title": "Slider",
   "category": "widgets",
@@ -11,7 +11,7 @@
     "bootstrap",
     "carousel"
   ],
-  "textdomain": "slider",
+  "textdomain": "b-slider",
   "attributes": {
     "align": {
       "type": "string",
@@ -75,9 +75,6 @@
           "video": "",
           "title": null,
           "desc": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "btnLabel": "",
-          "btnUrl": "https://wordpress.org/plugins/b-slider/",
-          "target": false,
           "altText": null
         },
         {
@@ -87,10 +84,7 @@
           "video": "",
           "isPoster": true,
           "title": null,
-          "desc": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "btnLabel": "",
-          "btnUrl": "https://wordpress.org/plugins/b-slider/",
-          "target": false
+          "desc": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
       ]
     },
@@ -224,12 +218,6 @@
         "muted": false,
         "resetOnEnd": false,
         "autoHideControl": true
-      }
-    },
-    "title": {
-      "type": "object",
-      "default": {
-        "tag": "h5"
       }
     },
     "titleFCaption": {
@@ -527,15 +515,15 @@
     "file:./index.js",
     "bootstrap",
     "lazyLoad",
-    "lbb-plyr-script",
+    "b-slider-plyr-script",
     "wp-api",
     "wp-util"
   ],
   "editorStyle": "file:./index.css",
   "style": [
     "file:./view.css",
-    "bsb-style",
-    "lbb-plyr-style"
+    "b-slider-style",
+    "b-slider-plyr-style"
   ],
   "render": "file:./render.php",
   "viewScript": [
@@ -543,7 +531,7 @@
     "jquery",
     "bootstrap",
     "lazyLoad",
-    "lbb-plyr-script",
+    "b-slider-plyr-script",
     "wp-util",
     "wp-api"
   ]
