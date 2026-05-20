@@ -513,6 +513,7 @@
   },
   "editorScript": [
     "file:./index.js",
+    "jquery",
     "bootstrap",
     "lazyLoad",
     "b-slider-plyr-script",
@@ -522,7 +523,7 @@
   "editorStyle": "file:./index.css",
   "style": [
     "file:./view.css",
-    "b-slider-style",
+    "bootstrap",
     "b-slider-plyr-style"
   ],
   "render": "file:./render.php",

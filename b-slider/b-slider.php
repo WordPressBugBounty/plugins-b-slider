@@ -2,7 +2,7 @@
 /**
  * Plugin Name: bSlider – Create Responsive Image, Post, Product, and Video Sliders
  * Description: Simple slider with bootstrap.
- * Version: 2.0.12
+ * Version: 2.0.13
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -16,7 +16,7 @@
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.0.12');
+        define('B_SLIDER_PLUGIN_VERSION', '2.0.13');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));
@@ -116,14 +116,14 @@
         }
 
         // Enqueue Block assets 
-        public function enqueueBlockAssets(){
-            wp_register_style('b-slider-style', B_SLIDER_ASSETS_DIR . 'css/bootstrap.min.css', [], B_SLIDER_PLUGIN_VERSION);
+        public function enqueueBlockAssets(){ 
+            wp_register_style('bootstrap', B_SLIDER_ASSETS_DIR . 'css/bootstrap.min.css', [], B_SLIDER_PLUGIN_VERSION);
             wp_register_style('b-slider-plyr-style', B_SLIDER_ASSETS_DIR . 'css/plyr.min.css', [], B_SLIDER_PLUGIN_VERSION);
 
             wp_register_script('bootstrap', B_SLIDER_ASSETS_DIR . 'js/bootstrap.min.js', [], B_SLIDER_PLUGIN_VERSION, true);
             wp_register_script('lazyLoad', B_SLIDER_ASSETS_DIR . 'js/lazyLoad.js', [], B_SLIDER_PLUGIN_VERSION, true);
             wp_register_script('b-slider-plyr-script', B_SLIDER_ASSETS_DIR . 'js/plyr.min.js', [], B_SLIDER_PLUGIN_VERSION, true);
-
+ 
              
         }
 

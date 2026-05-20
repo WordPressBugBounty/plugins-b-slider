@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 6.9
-Stable tag: 2.0.12
+Stable tag: 2.0.13
 Requires PHP: 7.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -234,6 +234,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 
 == Changelog ==
+
+= 2.0.13 - 20 May, 2026 =
+* Fix: The backend defaults, carousel, and thumbnail slides have been fixed and are now working properly.
 
 = 2.0.12 - 13 May, 2026 =
 * Update: Fixed a security vulnerability through responsible disclosure.
