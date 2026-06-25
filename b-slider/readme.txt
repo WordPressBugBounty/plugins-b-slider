@@ -4,10 +4,10 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 6.9
-Stable tag: 2.0.13
+Stable tag: 2.0.14
 Requires PHP: 7.2
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 bSlider is a WordPress slider plugin that lets you create responsive image, post, product, and video carousels using the Gutenberg block & shortcode.
 
@@ -235,8 +235,12 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Changelog ==
 
+= 2.0.14 - 24 June, 2026 =
+* Update: Added new modern dashboard.
+
+
 = 2.0.13 - 20 May, 2026 =
-* Fix: The backend defaults, carousel, and thumbnail slides have been fixed and are now working properly.
+* Fix: The backend defaults, carousel, and thumbnail layouts slides have been fixed and are now working properly.
 
 = 2.0.12 - 13 May, 2026 =
 * Update: Fixed a security vulnerability through responsible disclosure.
@@ -421,7 +425,10 @@ Please report security bugs found in the source code of the bSlider plugin throu
 = 1.0.0 =
 * Initial Release
 
-== Upgrade Notice == 
+== Upgrade Notice ==
+
+= 2.0.14 - 24 June, 2026 =
+* Update: Added new modern dashboard.
 
 = 2.0.10 - 5 April, 2026 =
 * Added a new modern dashboard;

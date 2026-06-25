@@ -2,12 +2,11 @@
 /**
  * Plugin Name: bSlider – Create Responsive Image, Post, Product, and Video Sliders
  * Description: Simple slider with bootstrap.
- * Version: 2.0.13
+ * Version: 2.0.14
  * Author: bPlugins
  * Author URI: http://bplugins.com
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: b-slider
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
  
     // ABS PATH
@@ -16,7 +15,7 @@
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.0.13');
+        define('B_SLIDER_PLUGIN_VERSION', '2.0.14');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));

@@ -37,6 +37,7 @@ if(!class_exists(__NAMESPACE__ . '\AdminMenu')) {
                 id='bsbDashboard'
                 data-info='<?php echo esc_attr( wp_json_encode( [
                     'version' => B_SLIDER_PLUGIN_VERSION,
+                    'adminUrl' => admin_url(),
                 ] ) ); ?>'
             >
             </div>
