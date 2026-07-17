@@ -1,8 +1,9 @@
 <?php
 /**
  * Plugin Name: bSlider – Create Responsive Image, Post, Product, and Video Sliders
+ * Plugin URI: http://bplugins.com
  * Description: Simple slider with bootstrap.
- * Version: 2.0.14
+ * Version: 2.0.15
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
@@ -15,7 +16,7 @@
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.0.14');
+        define('B_SLIDER_PLUGIN_VERSION', '2.0.15');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));
@@ -28,7 +29,7 @@
             global $b_slider_fs;
 
             if ( !isset( $b_slider_fs ) ) {
-                require_once dirname(__FILE__) . '/vendor/freemius-lite/start.php'; 
+                require_once dirname(__FILE__) . '/vendor/freemius-lite/start.php';
 
                 $bs_fs = fs_lite_dynamic_init([
                     'id'                  => '19318',
