@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.0.1
-Stable tag: 2.0.15
+Stable tag: 2.0.16
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -235,6 +235,15 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Changelog ==
 
+= 2.0.16 - 27 July, 2026 =
+* Fix: `Post Per Page` set to -1 now displays all posts on the front end instead of falling back to 10.
+* Fix: `Post Type`, `Order By`, `Order` and `Post Offset` from the Post Query panel were ignored on the front end, now they are applied correctly.
+* Fix: Product sliders were querying posts instead of products on the front end.
+* Fix: Duplicate items when opening the next page or clicking Load More in the Grid layout.
+* Fix: The last post was skipped in the editor while `Post Per Page` was set to -1.
+* Fix: Changing `Post Per Page` to -1 could break the block preview in the editor.
+* New: `Show Button` toggle for post and product sliders, so the button can be turned off without clearing its text.
+
 = 2.0.15 - 17 July, 2026 =
 * Fixed: When adding a block from the block editor search, I was not getting CSS and JS, but now it is fixed.
 
@@ -429,6 +438,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Initial Release
 
 == Upgrade Notice ==
+
+= 2.0.16 - 27 July, 2026 =
+Recommended update. Fixes the post query on the front end: `Post Per Page = -1` now shows all posts, and Post Type, Order By, Order and Offset are applied properly. Adds a Show Button toggle for post and product sliders.
 
 = 2.0.15 - 17 July, 2026 =
 * Fixed: When adding a block from the block editor search, I was not getting CSS and JS, but now it is fixed.

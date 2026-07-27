@@ -127,13 +127,16 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
 
         static function query( $attributes ){
             $postsQuery           = $attributes['postsQuery'] ?? [];
-            $post_type            = $attributes['post_type'] ?? 'post';
-            $per_page             = $attributes['per_page'] ?? 10;
-            $orderby              = $attributes['orderby'] ?? 'date';
-            $order                = $attributes['order'] ?? 'DESC';
-            $offset               = $attributes['offset'] ?? 0;
-            $isExcludeCurrent     = $attributes['isExcludeCurrent'] ?? false;
-            $include              = $attributes['include'] ?? [];
+            // Every post query setting lives inside the `postsQuery` object attribute,
+            // the top level keys are only kept as a fallback for older saved blocks.
+            $post_type            = $postsQuery['post_type'] ?? $attributes['post_type'] ?? 'post';
+            $per_page             = (int) ( $postsQuery['per_page'] ?? $attributes['per_page'] ?? 10 );
+            $orderby              = $postsQuery['orderby'] ?? $attributes['orderby'] ?? 'date';
+            $order                = $postsQuery['order'] ?? $attributes['order'] ?? 'DESC';
+            $offset               = (int) ( $postsQuery['offset'] ?? $attributes['offset'] ?? 0 );
+            $isExcludeCurrent     = $postsQuery['isExcludeCurrent'] ?? $attributes['isExcludeCurrent'] ?? false;
+            $isExcludeCurrent     = filter_var( $isExcludeCurrent, FILTER_VALIDATE_BOOLEAN );
+            $include              = $postsQuery['include'] ?? $attributes['include'] ?? [];
 
             $selectedTaxonomies   = $postsQuery['selectedTaxonomies'] ?? [];
             $selectedCategories   = $postsQuery['selectedCategories'] ?? [];
@@ -172,21 +175,34 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
                 'post_status'		=> 'publish'
             ], $post__in, $defaultPostQuery );
 
+            // `-1` means show all posts. WP_Query ignores `offset` while `nopaging` is on.
+            if ( $per_page < 0 ) {
+                $query['posts_per_page'] = -1;
+                $query['nopaging']       = true;
+                unset( $query['offset'] );
+            }
+
             return $query;
         }
 
         static function getPosts( $attributes = [], $pageNumber = 1 ){
             $postsQuery           = $attributes['postsQuery'] ?? [];
-            $post_type            = $attributes['post_type'] ?? 'post';
-            $per_page             = $postsQuery['per_page'] ?? $attributes['per_page'] ?? 10;
-            $offset               = $postsQuery['offset'] ?? $attributes['offset'] ?? 0;
+            $post_type            = $postsQuery['post_type'] ?? $attributes['post_type'] ?? 'post';
+            $per_page             = (int) ( $postsQuery['per_page'] ?? $attributes['per_page'] ?? 10 );
+            $offset               = (int) ( $postsQuery['offset'] ?? $attributes['offset'] ?? 0 );
             $fImgSize             = $postsQuery['fImgSize'] ?? $attributes['fImgSize'] ?? 'full';
             $metaDateFormat       = $postsQuery['metaDateFormat'] ?? $attributes['metaDateFormat'] ?? 'M j, Y';
             $isExcerptFromContent = $postsQuery['isExcerptFromContent'] ?? $attributes['isExcerptFromContent'] ?? true;
             $excerptLength        = $postsQuery['excerptLength'] ?? $attributes['excerptLength'] ?? 25;
             $isExcludeCurrent     = $postsQuery['isExcludeCurrent'] ?? $attributes['isExcludeCurrent'] ?? false;
             $isExcludeCurrent     = $isExcludeCurrent || 'true' === $isExcludeCurrent;
-            $newArgs = wp_parse_args( [ 'offset' => ( $per_page * ( $pageNumber - 1 ) ) + $offset ], self::query( $attributes ) );
+            $newArgs = self::query( $attributes );
+
+            // Paging only makes sense with a positive per page value, `-1` returns every post.
+            if ( $per_page > 0 ) {
+                $newArgs['offset'] = ( $per_page * ( $pageNumber - 1 ) ) + $offset;
+            }
+
             $posts = self::arrangedPosts(
                 get_posts( $newArgs ),
                 $post_type,
