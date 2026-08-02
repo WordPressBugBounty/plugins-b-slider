@@ -21,7 +21,9 @@ call_user_func( function( $attributes ) {
     $is_excerpt_from_content = isset( $posts_query['isExcerptFromContent'] ) ? $posts_query['isExcerptFromContent'] : true;
     $excerpt_length = isset( $posts_query['excerptLength'] ) ? $posts_query['excerptLength'] : 25;
 
-    $posts = \B_SLIDER\Posts::arrangedPosts( get_posts( \B_SLIDER\Posts::query( $attributes ) ), $post_type, $fimg_size, $meta_date_format, $is_excerpt_from_content, $excerpt_length );
+    $selected_acf_fields = \B_SLIDER\Posts::acfFieldsToFetch( $posts_query );
+
+    $posts = \B_SLIDER\Posts::arrangedPosts( get_posts( \B_SLIDER\Posts::query( $attributes ) ), $post_type, $fimg_size, $meta_date_format, $is_excerpt_from_content, $excerpt_length, $selected_acf_fields );
 
     ?>
     <div

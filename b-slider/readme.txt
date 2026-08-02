@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.0.1
-Stable tag: 2.0.16
+Stable tag: 2.0.17
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,6 +40,10 @@ You can use bSlider for product showcases, portfolios, testimonials, or hero sec
 - **Grid Layout**: Display sliders in responsive grids with adjustable column and row gaps.
 - **Thumbnails Layout**: Add thumbnail navigation with overlay, autoplay, and border options.
 - **Post Slider Options**: Query posts by category or tag, show excerpts, and limit content length.
+- **Default Post Types**: Build sliders using standard WordPress post types (Posts, Pages, and WooCommerce Products).
+- **ACF Fields on Slides**: Show up to three Advanced Custom Fields on each slide, placed anywhere on it.
+- **ACF Display Presets**: Pick from six looks for your fields, with a per field icon, label, prefix, and suffix.
+- **ACF Content Mapping**: Use an ACF field for the slide image, title, description, button label, or button link.
 - **WooCommerce Slider**: Highlight products with content length and excerpt display controls.
 - **Video Slider Options**: Enable popup playback with repeat, mute, autoplay, reset, or hide controls.
 - **Basic Video Controls**: Show a large play button and restart option for easier interaction.
@@ -75,6 +79,8 @@ You can use bSlider for product showcases, portfolios, testimonials, or hero sec
 - **Pagination Position**: Flexible alignment for pagination buttons within grid layouts.
 - **Include/Exclude Posts & Products**: Manually select exactly which items to display or hide.
 - **Exclude Current Post**: Prevents the post being currently viewed from appearing in the feed.
+- **Custom Post Type Sliders**: Build a slider from any user-registered custom post type (CPT), like portfolio, services, or testimonials.
+- **Unlimited ACF Fields**: Show as many Advanced Custom Fields per slide as you need, past the three the free version allows.
 - **Grab Cursor Interaction**: Displays a "grab" icon to improve carousel usability.
 - **Thumbnail Direction & Navigation**: Controls for thumbnail flow and dedicated navigation arrows.
 - **Thumbnail Styling**: Custom settings for thumbnail position, dimensions, borders, and color overlays.
@@ -186,6 +192,14 @@ Yes, you can change block settings from the Gutenberg block editor's right sideb
 
 You can use unlimited times as you want.
 
+= Do I need Advanced Custom Fields to use bSlider? =
+
+No. ACF is optional. Install and activate [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/) only if you want to show your own custom fields on a slide. The ACF Integration panel appears once you have a field group whose location rules target the post type your slider is querying.
+
+= How many ACF fields can I show on a slide? =
+
+The free version displays up to three fields per slide. bSlider Pro removes the limit. Fields you assign to the slide image, title, description, or button under **Use ACF For** do not count against those three.
+
 = Where can I get support? =
 
 You can post your questions on the [support forum here](https://wordpress.org/support/plugin/b-slider/)
@@ -235,14 +249,14 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Changelog ==
 
-= 2.0.16 - 27 July, 2026 =
-* Fix: `Post Per Page` set to -1 now displays all posts on the front end instead of falling back to 10.
-* Fix: `Post Type`, `Order By`, `Order` and `Post Offset` from the Post Query panel were ignored on the front end, now they are applied correctly.
-* Fix: Product sliders were querying posts instead of products on the front end.
-* Fix: Duplicate items when opening the next page or clicking Load More in the Grid layout.
-* Fix: The last post was skipped in the editor while `Post Per Page` was set to -1.
-* Fix: Changing `Post Per Page` to -1 could break the block preview in the editor.
-* New: `Show Button` toggle for post and product sliders, so the button can be turned off without clearing its text.
+= 2.0.17 - 02 August, 2026 =
+* New: Default Post Type support — build sliders using standard WordPress post types (Posts, Pages, and Products);
+* New: Locked custom post types (CPTs) behind Pro with a modern sidebar and wizard upgrade promotion;
+* New: Advanced Custom Fields (ACF) on slides with a limit of three fields per slide (Pro removes this limit);
+* New: Use an ACF field for the slide image, title, description, button label, or button link, and override it per item;
+* New: Six display presets for ACF fields, free placement on nine anchors, and a per-field icon, label, prefix, and suffix;
+* Fix: `Post Type`, `Order By`, `Order` and `Post Offset` are now applied to the editor preview, not only the front end;
+* Fix: Some control labels were tagged with the wrong text domain and never translated;
 
 = 2.0.15 - 17 July, 2026 =
 * Fixed: When adding a block from the block editor search, I was not getting CSS and JS, but now it is fixed.
@@ -439,8 +453,8 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Upgrade Notice ==
 
-= 2.0.16 - 27 July, 2026 =
-Recommended update. Fixes the post query on the front end: `Post Per Page = -1` now shows all posts, and Post Type, Order By, Order and Offset are applied properly. Adds a Show Button toggle for post and product sliders.
+= 2.0.17 - 02 August, 2026 =
+* Adds Advanced Custom Fields and Custom Post Type sliders, free shows three ACF fields per slide.
 
 = 2.0.15 - 17 July, 2026 =
 * Fixed: When adding a block from the block editor search, I was not getting CSS and JS, but now it is fixed.

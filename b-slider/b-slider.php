@@ -2,12 +2,13 @@
 /**
  * Plugin Name: bSlider – Create Responsive Image, Post, Product, and Video Sliders
  * Plugin URI: http://bplugins.com
- * Description: Simple slider with bootstrap. 
- * Version: 2.0.16
+ * Description: Simple slider with bootstrap.
+ * Version: 2.0.17
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: b-slider
  */
  
     // ABS PATH
@@ -16,7 +17,7 @@
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.0.16');
+        define('B_SLIDER_PLUGIN_VERSION', '2.0.17');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));
@@ -52,6 +53,7 @@
 
     require_once plugin_dir_path(__FILE__) . '/includes/Posts.php';
     require_once plugin_dir_path(__FILE__) . '/includes/PostsAjax.php';
+    require_once plugin_dir_path(__FILE__) . '/includes/AcfFields.php';
 
     class B_Slider{
 
