@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 call_user_func( function( $attributes ) {
 
     $sliders = [];
-    $posts_query = $attributes['postsQuery'];
+    $posts_query = isset( $attributes['postsQuery'] ) ? $attributes['postsQuery'] : [];
 
-    foreach ( $attributes['sliders'] as $index => $slider ) {
+    foreach ( ( isset( $attributes['sliders'] ) ? $attributes['sliders'] : [] ) as $index => $slider ) {
         $sliders[] = $slider;
         $sliders[ $index ]['title'] = isset( $slider['title'] ) ? wp_kses_post( $slider['title'] ) : '';
         $sliders[ $index ]['desc'] = isset( $slider['desc'] ) ? wp_kses_post( $slider['desc'] ) : '';
@@ -15,23 +15,29 @@ call_user_func( function( $attributes ) {
 
     $attributes['sliders'] = $sliders;
 
-    $post_type = isset( $posts_query['post_type'] ) ? $posts_query['post_type'] : 'post';
+    // `query()` is what decides the post type actually queried — it turns down anything this
+    // licence or the public is not entitled to — so the taxonomies and the ACF allow list are
+    // both built from its answer rather than from the saved attribute.
+    $query = \B_SLIDER\Posts::query( $attributes );
+
+    $post_type = $query['post_type'];
     $fimg_size = isset( $posts_query['fImgSize'] ) ? $posts_query['fImgSize'] : 'full';
     $meta_date_format = isset( $posts_query['metaDateFormat'] ) ? $posts_query['metaDateFormat'] : 'M j, Y';
     $is_excerpt_from_content = isset( $posts_query['isExcerptFromContent'] ) ? $posts_query['isExcerptFromContent'] : true;
     $excerpt_length = isset( $posts_query['excerptLength'] ) ? $posts_query['excerptLength'] : 25;
 
-    $selected_acf_fields = \B_SLIDER\Posts::acfFieldsToFetch( $posts_query );
+    $selected_acf_fields = \B_SLIDER\Posts::acfFieldsToFetch( $posts_query, $post_type );
 
-    $posts = \B_SLIDER\Posts::arrangedPosts( get_posts( \B_SLIDER\Posts::query( $attributes ) ), $post_type, $fimg_size, $meta_date_format, $is_excerpt_from_content, $excerpt_length, $selected_acf_fields );
+    $posts = \B_SLIDER\Posts::arrangedPosts( get_posts( $query ), $post_type, $fimg_size, $meta_date_format, $is_excerpt_from_content, $excerpt_length, $selected_acf_fields );
 
     ?>
     <div
         <?php echo wp_kses_post( get_block_wrapper_attributes() ); ?>
-        id='bsbCarousel-<?php echo esc_attr( $attributes['cId'] ); ?>'
+        id='bsbCarousel-<?php echo esc_attr( isset( $attributes['cId'] ) ? $attributes['cId'] : '' ); ?>'
         data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'
-        data-nonce='<?php echo esc_attr( wp_json_encode( wp_create_nonce( 'wp_ajax' ) ) ); ?>'
-        data-totalposts=<?php echo esc_attr( count( get_posts( array_merge( \B_SLIDER\Posts::query( $attributes ), [ 'posts_per_page' => -1 ] ) ) ) ); ?>
+        data-nonce='<?php echo esc_attr( wp_json_encode( wp_create_nonce( \B_SLIDER\PostsAjax::NONCE_ACTION ) ) ); ?>'
+        <?php // The pagination total: IDs only, since nothing but the count is wanted. ?>
+        data-totalposts='<?php echo esc_attr( count( get_posts( array_merge( $query, [ 'posts_per_page' => -1, 'fields' => 'ids' ] ) ) ) ); ?>'
     >
         <pre id='posts' style='display: none;'>
             <?php echo esc_html( wp_json_encode( $posts ) ); ?>

@@ -34,6 +34,69 @@ class AcfFields {
             'callback' => [ $this, 'get_post_acf_values' ],
             'permission_callback' => [ __CLASS__, 'can_edit' ]
         ] );
+
+        register_rest_field( 'product', 'price', [
+            'get_callback' => function( $object ) {
+                if ( function_exists( 'wc_get_product' ) ) {
+                    $product = wc_get_product( $object['id'] );
+                    if ( $product ) {
+                        $price_html = $product->get_price_html();
+                        $price_html = preg_replace( '/<span class="screen-reader-text">.*?<\/span>/is', '', $price_html );
+                        return html_entity_decode( $price_html, ENT_QUOTES, 'UTF-8' );
+                    }
+                }
+                return '';
+            },
+            'schema' => null,
+        ] );
+
+        register_rest_field( 'product', 'sale', [
+            'get_callback' => function( $object ) {
+                if ( function_exists( 'wc_get_product' ) ) {
+                    $product = wc_get_product( $object['id'] );
+                    return ($product && $product->is_on_sale()) ? __( 'Sale!', 'b-slider' ) : '';
+                }
+                return '';
+            },
+            'schema' => null,
+        ] );
+
+        register_rest_field( 'product', 'sale_percent', [
+            'get_callback' => function( $object ) {
+                if ( function_exists( 'wc_get_product' ) ) {
+                    $product = wc_get_product( $object['id'] );
+                    if ( $product && $product->is_on_sale() ) {
+                        if ( $product->is_type( 'simple' ) || $product->is_type( 'external' ) ) {
+                            $regular_price = (float) $product->get_regular_price();
+                            $sale_price = (float) $product->get_sale_price();
+                            if ( $regular_price > 0 && $sale_price > 0 ) {
+                                $percentage = round( ( ( $regular_price - $sale_price ) / $regular_price ) * 100 );
+                                return '-' . $percentage . '%';
+                            }
+                        } else if ( $product->is_type( 'variable' ) ) {
+                            $prices = $product->get_variation_prices();
+                            $max_percentage = 0;
+                            foreach ( $prices['price'] as $key => $var_price ) {
+                                $regular_price = (float) $prices['regular_price'][$key];
+                                $sale_price = (float) $prices['sale_price'][$key];
+                                if ( $regular_price > 0 && $sale_price > 0 && $regular_price > $sale_price ) {
+                                    $p = round( ( ( $regular_price - $sale_price ) / $regular_price ) * 100 );
+                                    if ( $p > $max_percentage ) {
+                                        $max_percentage = $p;
+                                    }
+                                }
+                            }
+                            if ( $max_percentage > 0 ) {
+                                return '-' . $max_percentage . '%';
+                            }
+                        }
+                        return __( 'Sale!', 'b-slider' );
+                    }
+                }
+                return '';
+            },
+            'schema' => null,
+        ] );
     }
 
     public static function can_edit() {
@@ -50,10 +113,76 @@ class AcfFields {
         $results = [];
 
         foreach ( $post_ids as $id ) {
-            $results[ $id ] = self::get_fields_for_post( $fields, $id );
+            // `can_edit()` lets a contributor this far, and the IDs come with the request. Without
+            // this the route would hand out the meta of anyone's drafts and private posts to anyone
+            // who can guess an ID.
+            if ( ! current_user_can( 'read_post', $id ) ) {
+                continue;
+            }
+
+            $results[ $id ] = self::get_fields_for_post( self::allowedFields( $fields, get_post_type( $id ) ), $id );
         }
 
         return rest_ensure_response( $results );
+    }
+
+    /**
+     * The field names a slider on `$post_type` is allowed to read, keyed by name.
+     *
+     * Field names arrive with the request — in the block's saved query, in the AJAX pagination
+     * call, in anything anyone cares to craft — and end their journey at `get_post_meta()`. Held
+     * to the names ACF really registered for this post type, that journey can only reach the
+     * fields the editor itself offered; left open, it reads any meta on the post.
+     *
+     * `b_slider_allowed_acf_fields` is the way in for sites that register meta outside ACF and want it
+     * on a slide anyway: naming a key there is a deliberate act by the site owner, which is the
+     * part a request cannot supply.
+     */
+    public static function allowedFieldNames( $post_type ) {
+        static $cache = [];
+
+        $post_type = (string) $post_type;
+
+        if ( ! isset( $cache[ $post_type ] ) ) {
+            $names = wp_list_pluck( self::fields_for_post_type( $post_type ), 'value' );
+
+            /**
+             * Filters the meta keys a slider may read for a post type.
+             *
+             * @param string[] $names     Field names registered with ACF for this post type.
+             * @param string   $post_type The post type being queried.
+             */
+            $names = apply_filters( 'b_slider_allowed_acf_fields', $names, $post_type );
+            $names = is_array( $names ) ? array_map( 'strval', $names ) : [];
+
+            $cache[ $post_type ] = array_flip( $names );
+        }
+
+        return $cache[ $post_type ];
+    }
+
+    /** Whether a slider on `$post_type` may read `$field_name`. */
+    public static function isFieldAllowed( $field_name, $post_type ) {
+        $field_name = trim( (string) $field_name );
+
+        if ( '' === $field_name || is_protected_meta( $field_name, 'post' ) ) {
+            return false;
+        }
+
+        return isset( self::allowedFieldNames( $post_type )[ $field_name ] );
+    }
+
+    /** `$fields` with everything this post type has no business reading dropped. */
+    public static function allowedFields( $fields, $post_type ) {
+        if ( ! is_array( $fields ) ) {
+            return [];
+        }
+
+        return array_values( array_filter( $fields, function( $field ) use ( $post_type ) {
+            $name = is_array( $field ) ? ( $field['name'] ?? '' ) : $field;
+
+            return self::isFieldAllowed( $name, $post_type );
+        } ) );
     }
 
     /**
@@ -98,6 +227,12 @@ class AcfFields {
         $post_id    = (int) $post_id;
 
         if ( '' === $field_name || $post_id <= 0 ) {
+            return null;
+        }
+
+        // The allow list again, right where the meta is actually read, so it holds for every
+        // caller and not only for the two that remember to filter their input first.
+        if ( ! self::isFieldAllowed( $field_name, get_post_type( $post_id ) ) ) {
             return null;
         }
 
@@ -231,8 +366,8 @@ class AcfFields {
                 break;
 
             case 'true_false':
-                $on  = ! empty( $acfObj['ui_on_text'] ) ? $acfObj['ui_on_text'] : __( 'Yes', 'slider' );
-                $off = ! empty( $acfObj['ui_off_text'] ) ? $acfObj['ui_off_text'] : __( 'No', 'slider' );
+                $on  = ! empty( $acfObj['ui_on_text'] ) ? $acfObj['ui_on_text'] : __( 'Yes', 'b-slider' );
+                $off = ! empty( $acfObj['ui_off_text'] ) ? $acfObj['ui_off_text'] : __( 'No', 'b-slider' );
                 $out['value'] = ( $raw && '0' !== $raw ) ? $on : $off;
                 break;
 
@@ -512,45 +647,63 @@ class AcfFields {
      */
     public function get_acf_fields( \WP_REST_Request $request ) {
         $post_type = sanitize_text_field( $request->get_param( 'post_type' ) ?: 'post' );
-        $is_active = function_exists( 'acf_get_field_groups' ) && function_exists( 'acf_get_fields' );
-        $fields_list = [];
 
-        if ( $is_active ) {
-            // Only groups whose location rules match this post type. There is deliberately no
-            // fallback to every group: a post type with no ACF groups must return an empty list
-            // rather than fields that belong to some other post type.
-            $field_groups = acf_get_field_groups( [ 'post_type' => $post_type ] );
-            $seen         = [];
+        return rest_ensure_response( [
+            'isActive' => self::acf_is_active(),
+            'fields'   => self::fields_for_post_type( $post_type )
+        ] );
+    }
 
-            foreach ( (array) $field_groups as $group ) {
-                if ( empty( $group['key'] ) || ! self::group_targets_post_type( $group, $post_type ) ) {
-                    continue;
-                }
+    /** Whether the ACF API this plugin reads field definitions through is there. */
+    private static function acf_is_active() {
+        return function_exists( 'acf_get_field_groups' ) && function_exists( 'acf_get_fields' );
+    }
 
-                $fields = acf_get_fields( $group['key'] );
-                if ( ! empty( $fields ) && is_array( $fields ) ) {
-                    foreach ( $fields as $field ) {
-                        if ( empty( $field['name'] ) || isset( $seen[ $field['name'] ] ) ) {
-                            continue;
-                        }
-                        if ( in_array( $field['type'] ?? 'text', self::UNSUPPORTED_TYPES, true ) ) {
-                            continue;
-                        }
-                        $seen[ $field['name'] ] = true;
-                        $fields_list[] = [
-                            'value' => $field['name'],
-                            'label' => self::field_label( $field, $field['name'] ),
-                            'type'  => $field['type'] ?? 'text'
-                        ];
+    /**
+     * The ACF fields on offer for a post type: `value`, `label` and `type` for each.
+     *
+     * The picker route and `allowedFieldNames()` both read this one list, so what a slider is
+     * allowed to fetch can never come to mean something wider than what the editor offered.
+     *
+     * @return array[] Empty when ACF is absent or nothing targets this post type.
+     */
+    public static function fields_for_post_type( $post_type ) {
+        if ( ! self::acf_is_active() ) {
+            return [];
+        }
+
+        // Only groups whose location rules match this post type. There is deliberately no
+        // fallback to every group: a post type with no ACF groups must return an empty list
+        // rather than fields that belong to some other post type.
+        $field_groups = acf_get_field_groups( [ 'post_type' => $post_type ] );
+        $fields_list  = [];
+        $seen         = [];
+
+        foreach ( (array) $field_groups as $group ) {
+            if ( empty( $group['key'] ) || ! self::group_targets_post_type( $group, $post_type ) ) {
+                continue;
+            }
+
+            $fields = acf_get_fields( $group['key'] );
+            if ( ! empty( $fields ) && is_array( $fields ) ) {
+                foreach ( $fields as $field ) {
+                    if ( empty( $field['name'] ) || isset( $seen[ $field['name'] ] ) ) {
+                        continue;
                     }
+                    if ( in_array( $field['type'] ?? 'text', self::UNSUPPORTED_TYPES, true ) ) {
+                        continue;
+                    }
+                    $seen[ $field['name'] ] = true;
+                    $fields_list[] = [
+                        'value' => $field['name'],
+                        'label' => self::field_label( $field, $field['name'] ),
+                        'type'  => $field['type'] ?? 'text'
+                    ];
                 }
             }
         }
 
-        return rest_ensure_response( [
-            'isActive' => $is_active,
-            'fields'   => $fields_list
-        ] );
+        return $fields_list;
     }
 }
 
