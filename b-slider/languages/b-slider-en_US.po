@@ -2,21 +2,21 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bSlider – Create Responsive Image, Post, Product, and Video Sliders 2.0.18\n"
+"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-12T12:43:44+00:00\n"
+"POT-Creation-Date: 2026-08-17T10:22:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-slider\n"
 
 #. Plugin Name of the plugin
 #: b-slider.php
-msgid "bSlider – Create Responsive Image, Post, Product, and Video Sliders"
+msgid "bSlider – Build Sliders That Bring Your Content to Life"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -495,7 +495,19 @@ msgid "Current Post"
 msgstr ""
 
 #: build/index.js:1
+msgid "Sort by ACF Field"
+msgstr ""
+
+#: build/index.js:1
+msgid "Filter by ACF Field"
+msgstr ""
+
+#: build/index.js:1
 msgid "Custom HTML wrapper tags (e.g., h1-h6)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Icon Library"
 msgstr ""
 
 #: build/index.js:1
@@ -1130,6 +1142,11 @@ msgid "Muted"
 msgstr ""
 
 #: build/index.js:1
+#, js-format
+msgid "Premium %s"
+msgstr ""
+
+#: build/index.js:1
 msgid "Source & Layout"
 msgstr ""
 
@@ -1202,14 +1219,6 @@ msgid "Button"
 msgstr ""
 
 #: build/index.js:1
-msgid "Post Date"
-msgstr ""
-
-#: build/index.js:1
-msgid "Post Author"
-msgstr ""
-
-#: build/index.js:1
 msgid "Content background"
 msgstr ""
 
@@ -1250,8 +1259,11 @@ msgid "Grey until pointed at"
 msgstr ""
 
 #: build/index.js:1
-#, js-format
-msgid "Premium %s"
+msgid "ACF Query"
+msgstr ""
+
+#: build/index.js:1
+msgid "Premium ACF Query"
 msgstr ""
 
 #: build/index.js:1
@@ -1331,7 +1343,7 @@ msgid "Premium Thumbnails Active"
 msgstr ""
 
 #: build/index.js:1
-msgid "Badges"
+msgid "Badges & ACF Fields"
 msgstr ""
 
 #: build/index.js:1

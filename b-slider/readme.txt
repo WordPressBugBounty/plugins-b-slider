@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.0.1
-Stable tag: 2.0.18
+Stable tag: 2.0.19
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -102,6 +102,10 @@ You can use bSlider for product showcases, portfolios, testimonials, or hero sec
 - **Clickable CTA Buttons**: Add custom button labels and URLs directly into slide content.
 - **Smart Link Behavior**: Option to open button links in a new browser tab automatically.
 - **Advanced Carousel Styles**: Create unique carousels with ticker, grid, and 3D effects.
+- **ACF Query – Sort by Custom Field**: Order slides by any ACF field — price, rating, event date, a manual sort order — as numbers or as text, ascending or descending, with the option to hide posts that left the field blank.
+- **ACF Query – Filter by Custom Field**: Show only the posts that match your rules, e.g. price is at least 2000, stock has "In stock", event date is after today. Build as many rules as you need and match all of them or any of them.
+- **Rules Built From Your Fields**: Each rule offers the comparisons that suit the field and, for dropdown, radio and checkbox fields, a list of that field's own choices — no typing values by hand and no guessing which comparison works.
+- **Badge & Field Icon Library**: Pick an icon for any badge or ACF field from Font Awesome, Bootstrap or Lucide instead of typing an emoji.
 
 [Upgrade to Pro](https://bplugins.com/products/b-slider/pricing/) to unlock all premium features.
 
@@ -259,6 +263,16 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 
 == Changelog ==
+
+= 2.0.19 - 17 August, 2026 =
+* New: Added promotional/upsell panel for the ACF Query premium features under the ACF Integration panel;
+* New: The ACF Integration and Post Badges panels now say that the icon library is a premium feature, alongside the character you can type in the free version;
+* New: The Style tab's badge typography and colours now apply to ACF fields as well, so badges and fields on one slide share a look, and the section appears for a slider that has fields but no badges;
+* Fix: An ACF field named price, date, author or sale could not be moved off its default corner — badge settings of the same name were taking over the field's position, icon and style;
+* Fix: An ACF field placed over a navigation arrow swallowed the click and the slider stopped advancing;
+* Fix: An ACF field named date or author could be forced to hover-only by a badge that was not on the slide;
+* Fix: A chosen badge colour overrode the outline, plain and ribbon presets even when no colour had been picked;
+* Fix: Cleaned up unused variables and resolved ESLint warnings in settings components;
 
 = 2.0.18 - 11 August, 2026 =
 * New: Slide Content panel — one place to show or hide a slide's title, description and button, and to set the button label;
@@ -479,6 +493,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Initial Release
 
 == Upgrade Notice ==
+
+= 2.0.19 - 17 August, 2026 =
+* Adds the ACF Query Pro panel, extends badge styling to ACF fields, and fixes ACF fields named after a badge, fields blocking the navigation arrows, and preset colours being overridden.
 
 = 2.0.18 - 11 August, 2026 =
 * Adds slide content panel, WooCommerce price and sale badges, selective hover controls, linked slide pictures, and fixes badge animation on hover.
