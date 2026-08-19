@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.0.19\n"
+"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.0.20\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-17T10:22:16+00:00\n"
+"POT-Creation-Date: 2026-08-19T05:54:06+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-slider\n"
@@ -36,158 +36,203 @@ msgid "bPlugins"
 msgstr ""
 
 #: b-slider.php:96
+#: b-slider/b-slider.php:96
 msgid "Go Pro!"
 msgstr ""
 
 #: b-slider.php:99
+#: b-slider/b-slider.php:99
 msgid "Dashboard!"
 msgstr ""
 
 #: b-slider.php:112
+#: b-slider/b-slider.php:112
 msgid "Docs & FAQs"
 msgstr ""
 
 #: b-slider.php:115
+#: b-slider/b-slider.php:115
 msgid "Demos"
 msgstr ""
 
+#: b-slider/custom-post.php:22
+#: b-slider/custom-post.php:23
+#: b-slider/custom-post.php:24
 #: custom-post.php:22
 #: custom-post.php:23
 #: custom-post.php:24
 msgid "bSlider"
 msgstr ""
 
+#: b-slider/custom-post.php:25
 #: custom-post.php:25
 msgid "All Sliders"
 msgstr ""
 
+#: b-slider/custom-post.php:26
 #: custom-post.php:26
 msgid "Add New"
 msgstr ""
 
+#: b-slider/custom-post.php:27
 #: custom-post.php:27
 msgid " &#8627; Add New Slider"
 msgstr ""
 
+#: b-slider/custom-post.php:28
 #: custom-post.php:28
 msgid "Edit"
 msgstr ""
 
+#: b-slider/custom-post.php:29
 #: custom-post.php:29
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "New"
 msgstr ""
 
+#: b-slider/custom-post.php:30
 #: custom-post.php:30
 msgid "View"
 msgstr ""
 
+#: b-slider/custom-post.php:31
 #: custom-post.php:31
 msgid "Publish Slider"
 msgstr ""
 
+#: b-slider/custom-post.php:32
 #: custom-post.php:32
 msgid "Update Slider"
 msgstr ""
 
+#: b-slider/custom-post.php:33
 #: custom-post.php:33
 msgid "Slider trashed"
 msgstr ""
 
+#: b-slider/custom-post.php:34
 #: custom-post.php:34
 msgid "Search"
 msgstr ""
 
+#: b-slider/custom-post.php:35
 #: custom-post.php:35
 msgid "Sorry, we couldn't find the that you are looking for."
 msgstr ""
 
+#: b-slider/custom-post.php:120
 #: custom-post.php:120
 #: assets/js/admin.js:9
+#: b-slider/assets/js/admin.js:9
 msgid "Copy To Clipboard"
 msgstr ""
 
+#: b-slider/includes/AcfFields.php:57
+#: b-slider/includes/AcfFields.php:93
+#: b-slider/includes/Posts.php:241
+#: b-slider/includes/Posts.php:267
 #: includes/AcfFields.php:57
 #: includes/AcfFields.php:93
-#: includes/Posts.php:241
-#: includes/Posts.php:267
+#: includes/Posts.php:230
+#: includes/Posts.php:256
 msgid "Sale!"
 msgstr ""
 
+#: b-slider/includes/AcfFields.php:369
 #: includes/AcfFields.php:369
 msgid "Yes"
 msgstr ""
 
+#: b-slider/includes/AcfFields.php:370
 #: includes/AcfFields.php:370
 msgid "No"
 msgstr ""
 
+#: b-slider/includes/admin-menu.php:26
+#: b-slider/includes/admin-menu.php:27
 #: includes/admin-menu.php:26
 #: includes/admin-menu.php:27
 msgid "Demo & Help"
 msgstr ""
 
 #: assets/js/admin.js:7
+#: b-slider/assets/js/admin.js:7
 msgid "Copied Successfully!"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "What this does"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Enter Video URL"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Enter Image URL"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Image Alt"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "top"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Enter Image Alt Text"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Title"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Enter Title"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Description"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Enter desc"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid " and "
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%1$s, and %2$d more"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Unlock with Pro"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%d custom post type is Pro only."
@@ -195,14 +240,17 @@ msgid_plural "%d custom post types are Pro only."
 msgstr[0] ""
 msgstr[1] ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Custom post types are Pro only."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Pro Feature"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%d Custom Post Type Available in Pro"
@@ -210,434 +258,543 @@ msgid_plural "%d Custom Post Types Available in Pro"
 msgstr[0] ""
 msgstr[1] ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Custom Post Types Available in Pro"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "Unlock %s and every custom post type you create — with advanced filtering, ACF field support, and more."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Unlock every custom post type you create — with advanced filtering, ACF field support, and more."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "All custom post types"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "ACF field mapping"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Advanced query filters"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Upgrade to Pro"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide your custom post types"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "Standard post types (Posts, Pages, Products) are free. Pro unlocks custom post types like %s."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Standard post types (Posts, Pages, Products) are free. Pro unlocks every custom post type you register."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Include & exclude posts"
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "Author"
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "Date"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Last Modified"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Ascending"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Descending"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Default"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Image"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Horizontal"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Vertical"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "None"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Pagination"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Load More"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Bottom Center"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Center Center"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Play Large"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Restart"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Rewind"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Play"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fast Forward"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Progress"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Current Time"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Duration"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Mute"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Bottom"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Top"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Left"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Right"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Standard"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Center"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Cards"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Coverflow"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Style 1"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fade In Left"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fade In Right"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fade In Up"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fade In Down"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fade In"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Zoom In"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide In Down"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide In Up"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide In Left"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide In Right"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fade"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Flip"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "General"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Style"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Hide"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Dot"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Loop"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Auto Play"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Mouse Wheel"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Grab Cursor"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Button label"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Button Url"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Open In New Tab"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Include"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Exclude"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Current Post"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Sort by ACF Field"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Filter by ACF Field"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Custom HTML wrapper tags (e.g., h1-h6)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Icon Library"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Carousel Style (Ticker, Grid, 3D Carousel)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Effect (Default, Cards, Coverflow)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Direction (Horizontal, Vertical)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Arrow/Navigation"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide Direction (Horizontal and Vertical)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Arrow Styles"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide On MouseWheel"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide on Mouse Drag"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Arrow Follow Mouse"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Lazy Load Enable"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Move From Edge"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Position (Left, Right, Center)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Reset On End"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Auto Hide Control"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Volume"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "PIP"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Airplay"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Settings"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Download"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fullscreen"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Margin"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Animation"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Delay"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Typography"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Colors"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Hover Colors"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Padding"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Border"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Border Radius"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Position (Bottom, Top, Right, Left)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Height"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Overly Color"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%s is available in the Premium version."
@@ -645,810 +802,1021 @@ msgid_plural "%s are available in the Premium version."
 msgstr[0] ""
 msgstr[1] ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Indicators/Pagination"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Import Title From Media Caption"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Controls"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Carousel Style"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Reverse Direction"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Direction"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Layout Settings"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Columns:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Set a count for each device using the icons above."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Column Gap:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Row Gap:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Content Position:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Item Height:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slider Height:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Tablet falls back to desktop, and mobile to tablet, wherever a height is left unset."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slider Options"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Animation/Effect:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Autoplay"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Interval(ms)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "How long each slide holds before the next one comes in, in milliseconds. 1000 is one second."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Pause on Mouse over"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Indicators"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Type"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Position:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Per Page"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Pagination Type"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Thumbnails"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Post"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Product"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%s Query"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Product Categories:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Categories:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Product Tags:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Tags:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%s Per Page:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Set -1 to show every post."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%s Order By:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%s Order:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "%s Offset:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Skips the first N posts. Ignored when `Per Page` is -1."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Excerpt from Content"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Content Length:"
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "Price"
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "Sale"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "— Featured image —"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "— Post default —"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "— Button panel text —"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Use ACF For"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "A field used here is hidden from the slide body. Its panel below carries the rest: whether every item uses it, which items differ, and putting it back on the slide as well."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Top left"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Top centre"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Top right"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Middle left"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Middle centre"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Middle right"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Bottom left"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Bottom centre"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Bottom right"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Position on the slide"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Chips"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Rows"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Card"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Outline"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Plain"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Ribbon"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Field style"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Stock"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "ACF"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Also show it on the slide"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "This field is used as the"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Turn this on to place it on the slide as well."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show label"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show on hover only"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Icon:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "An emoji or character shown before the value, e.g. 📍"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Prefix:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Suffix:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Offset X:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Offset Y:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "A plain number is px. Any CSS length works, e.g. 12px, -1em or 2rem."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Style:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Per Item:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Featured"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fixed"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Use the ACF image for every item"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Use the ACF title for every item"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Use the ACF description for every item"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Use the ACF button label for every item"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Use the ACF link for every item"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Each field sits on one of nine points over the slide. Offsets nudge it from there — any CSS length, negative to pull it back."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Default Field Style:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Used by every field left on Default."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Pick a field above to place it on the slide and style it."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "No ACF fields are available for this post type. In ACF, add a field group whose location rules target it."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Advanced Custom Fields is not installed. Install and activate ACF, then create a field group for this post type."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "ACF Integration"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "See how it works (2 min)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select ACF Fields:"
 msgstr ""
 
-#: build/index.js:1
+#: b-slider/build/index.js:1
 #, js-format
 msgid "Using %1$d of %2$d fields. bSlider Pro displays all of your ACF fields, the free version displays %2$d."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Post Badges"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Badges to Display:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Product Price"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Sale Badge"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Publish Date"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Author Name"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Search or select metadata like \"Product Price\" or \"Sale Badge\" to display them as customizable badges on top of your slides."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Search or select metadata like \"Publish Date\" or \"Author Name\" to display them as customizable badges on top of your slides."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "An emoji or character shown before the value."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Discount Percentage"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Sale Price Only"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Default Badges Style:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Effect"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Set my own delay"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Delay (s)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Duration (s)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Gap between badges (s)"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Video"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Popup enable"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Icon"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Repeat"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Autoplay might require muting based on the browser."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Muted"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "Premium %s"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Source & Layout"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Source Type"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Post Type"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Layout"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slides"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slide Content"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Title"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Description"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show Button"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Text"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Open in a new tab"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "About the slide links"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Picture and button open in a new tab."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Show content on hover"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "About the slide content"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Content shows when you hover the picture."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Enable hover for:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Button"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Content background"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "About the content background"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Pick the colour on the Style tab."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Tint the whole picture"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Fade behind the text"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Picture on hover"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Nothing"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Zoom in"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Zoom out"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Grey until pointed at"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "ACF Query"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Premium ACF Query"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Slider"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Laid over the image, under the title and description. Use a transparent colour to keep the image readable."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Typography:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Color"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Premium Button"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Arrow"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Icon Size"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Width:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Height:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Set per device. Tablet falls back to desktop, and mobile to tablet, wherever a size is left unset."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Background"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Active Color"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Width"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Radius:"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Active Border"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Overlay Color"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Tints every thumbnail. Leave it empty to show the images untouched."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Thumbnails Active"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Premium Thumbnails Active"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Badges & ACF Fields"
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "No products to show"
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "No posts to show"
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "Nothing matched this query. Widen the categories, tags or offset in the Product Query panel — or publish a product."
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "Nothing matched this query. Widen the categories, tags or offset in the Post Query panel — or publish a post."
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "There is nothing to show here yet. Please check back soon."
 msgstr ""
 
+#: b-slider/build/index.js:1
+#: b-slider/build/view.js:1
 #: build/index.js:1
 #: build/view.js:1
 msgid "Loading..."
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Posts"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Pages"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Back to Main Sources"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Step 1.5 of 2"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Post Type"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Choose which post type content you want to fetch and display in your slider"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 #, js-format
 msgid "Query all %s posts"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "WordPress blog posts"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Step 1 of 2"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Choose Content Source"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select the type of content you want to display in your slider"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Browse Post Types"
 msgstr ""
 
+#: b-slider/build/index.js:1
 #: build/index.js:1
 msgid "Select Source"
 msgstr ""
 
+#: build/index.js:1
+#, js-format
+msgid "%d field selected."
+msgid_plural "%d fields selected."
+msgstr[0] ""
+msgstr[1] ""
+
+#: b-slider/build/block.json
 #: build/block.json
 msgctxt "block title"
 msgid "Slider"
 msgstr ""
 
+#: b-slider/build/block.json
 #: build/block.json
 msgctxt "block description"
 msgid "Display Amazing Gutenberg Responsive Image And Content Slider"
 msgstr ""
 
+#: b-slider/build/block.json
 #: build/block.json
 msgctxt "block keyword"
 msgid "slider"
 msgstr ""
 
+#: b-slider/build/block.json
 #: build/block.json
 msgctxt "block keyword"
 msgid "bootstrap"
 msgstr ""
 
+#: b-slider/build/block.json
 #: build/block.json
 msgctxt "block keyword"
 msgid "carousel"

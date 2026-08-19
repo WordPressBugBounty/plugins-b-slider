@@ -96,15 +96,6 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
         }
 
         /**
-         * How many picked fields a slider displays. Mirrored in AcfFields.js as
-         * `FREE_ACF_FIELD_LIMIT`, which is what the editor caps its own preview by.
-         *
-         * The cap covers the picker only. Fields assigned to the image, title, description or
-         * button slot are a separate setting and are not counted against it.
-         */
-        const FREE_ACF_FIELD_LIMIT = 3;
-
-        /**
          * The ACF fields to pull for each post: the ones picked for display, plus any field
          * assigned to the image, title, description or button slot.
          *
@@ -112,10 +103,10 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
          * have to also list them under "Select ACF Fields" just to make the slot resolve — and
          * image fields are never listed there at all.
          *
-         * This is where the limit is enforced for real: every path that renders a slider comes
-         * through here, so a selection carried over from Pro — or written straight into the block
-         * markup — still comes back trimmed. The editor applies the same cap, but only so the
-         * preview agrees with the site; it is not what holds the line.
+         * There is no cap on how many fields may be picked — every field the user selected is
+         * fetched. What this still does is filter: every path that renders a slider comes through
+         * here, so a name written straight into the block markup cannot reach `get_post_meta()`
+         * unless ACF actually registered it for this post type.
          */
         static function acfFieldsToFetch( $postsQuery = [], $post_type = null ) {
             $post_type = $post_type ?: ( $postsQuery['post_type'] ?? 'post' );
@@ -125,10 +116,8 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
 
             // Names come in with the request and go out to `get_post_meta()`, so they are filtered
             // down to the fields ACF registered for this post type before anything else is done
-            // with them — see AcfFields::allowedFieldNames(). Filtering first also means a stale
-            // name left in a saved slider costs the user none of their three free slots.
+            // with them — see AcfFields::allowedFieldNames().
             $fields = self::allowedAcfFields( $fields, $post_type );
-            $fields = array_slice( $fields, 0, self::FREE_ACF_FIELD_LIMIT );
 
             foreach ( self::ACF_ROLE_KEYS as $key ) {
                 $name = trim( (string) ( $postsQuery[ $key ] ?? '' ) );

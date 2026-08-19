@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.0.1
-Stable tag: 2.0.19
+Stable tag: 2.0.20
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -213,7 +213,7 @@ No. ACF is optional. Install and activate [Advanced Custom Fields](https://wordp
 
 = How many ACF fields can I show on a slide? =
 
-The free version displays up to three fields per slide. bSlider Pro removes the limit. Fields you assign to the slide image, title, description, or button under **Use ACF For** do not count against those three.
+As many as you like — there is no limit on how many fields a slide can show. Fields you assign to the slide image, title, description, or button under **Use ACF For** are a separate setting and are shown on top of the ones you pick.
 
 = Where can I get support? =
 
@@ -263,6 +263,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 
 == Changelog ==
+
+= 2.0.20 - 19 August, 2026 =
+* New: The three-field limit on ACF fields is gone — a slide can now show every ACF field you pick, no upgrade needed;
 
 = 2.0.19 - 17 August, 2026 =
 * New: Added promotional/upsell panel for the ACF Query premium features under the ACF Integration panel;
@@ -493,6 +496,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Initial Release
 
 == Upgrade Notice ==
+
+= 2.0.20 - 19 August, 2026 =
+* Removes the three-field cap on ACF fields — show as many custom fields per slide as you like.
 
 = 2.0.19 - 17 August, 2026 =
 * Adds the ACF Query Pro panel, extends badge styling to ACF fields, and fixes ACF fields named after a badge, fields blocking the navigation arrows, and preset colours being overridden.
