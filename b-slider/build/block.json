@@ -4,7 +4,7 @@
   "name": "bsb/slider",
   "title": "Slider",
   "category": "widgets",
-  "version": "2.0.20",
+  "version": "2.1.0",
   "description": "Display Amazing Gutenberg Responsive Image And Content Slider",
   "keywords": [
     "slider",
@@ -65,6 +65,150 @@
         "buttonLinkField": "",
         "buttonLinkSource": "post",
         "buttonLinkOverrides": {}
+      }
+    },
+    "badgeStyle": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 12,
+            "tablet": 12,
+            "mobile": 11
+          },
+          "fontWeight": 500,
+          "lineHeight": "150%"
+        },
+        "colors": {
+          "color": "#ffffff",
+          "bg": "rgba(0,0,0,0.65)"
+        }
+      }
+    },
+    "badgeAnimation": {
+      "type": "object",
+      "default": {
+        "effect": "fadeInUp",
+        "duration": 0.6,
+        "start": "afterButton",
+        "delay": 0,
+        "stagger": 0.12
+      }
+    },
+    "listLayout": {
+      "type": "object",
+      "default": {
+        "listPosition": "below",
+        "rows": 4,
+        "thumbWidth": 168,
+        "thumbRatio": "16/9",
+        "rowGap": 8,
+        "rowPadding": 8,
+        "rowRadius": 10,
+        "titleLines": 2,
+        "stageRatio": "16/9",
+        "stickyStage": false,
+        "autoplayNext": true,
+        "loopList": false,
+        "showFilter": true,
+        "showDuration": true,
+        "showViews": true,
+        "showDate": true,
+        "showStageMeta": true,
+        "rememberProgress": true,
+        "hoverPreviewRows": true,
+        "rowBg": "",
+        "rowHoverBg": "rgba(0,0,0,0.05)",
+        "rowActiveBg": "rgba(24,108,245,0.10)",
+        "rowTitleColor": "#111827",
+        "rowMetaColor": "#6b7280",
+        "activeBarColor": "#ff0000",
+        "watchedColor": "#16a34a"
+      }
+    },
+    "socialQuery": {
+      "type": "object",
+      "default": {
+        "feedType": "youtube",
+        "activePreset": "",
+        "channelId": "",
+        "source": "",
+        "per_page": 12,
+        "videoSet": "latest",
+        "playVideo": "popup",
+        "miniPosition": "bottom-right",
+        "hoverPreview": false,
+        "hoverActions": true,
+        "instagramEmbedFallback": false,
+        "cacheTime": 21600,
+        "metaDateFormat": "M j, Y",
+        "storeLocal": false,
+        "syncInterval": 21600,
+        "seoSchema": "video",
+        "linkTarget": "",
+        "defaultImageUrl": "",
+        "imageFit": "blur",
+        "titleLength": -1,
+        "keywordFilter": "",
+        "excludeKeywordFilter": "",
+        "feedOrderBy": "date_desc",
+        "feedOffset": 0,
+        "feedAgeLimit": 0,
+        "selectedBadges": [],
+        "badgeSettings": {},
+        "badgeDisplayStyle": "chips",
+        "jsonRootKey": "",
+        "jsonImageKey": "",
+        "jsonTitleKey": "",
+        "jsonLinkKey": "",
+        "jsonExcerptKey": "",
+        "jsonButtonTextKey": "",
+        "jsonDateKey": "",
+        "jsonAuthorKey": "",
+        "showHeader": false,
+        "headerStyle": "card",
+        "showChannelStats": false,
+        "showHeaderBanner": false,
+        "headerBanner": "",
+        "headerBannerHeight": 180,
+        "headerAvatar": "",
+        "headerName": "",
+        "headerBio": "",
+        "headerLink": "",
+        "headerFollowText": "Follow",
+        "showFollowers": false,
+        "showFollowButton": false,
+        "followButtonText": "",
+        "followButtonAlign": "center",
+        "ytQueryType": "channel",
+        "ytSearchTerm": "",
+        "ytPlaylistId": "",
+        "ytThumbQuality": "maxresdefault",
+        "ytPrivacyStatus": "all",
+        "usePlyr": true,
+        "ytAutoplay": true,
+        "ytMute": false,
+        "ytControls": true,
+        "ytFullscreen": true,
+        "ytKeyboard": true,
+        "ytCaptions": false,
+        "ytNoCookie": true,
+        "ytRel": false,
+        "ytLazy": true,
+        "rssTimezoneOffset": "",
+        "rssTranslateDate": "",
+        "rssLocalTimezone": false,
+        "igAllowImage": true,
+        "igAllowAlbum": true,
+        "igAllowVideo": true,
+        "showLikesComments": false,
+        "hoverActionsPosition": "top-right",
+        "showSourceIcon": true,
+        "showPlayIcon": true,
+        "igAutoplay": true,
+        "igMute": true,
+        "igControls": true,
+        "igLoop": true
       }
     },
     "woocommerceQuery": {
@@ -139,7 +283,9 @@
         "reverseDirection": false,
         "caroDirection": "horizontal",
         "navigation": true,
-        "pagination": true
+        "pagination": true,
+        "itemsPerSlide": 1,
+        "groupColumns": 1
       }
     },
     "grid": {
@@ -149,12 +295,12 @@
         "loadMoreBtn": {
           "typo": {
             "fontSize": {
-              "desktop": 25,
-              "tablet": 20,
-              "mobile": 15
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 14
             },
-            "fontWeight": 700,
-            "lineHeight": "135%"
+            "fontWeight": 600,
+            "lineHeight": "140%"
           },
           "colors": {
             "color": "#000",
@@ -210,7 +356,16 @@
             "style": "solid",
             "width": "0px"
           }
-        }
+        },
+        "mode": "slider",
+        "showStage": true,
+        "showDuration": false,
+        "showPlay": false,
+        "navPosition": "overlay",
+        "cardStyle": "bare",
+        "showCardTitle": false,
+        "showCardMeta": false,
+        "showCardExcerpt": false
       }
     },
     "videoConf": {
@@ -245,7 +400,8 @@
     "title": {
       "type": "object",
       "default": {
-        "isVisible": true
+        "isVisible": true,
+        "tag": "h5"
       }
     },
     "desc": {
@@ -265,7 +421,129 @@
       "type": "object",
       "default": {
         "hover": "none",
-        "linkTarget": ""
+        "linkTarget": "",
+        "link": "none"
+      }
+    },
+    "headerNameTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 16,
+          "tablet": 16,
+          "mobile": 15
+        },
+        "fontWeight": 700,
+        "lineHeight": "120%"
+      }
+    },
+    "headerNameColor": {
+      "type": "string",
+      "default": ""
+    },
+    "likesCommentsColor": {
+      "type": "string",
+      "default": ""
+    },
+    "playIconColor": {
+      "type": "string",
+      "default": ""
+    },
+    "playIconBg": {
+      "type": "string",
+      "default": ""
+    },
+    "playIconHoverBg": {
+      "type": "string",
+      "default": ""
+    },
+    "likesCommentsTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 14,
+          "tablet": 14,
+          "mobile": 13
+        },
+        "fontWeight": 500,
+        "lineHeight": "120%"
+      }
+    },
+    "cardLayout": {
+      "type": "boolean",
+      "default": false
+    },
+    "cardBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "cardPadding": {
+      "type": "object",
+      "default": {
+        "top": "16px",
+        "right": "16px",
+        "bottom": "16px",
+        "left": "16px"
+      }
+    },
+    "cardRadius": {
+      "type": "object",
+      "default": {
+        "top": "8px",
+        "right": "8px",
+        "bottom": "8px",
+        "left": "8px"
+      }
+    },
+    "headerBioTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 13,
+          "tablet": 13,
+          "mobile": 12
+        },
+        "fontWeight": 400,
+        "lineHeight": "130%"
+      }
+    },
+    "headerBioColor": {
+      "type": "string",
+      "default": "#666666"
+    },
+    "headerFollowersTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 13,
+          "tablet": 13,
+          "mobile": 12
+        },
+        "fontWeight": 400,
+        "lineHeight": "130%"
+      }
+    },
+    "headerFollowersColor": {
+      "type": "string",
+      "default": "#666666"
+    },
+    "headerBtnTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 13,
+          "tablet": 13,
+          "mobile": 12
+        },
+        "fontWeight": 600,
+        "lineHeight": "120%"
+      }
+    },
+    "headerBtnColors": {
+      "type": "object",
+      "default": {
+        "color": "#ffffff",
+        "bg": "#0095f6"
       }
     },
     "titleFCaption": {
@@ -294,34 +572,6 @@
         "effect": "zoomIn",
         "delay": 1.4,
         "duration": 0.7
-      }
-    },
-    "badgeAnimation": {
-      "type": "object",
-      "default": {
-        "effect": "fadeInUp",
-        "duration": 0.6,
-        "start": "afterButton",
-        "delay": 0,
-        "stagger": 0.12
-      }
-    },
-    "badgeStyle": {
-      "type": "object",
-      "default": {
-        "typo": {
-          "fontSize": {
-            "desktop": 12,
-            "tablet": 12,
-            "mobile": 11
-          },
-          "fontWeight": 500,
-          "lineHeight": "150%"
-        },
-        "colors": {
-          "color": "#ffffff",
-          "bg": "rgba(0,0,0,0.65)"
-        }
       }
     },
     "isMouseWheel": {
@@ -445,13 +695,17 @@
       "type": "string",
       "default": "0px"
     },
+    "gridItemRatio": {
+      "type": "string",
+      "default": "1/1"
+    },
     "arrow": {
       "type": "object",
       "default": {
         "visibility": true,
         "size": 48,
         "color": "#fff",
-        "bg": "transparent"
+        "bg": "rgba(17, 17, 17, 0.55)"
       }
     },
     "arrowWidth": {

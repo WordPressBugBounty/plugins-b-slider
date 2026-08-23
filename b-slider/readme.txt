@@ -3,8 +3,8 @@ Contributors: bplugins, abuhayat, btechnologies, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
-Tested up to: 7.0.1
-Stable tag: 2.0.20
+Tested up to: 7.1
+Stable tag: 2.1.0
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -106,6 +106,14 @@ You can use bSlider for product showcases, portfolios, testimonials, or hero sec
 - **ACF Query – Filter by Custom Field**: Show only the posts that match your rules, e.g. price is at least 2000, stock has "In stock", event date is after today. Build as many rules as you need and match all of them or any of them.
 - **Rules Built From Your Fields**: Each rule offers the comparisons that suit the field and, for dropdown, radio and checkbox fields, a list of that field's own choices — no typing values by hand and no guessing which comparison works.
 - **Badge & Field Icon Library**: Pick an icon for any badge or ACF field from Font Awesome, Bootstrap or Lucide instead of typing an emoji.
+- **Social & External Feeds Source**: Build a slider straight from a YouTube channel or playlist, an Instagram account, an RSS feed, or any JSON endpoint, with the feed cached and refreshed on a schedule you set.
+- **Feed Presets**: Ready-made sliders (YouTube channel grid, player grid, theater, Instagram reels player, card and hover-overlay grids) that set the layout, player and styling in one pick.
+- **Profile Header Card**: The channel, account or publication's name, picture and follower count above the slider, with a Follow or Subscribe button.
+- **Mini Player**: A video that docks into a corner and keeps playing while the visitor carries on using the page, without ever reloading.
+- **Hover Preview**: Pointing at a video slide plays a preview in place, fetched only after the cursor settles so scrolling past costs nothing.
+- **YouTube Feed Controls**: Filter by search term, pick from the channel's own playlists, filter on privacy status, group results, and choose the thumbnail quality.
+- **Player Options**: Theme, progress bar colour, and lazy loading so a page of videos does not embed them all at once.
+- **List Layout**: A dedicated list layout with its own styling panel, alongside the Grid and Carousel layouts.
 
 [Upgrade to Pro](https://bplugins.com/products/b-slider/pricing/) to unlock all premium features.
 
@@ -263,6 +271,12 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 
 == Changelog ==
+
+= 2.1.0 - 22 August, 2026 =
+* New: Social Feeds source type tile and upsell notice in the Source & Layout sidebar panel;
+* New: List Layout & premium presets upsell notice below the Select Layout grid;
+* New: Compact promotional notices for Social Feeds and List Layout in the editor sidebar;
+* Update: ACF field & query options text in the Custom Post Types promotion;
 
 = 2.0.20 - 19 August, 2026 =
 * New: The three-field limit on ACF fields is gone — a slide can now show every ACF field you pick, no upgrade needed;
@@ -496,6 +510,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Initial Release
 
 == Upgrade Notice ==
+
+= 2.1.0 - 22 August, 2026 =
+* Adds the Social & External Feeds source (YouTube, Instagram, RSS, JSON) with feed presets, a profile header, a docking mini player, hover previews and a List layout.
 
 = 2.0.20 - 19 August, 2026 =
 * Removes the three-field cap on ACF fields — show as many custom fields per slide as you like.

@@ -1,7 +1,6 @@
-<?php 
+<?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Wrap in a function to avoid global variable scope warnings.
 call_user_func( function( $attributes ) {
 
     $sliders = [];
@@ -15,9 +14,6 @@ call_user_func( function( $attributes ) {
 
     $attributes['sliders'] = $sliders;
 
-    // `query()` is what decides the post type actually queried — it turns down anything this
-    // licence or the public is not entitled to — so the taxonomies and the ACF allow list are
-    // both built from its answer rather than from the saved attribute.
     $query = \B_SLIDER\Posts::query( $attributes );
 
     $post_type = $query['post_type'];
@@ -36,7 +32,6 @@ call_user_func( function( $attributes ) {
         id='bsbCarousel-<?php echo esc_attr( isset( $attributes['cId'] ) ? $attributes['cId'] : '' ); ?>'
         data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'
         data-nonce='<?php echo esc_attr( wp_json_encode( wp_create_nonce( \B_SLIDER\PostsAjax::NONCE_ACTION ) ) ); ?>'
-        <?php // The pagination total: IDs only, since nothing but the count is wanted. ?>
         data-totalposts='<?php echo esc_attr( count( get_posts( array_merge( $query, [ 'posts_per_page' => -1, 'fields' => 'ids' ] ) ) ) ); ?>'
     >
         <pre id='posts' style='display: none;'>

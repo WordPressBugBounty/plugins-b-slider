@@ -23,8 +23,8 @@ if(!class_exists(__NAMESPACE__ . '\AdminMenu')) {
              
             add_submenu_page(
                 'edit.php?post_type=bsb',
-                __('Demo & Help', 'b-slider'),
-                __('Demo & Help', 'b-slider'),
+                __('Help & Demos', 'b-slider'),
+                '<span style="color:#f18500;font-weight:bold;">' . __('Help & Demos', 'b-slider') . '</span>',
                 'manage_options',
                 'b-slider',
                 [$this, 'bsbHelpPage']
