@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,8 @@ https://www.youtube.com/watch?v=DOvUG5ArWHE
 [bSlider](https://bplugins.com/products/b-slider/) makes it easy to build engaging sliders without coding. Choose from smooth transitions like fade, slide, or flip, and customize titles, buttons, indicators, and arrows. Add slides quickly, reorder them with drag-and-drop, and adjust settings per device for fully responsive layouts.
 
 You can use bSlider for product showcases, portfolios, testimonials, or hero sections. It works with any WordPress theme. You can add sliders using the Gutenberg block or place them anywhere with a shortcode.
+
+https://www.youtube.com/watch?v=Pj7veTzHbQk
 
 === Key Features –  Free Version ===
 - **Shortcode Support** – Insert sliders anywhere on your site, even outside Gutenberg, using shortcodes.
@@ -67,7 +69,7 @@ You can use bSlider for product showcases, portfolios, testimonials, or hero sec
 - **WooCommerce Sale Badge**: Show a "Sale!" badge or the exact discount percentage (e.g. −25%) on products that are on sale.
 - **Badge Animation**: Choose the effect, let the badges follow the caption or set your own delay, and space them so several cascade.
 - **Badge Styling**: One set of typography and colours for every badge on the slider.
-- **Selective Hover Controls**: When content is shown on hover, choose exactly which parts appear — title, description, button, date, author, price or sale — independently.
+- **Selective Hover Controls**: When content is shown on hover, choose exactly which parts appear title, description, button, date, author, price or sale  independently.
 
 === bSlider Pro – Unlock Premium Features ===
 [bSlider Pro](https://bplugins.com/products/b-slider/pricing/) gives you more design power and control. Add advanced effects, flexible layouts, and interactive options to create engaging, professional sliders.
@@ -102,9 +104,9 @@ You can use bSlider for product showcases, portfolios, testimonials, or hero sec
 - **Clickable CTA Buttons**: Add custom button labels and URLs directly into slide content.
 - **Smart Link Behavior**: Option to open button links in a new browser tab automatically.
 - **Advanced Carousel Styles**: Create unique carousels with ticker, grid, and 3D effects.
-- **ACF Query – Sort by Custom Field**: Order slides by any ACF field — price, rating, event date, a manual sort order — as numbers or as text, ascending or descending, with the option to hide posts that left the field blank.
+- **ACF Query – Sort by Custom Field**: Order slides by any ACF field  price, rating, event date, a manual sort order  as numbers or as text, ascending or descending, with the option to hide posts that left the field blank.
 - **ACF Query – Filter by Custom Field**: Show only the posts that match your rules, e.g. price is at least 2000, stock has "In stock", event date is after today. Build as many rules as you need and match all of them or any of them.
-- **Rules Built From Your Fields**: Each rule offers the comparisons that suit the field and, for dropdown, radio and checkbox fields, a list of that field's own choices — no typing values by hand and no guessing which comparison works.
+- **Rules Built From Your Fields**: Each rule offers the comparisons that suit the field and, for dropdown, radio and checkbox fields, a list of that field's own choices  no typing values by hand and no guessing which comparison works.
 - **Badge & Field Icon Library**: Pick an icon for any badge or ACF field from Font Awesome, Bootstrap or Lucide instead of typing an emoji.
 - **Social & External Feeds Source**: Build a slider straight from a YouTube channel or playlist, an Instagram account, an RSS feed, or any JSON endpoint, with the feed cached and refreshed on a schedule you set.
 - **Feed Presets**: Ready-made sliders (YouTube channel grid, player grid, theater, Instagram reels player, card and hover-overlay grids) that set the layout, player and styling in one pick.
@@ -137,6 +139,27 @@ Enjoy smooth, responsive sliders on your site!
 [Live Demo](https://bplugins.com/products/b-slider/#demos) | [Try the Pro Version](https://bplugins.com/products/b-slider/pricing/)
 
 * For installation help click on Installation Tab
+
+=== Video Tutorials ===
+
+Short walkthroughs of what the plugin can do. The first one covers a panel in this free version and
+is linked from inside the plugin, at the top of that panel. The rest cover the Social & External
+Feeds source, which is a [Pro](https://bplugins.com/products/b-slider/pricing/) feature  they are
+here so you can see how it works before deciding.
+
+**Works in this free version**
+
+* [Slide content, post badges and WooCommerce badges](https://www.youtube.com/watch?v=ublq1N-Bc3o&list=PLaYpMGTB1oSs&index=1)
+
+**Pro only  [Social & External Feeds](https://bplugins.com/products/b-slider/pricing/)**
+
+* [Getting YouTube access for private and unlisted videos](https://www.youtube.com/watch?v=EqZXgw5PyKs&list=PLaYpMGTB1oSs&index=2)
+* [Creating a YouTube Data API key](https://www.youtube.com/watch?v=yFby1EJNUR4&list=PLaYpMGTB1oSs&index=3)
+* [Social feeds from start to finish](https://www.youtube.com/watch?v=AzpHDAbiHZI&list=PLaYpMGTB1oSs&index=4)
+* [Mapping a JSON feed onto slides](https://www.youtube.com/watch?v=6NngvNWhTSE&list=PLaYpMGTB1oSs&index=5)
+* [Getting an Instagram Access Token](https://www.youtube.com/watch?v=C3lNbKLdHM8&list=PLaYpMGTB1oSs&index=6)
+
+[Watch the whole playlist](https://www.youtube.com/playlist?list=PLaYpMGTB1oSs)
 
 ### User Feedback
 
@@ -221,7 +244,19 @@ No. ACF is optional. Install and activate [Advanced Custom Fields](https://wordp
 
 = How many ACF fields can I show on a slide? =
 
-As many as you like — there is no limit on how many fields a slide can show. Fields you assign to the slide image, title, description, or button under **Use ACF For** are a separate setting and are shown on top of the ones you pick.
+As many as you like  there is no limit on how many fields a slide can show. Fields you assign to the slide image, title, description, or button under **Use ACF For** are a separate setting and are shown on top of the ones you pick.
+
+= How do I get a YouTube API key or an Instagram access token? =
+
+These are only needed for the Social & External Feeds source, which is a
+[Pro](https://bplugins.com/products/b-slider/pricing/) feature. Both credentials are made outside
+WordPress, so there is a video for each.
+
+* [Creating a YouTube Data API key](https://www.youtube.com/watch?v=yFby1EJNUR4&list=PLaYpMGTB1oSs&index=3)
+* [Getting an Instagram Access Token](https://www.youtube.com/watch?v=C3lNbKLdHM8&list=PLaYpMGTB1oSs&index=6)
+* [Getting YouTube OAuth access, for private and unlisted videos](https://www.youtube.com/watch?v=EqZXgw5PyKs&list=PLaYpMGTB1oSs&index=2)
+
+In Pro each of these is also linked inside the plugin, beside the field that asks for it.
 
 = Where can I get support? =
 
@@ -272,6 +307,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Changelog ==
 
+= 2.1.1 - 31 August, 2026 =
+* New: A tutorial video link at the top of the Slide Content panel, and the full tutorial list in the readme;
+
 = 2.1.0 - 22 August, 2026 =
 * New: Social Feeds source type tile and upsell notice in the Source & Layout sidebar panel;
 * New: List Layout & premium presets upsell notice below the Select Layout grid;
@@ -279,36 +317,36 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Update: ACF field & query options text in the Custom Post Types promotion;
 
 = 2.0.20 - 19 August, 2026 =
-* New: The three-field limit on ACF fields is gone — a slide can now show every ACF field you pick, no upgrade needed;
+* New: The three-field limit on ACF fields is gone  a slide can now show every ACF field you pick, no upgrade needed;
 
 = 2.0.19 - 17 August, 2026 =
 * New: Added promotional/upsell panel for the ACF Query premium features under the ACF Integration panel;
 * New: The ACF Integration and Post Badges panels now say that the icon library is a premium feature, alongside the character you can type in the free version;
 * New: The Style tab's badge typography and colours now apply to ACF fields as well, so badges and fields on one slide share a look, and the section appears for a slider that has fields but no badges;
-* Fix: An ACF field named price, date, author or sale could not be moved off its default corner — badge settings of the same name were taking over the field's position, icon and style;
+* Fix: An ACF field named price, date, author or sale could not be moved off its default corner  badge settings of the same name were taking over the field's position, icon and style;
 * Fix: An ACF field placed over a navigation arrow swallowed the click and the slider stopped advancing;
 * Fix: An ACF field named date or author could be forced to hover-only by a badge that was not on the slide;
 * Fix: A chosen badge colour overrode the outline, plain and ribbon presets even when no colour had been picked;
 * Fix: Cleaned up unused variables and resolved ESLint warnings in settings components;
 
 = 2.0.18 - 11 August, 2026 =
-* New: Slide Content panel — one place to show or hide a slide's title, description and button, and to set the button label;
+* New: Slide Content panel  one place to show or hide a slide's title, description and button, and to set the button label;
 * New: Show the slide content on hover only, so the picture stands on its own until it is pointed at;
-* New: Selective hover controls — when content appears on hover, pick which parts show (title, description, button, date, author, price, sale) independently;
-* New: Content background choice — tint the whole picture, fade the colour in behind the text, or use none;
-* New: Picture on hover — zoom in, zoom out, or grey until pointed at;
+* New: Selective hover controls  when content appears on hover, pick which parts show (title, description, button, date, author, price, sale) independently;
+* New: Content background choice  tint the whole picture, fade the colour in behind the text, or use none;
+* New: Picture on hover  zoom in, zoom out, or grey until pointed at;
 * New: A slide's picture is now a link to the post or product wherever the button points, with an option to open both in a new tab;
-* New: Post Badges panel — show the publish date and the author name as badges over a slide, each with its own icon, prefix, suffix, corner, offset and style preset;
-* New: WooCommerce Product Price badge — display product prices (regular and sale) with a toggle to show only the sale price;
-* New: WooCommerce Sale badge — show "Sale!" text or the exact discount percentage (e.g. −25%) on products that are on sale;
-* New: Badge animation — pick the effect, let the badges follow the caption or set your own delay, and space them apart so several cascade;
+* New: Post Badges panel  show the publish date and the author name as badges over a slide, each with its own icon, prefix, suffix, corner, offset and style preset;
+* New: WooCommerce Product Price badge  display product prices (regular and sale) with a toggle to show only the sale price;
+* New: WooCommerce Sale badge  show "Sale!" text or the exact discount percentage (e.g. −25%) on products that are on sale;
+* New: Badge animation  pick the effect, let the badges follow the caption or set your own delay, and space them apart so several cascade;
 * New: Badges section on the Style tab for the typography and colours every badge shares;
 * Fix: Advanced Custom Fields link, url and email fields are now sanitised before they are used as a link;
 * Fix: Badges and ACF fields animated only the first time a slide was hovered when the content is revealed on hover, and afterwards simply appeared;
 * Fix: 42 control labels were tagged with the wrong text domain and never translated;
 
 = 2.0.17 - 02 August, 2026 =
-* New: Default Post Type support — build sliders using standard WordPress post types (Posts, Pages, and Products);
+* New: Default Post Type support  build sliders using standard WordPress post types (Posts, Pages, and Products);
 * New: Locked custom post types (CPTs) behind Pro with a modern sidebar and wizard upgrade promotion;
 * New: Advanced Custom Fields (ACF) on slides with a limit of three fields per slide (Pro removes this limit);
 * New: Use an ACF field for the slide image, title, description, button label, or button link, and override it per item;
@@ -511,11 +549,14 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Upgrade Notice ==
 
+= 2.1.1 - 31 August, 2026 =
+* Adds a tutorial video link to the Slide Content panel.
+
 = 2.1.0 - 22 August, 2026 =
 * Adds the Social & External Feeds source (YouTube, Instagram, RSS, JSON) with feed presets, a profile header, a docking mini player, hover previews and a List layout.
 
 = 2.0.20 - 19 August, 2026 =
-* Removes the three-field cap on ACF fields — show as many custom fields per slide as you like.
+* Removes the three-field cap on ACF fields  show as many custom fields per slide as you like.
 
 = 2.0.19 - 17 August, 2026 =
 * Adds the ACF Query Pro panel, extends badge styling to ACF fields, and fixes ACF fields named after a badge, fields blocking the navigation arrows, and preset colours being overridden.
