@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.1.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/blocks-b-slider-free\n"
+"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-31T14:32:55+00:00\n"
+"POT-Creation-Date: 2026-09-09T07:00:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-slider\n"
@@ -35,19 +35,19 @@ msgstr ""
 msgid "bPlugins"
 msgstr ""
 
-#: b-slider.php:93
+#: b-slider.php:94
 msgid "Go Pro!"
 msgstr ""
 
-#: b-slider.php:96
+#: b-slider.php:97
 msgid "Dashboard!"
 msgstr ""
 
-#: b-slider.php:107
+#: b-slider.php:108
 msgid "Docs & FAQs"
 msgstr ""
 
-#: b-slider.php:109
+#: b-slider.php:110
 msgid "Demos"
 msgstr ""
 
@@ -92,7 +92,8 @@ msgid "Edit"
 msgstr ""
 
 #: includes/custom-post.php:29
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "New"
 msgstr ""
 
@@ -120,7 +121,7 @@ msgstr ""
 msgid "Sorry, we couldn't find the that you are looking for."
 msgstr ""
 
-#: includes/custom-post.php:111
+#: includes/custom-post.php:120
 #: assets/js/admin.js:9
 msgid "Copy To Clipboard"
 msgstr ""
@@ -129,1347 +130,1834 @@ msgstr ""
 msgid "Copied Successfully!"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "What this does"
 msgstr ""
 
-#: build/index.js:1
-msgid "Slide"
-msgstr ""
-
-#: build/index.js:1
-msgid "Enter Video URL"
-msgstr ""
-
-#: build/index.js:1
-msgid "Enter Image URL"
-msgstr ""
-
-#: build/index.js:1
-msgid "Image Alt"
-msgstr ""
-
-#: build/index.js:1
-msgid "top"
-msgstr ""
-
-#: build/index.js:1
-msgid "Enter Image Alt Text"
-msgstr ""
-
-#: build/index.js:1
-msgid "Title"
-msgstr ""
-
-#: build/index.js:1
-msgid "Enter Title"
-msgstr ""
-
-#: build/index.js:1
-msgid "Description"
-msgstr ""
-
-#: build/index.js:1
-msgid "Enter desc"
-msgstr ""
-
-#: build/index.js:1
-msgid " and "
-msgstr ""
-
-#: build/index.js:1
-#, js-format
-msgid "%1$s, and %2$d more"
-msgstr ""
-
-#: build/index.js:1
-msgid "Unlock with Pro"
-msgstr ""
-
-#: build/index.js:1
-#, js-format
-msgid "%d custom post type is Pro only."
-msgid_plural "%d custom post types are Pro only."
-msgstr[0] ""
-msgstr[1] ""
-
-#: build/index.js:1
-msgid "Custom post types are Pro only."
-msgstr ""
-
-#: build/index.js:1
-msgid "Pro Feature"
-msgstr ""
-
-#: build/index.js:1
-#, js-format
-msgid "%d Custom Post Type Available in Pro"
-msgid_plural "%d Custom Post Types Available in Pro"
-msgstr[0] ""
-msgstr[1] ""
-
-#: build/index.js:1
-msgid "Custom Post Types Available in Pro"
-msgstr ""
-
-#: build/index.js:1
-#, js-format
-msgid "Unlock %s and every custom post type you create — with advanced filtering, ACF field support, and more."
-msgstr ""
-
-#: build/index.js:1
-msgid "Unlock every custom post type you create — with advanced filtering, ACF field support, and more."
-msgstr ""
-
-#: build/index.js:1
-msgid "All custom post types"
-msgstr ""
-
-#: build/index.js:1
-msgid "ACF field & query options"
-msgstr ""
-
-#: build/index.js:1
-msgid "Advanced query filters"
-msgstr ""
-
-#: build/index.js:1
-msgid "Upgrade to Pro"
-msgstr ""
-
-#: build/index.js:1
-msgid "Slide your custom post types"
-msgstr ""
-
-#: build/index.js:1
-#, js-format
-msgid "Standard post types (Posts, Pages, Products) are free. Pro unlocks custom post types like %s."
-msgstr ""
-
-#: build/index.js:1
-msgid "Standard post types (Posts, Pages, Products) are free. Pro unlocks every custom post type you register."
-msgstr ""
-
-#: build/index.js:1
-msgid "Include & exclude posts"
-msgstr ""
-
-#: build/index.js:1
-msgid "List Layout (YouTube only) & premium presets are Pro only."
-msgstr ""
-
-#: build/index.js:1
-msgid "Slide YouTube feeds with List Layout"
-msgstr ""
-
-#: build/index.js:1
-msgid "Upgrade to Pro to unlock the List Layout for YouTube feeds (active video player above, playlist below) and premium pre-designed style presets."
-msgstr ""
-
-#: build/index.js:1
-#: build/view.js:1
-msgid "Author"
-msgstr ""
-
-#: build/index.js:1
-#: build/view.js:1
-msgid "Date"
-msgstr ""
-
-#: build/index.js:1
-msgid "Last Modified"
-msgstr ""
-
-#: build/index.js:1
-msgid "Ascending"
-msgstr ""
-
-#: build/index.js:1
-msgid "Descending"
-msgstr ""
-
-#: build/index.js:1
-msgid "Default"
-msgstr ""
-
-#: build/index.js:1
-msgid "Image"
-msgstr ""
-
-#: build/index.js:1
-msgid "Horizontal"
-msgstr ""
-
-#: build/index.js:1
-msgid "Vertical"
-msgstr ""
-
-#: build/index.js:1
-msgid "None"
-msgstr ""
-
-#: build/index.js:1
-msgid "Pagination"
-msgstr ""
-
-#: build/index.js:1
-msgid "Load More"
-msgstr ""
-
-#: build/index.js:1
-msgid "Bottom Center"
-msgstr ""
-
-#: build/index.js:1
-msgid "Center Center"
-msgstr ""
-
-#: build/index.js:1
-msgid "Play Large"
-msgstr ""
-
-#: build/index.js:1
-msgid "Restart"
-msgstr ""
-
-#: build/index.js:1
-msgid "Rewind"
-msgstr ""
-
-#: build/index.js:1
-msgid "Play"
-msgstr ""
-
-#: build/index.js:1
-msgid "Fast Forward"
-msgstr ""
-
-#: build/index.js:1
-msgid "Progress"
-msgstr ""
-
-#: build/index.js:1
-msgid "Current Time"
-msgstr ""
-
-#: build/index.js:1
-msgid "Duration"
-msgstr ""
-
-#: build/index.js:1
-msgid "Mute"
-msgstr ""
-
-#: build/index.js:1
-msgid "Bottom"
-msgstr ""
-
-#: build/index.js:1
-msgid "Top"
-msgstr ""
-
-#: build/index.js:1
-msgid "Left"
-msgstr ""
-
-#: build/index.js:1
-msgid "Right"
-msgstr ""
-
-#: build/index.js:1
-msgid "Standard"
-msgstr ""
-
-#: build/index.js:1
-msgid "Center"
-msgstr ""
-
-#: build/index.js:1
-msgid "Cards"
-msgstr ""
-
-#: build/index.js:1
-msgid "Coverflow"
-msgstr ""
-
-#: build/index.js:1
-msgid "Style 1"
-msgstr ""
-
-#: build/index.js:1
-msgid "Fade In Left"
-msgstr ""
-
-#: build/index.js:1
-msgid "Fade In Right"
-msgstr ""
-
-#: build/index.js:1
-msgid "Fade In Up"
-msgstr ""
-
-#: build/index.js:1
-msgid "Fade In Down"
-msgstr ""
-
-#: build/index.js:1
-msgid "Fade In"
-msgstr ""
-
-#: build/index.js:1
-msgid "Zoom In"
-msgstr ""
-
-#: build/index.js:1
-msgid "Slide In Down"
-msgstr ""
-
-#: build/index.js:1
-msgid "Slide In Up"
-msgstr ""
-
-#: build/index.js:1
-msgid "Slide In Left"
-msgstr ""
-
-#: build/index.js:1
-msgid "Slide In Right"
-msgstr ""
-
-#: build/index.js:1
-msgid "Fade"
-msgstr ""
-
-#: build/index.js:1
-msgid "Flip"
-msgstr ""
-
-#: build/index.js:1
-msgid "General"
-msgstr ""
-
-#: build/index.js:1
-msgid "Style"
-msgstr ""
-
-#: build/index.js:1
-msgid "Show"
-msgstr ""
-
-#: build/index.js:1
-msgid "Hide"
-msgstr ""
-
-#: build/index.js:1
-msgid "Dot"
-msgstr ""
-
-#: build/index.js:1
-msgid "Loop"
-msgstr ""
-
-#: build/index.js:1
-msgid "Auto Play"
-msgstr ""
-
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Mouse Wheel"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Grab Cursor"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Button label"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Button Url"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Open In New Tab"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Include"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Exclude"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Current Post"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Sort by ACF Field"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Filter by ACF Field"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Custom HTML wrapper tags (e.g., h1-h6)"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Icon Library"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Carousel Style (Ticker, Grid, 3D Carousel)"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Effect (Default, Cards, Coverflow)"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Direction (Horizontal, Vertical)"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Show Arrow/Navigation"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Slide Direction (Horizontal and Vertical)"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Arrow Styles"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Slide On MouseWheel"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Slide on Mouse Drag"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Arrow Follow Mouse"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Lazy Load Enable"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Move From Edge"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Position (Left, Right, Center)"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Reset On End"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Auto Hide Control"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Volume"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "PIP"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Airplay"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Settings"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Download"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Fullscreen"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Margin"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Animation"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Delay"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Duration"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Typography"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Colors"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Hover Colors"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Padding"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Border"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Border Radius"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Position (Bottom, Top, Right, Left)"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Height"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Overly Color"
 msgstr ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Exit Animation"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fine-tuned Delay & Duration"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Float, Flash, Shake & Swing Loop Effects"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Word by Word Animation"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Post/Product Binding"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Dynamic Field Block"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Lottie Animation Layer"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Decorative Shapes — Blob, Ring, Scribble, Wave, Confetti & more"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 #, js-format
 msgid "%s is available in the Premium version."
 msgid_plural "%s are available in the Premium version."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/index.js:1
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+#: build/view.js:1
+msgid "Author"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Title"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+#: build/view.js:1
+msgid "Date"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Last Modified"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Ascending"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Descending"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Default"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Image"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Horizontal"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Vertical"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "None"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Pagination"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Load More"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Bottom Center"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Center Center"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Play Large"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Restart"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Rewind"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Play"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fast Forward"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Progress"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Current Time"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Mute"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Bottom"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Top"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Left"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Right"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Standard"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Center"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Cards"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Coverflow"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Style 1"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fade In Left"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fade In Right"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fade In Up"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fade In Down"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fade In"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Zoom In"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slide In Down"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slide In Up"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slide In Left"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slide In Right"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fade"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Flip"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "General"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Style"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Show"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Hide"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Dot"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Bounce In"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Flip In X"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Together (0s)"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "0.2s"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "0.5s"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "1s"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Pulse"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Bounce"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Float"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Flash"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Shake"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Swing"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slow"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Normal"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Fast"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Scale"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Lift"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Nothing"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Open a link"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Scroll to"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Next slide"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Previous slide"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#, js-format
+msgid "Delay for %s, in seconds"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Give a block inside this slide an entry animation, and it will appear here."
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#, js-format
+msgid "%1$s — runs for %2$ss. Click to select this block."
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Heading"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Your headline"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Button"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Two columns"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "This slide is empty"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Start with one of these, or pick any block."
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Browse all blocks"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Browse all"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Watch: build slides with blocks"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Hidden on"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Entry animation"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Start after"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+#, js-format
+msgid "Premium %s"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Loop animation"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Speed"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Amount"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Distance (px)"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Opacity"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "On hover"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Speed (seconds)"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "A button carries its own link — set it on the button itself."
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "On click"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Link"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Open in a new tab"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "The id or class of the section to scroll to."
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Font"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Desktop"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Tablet"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Mobile"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#, js-format
+msgid "Hide on %s"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#, js-format
+msgid "The layer is not drawn at all on %s."
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#, js-format
+msgid "Animate on %s"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Loop Animation"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Word by Word"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Hover & Click"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Responsive"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Dynamic Content"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Lottie Animation"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slide"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Stagger layers (seconds)"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "The gap between one layer starting and the next. A layer only moves if it has an Entry animation set."
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Timeline"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Background"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Overlay"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Decorations"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Corner radius"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Spacing & Alignment"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Align content"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Vertical position"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Middle"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Wrap long words"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Breaks a long link or other unspaced text to fit the slide."
+msgstr ""
+
+#: build/index.js:2
+msgid "Enter Video URL"
+msgstr ""
+
+#: build/index.js:2
+msgid "Enter Image URL"
+msgstr ""
+
+#: build/index.js:2
+msgid "Image Alt"
+msgstr ""
+
+#: build/index.js:2
+msgid "top"
+msgstr ""
+
+#: build/index.js:2
+msgid "Enter Image Alt Text"
+msgstr ""
+
+#: build/index.js:2
+msgid "Enter Title"
+msgstr ""
+
+#: build/index.js:2
+msgid "Description"
+msgstr ""
+
+#: build/index.js:2
+msgid "Enter desc"
+msgstr ""
+
+#: build/index.js:2
+msgid " and "
+msgstr ""
+
+#: build/index.js:2
+#, js-format
+msgid "%1$s, and %2$d more"
+msgstr ""
+
+#: build/index.js:2
+msgid "Unlock with Pro"
+msgstr ""
+
+#: build/index.js:2
+#, js-format
+msgid "%d custom post type is Pro only."
+msgid_plural "%d custom post types are Pro only."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:2
+msgid "Custom post types are Pro only."
+msgstr ""
+
+#: build/index.js:2
+msgid "Pro Feature"
+msgstr ""
+
+#: build/index.js:2
+#, js-format
+msgid "%d Custom Post Type Available in Pro"
+msgid_plural "%d Custom Post Types Available in Pro"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:2
+msgid "Custom Post Types Available in Pro"
+msgstr ""
+
+#: build/index.js:2
+#, js-format
+msgid "Unlock %s and every custom post type you create — with advanced filtering, ACF field support, and more."
+msgstr ""
+
+#: build/index.js:2
+msgid "Unlock every custom post type you create — with advanced filtering, ACF field support, and more."
+msgstr ""
+
+#: build/index.js:2
+msgid "All custom post types"
+msgstr ""
+
+#: build/index.js:2
+msgid "ACF field & query options"
+msgstr ""
+
+#: build/index.js:2
+msgid "Advanced query filters"
+msgstr ""
+
+#: build/index.js:2
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: build/index.js:2
+msgid "Slide your custom post types"
+msgstr ""
+
+#: build/index.js:2
+#, js-format
+msgid "Standard post types (Posts, Pages, Products) are free. Pro unlocks custom post types like %s."
+msgstr ""
+
+#: build/index.js:2
+msgid "Standard post types (Posts, Pages, Products) are free. Pro unlocks every custom post type you register."
+msgstr ""
+
+#: build/index.js:2
+msgid "Include & exclude posts"
+msgstr ""
+
+#: build/index.js:2
+msgid "Social & external feeds are Pro only."
+msgstr ""
+
+#: build/index.js:2
+msgid "Display social & external feeds"
+msgstr ""
+
+#: build/index.js:2
+msgid "Upgrade to Pro to fetch, cache and display slides straight from YouTube, Instagram, RSS, or custom JSON feeds, auto-synced on your schedule."
+msgstr ""
+
+#: build/index.js:2
+msgid "YouTube Feeds"
+msgstr ""
+
+#: build/index.js:2
+msgid "Instagram Feeds"
+msgstr ""
+
+#: build/index.js:2
+msgid "RSS & JSON Feeds"
+msgstr ""
+
+#: build/index.js:2
+msgid "Auto-sync Feeds"
+msgstr ""
+
+#: build/index.js:2
+msgid "Carousel Layout is in Pro — show several slides side by side."
+msgstr ""
+
+#: build/index.js:2
+msgid "List Layout (YouTube only) & premium presets are Pro only."
+msgstr ""
+
+#: build/index.js:2
+msgid "Carousel Layout"
+msgstr ""
+
+#: build/index.js:2
+msgid "Slide YouTube feeds with List Layout"
+msgstr ""
+
+#: build/index.js:2
+msgid "Show two or three slides side by side instead of one at a time."
+msgstr ""
+
+#: build/index.js:2
+msgid "Upgrade to Pro to unlock the List Layout for YouTube feeds (active video player above, playlist below) and premium pre-designed style presets."
+msgstr ""
+
+#: build/index.js:2
+msgid "Loop"
+msgstr ""
+
+#: build/index.js:2
+msgid "Auto Play"
+msgstr ""
+
+#: build/index.js:2
 msgid "Show Indicators/Pagination"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Import Title From Media Caption"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Controls"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Carousel Style"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Reverse Direction"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Direction"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Layout Settings"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Columns:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Set a count for each device using the icons above."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Column Gap:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Row Gap:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Content Position:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Item Height:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Slider Height:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
+msgid "Auto"
+msgstr ""
+
+#: build/index.js:2
 msgid "Tablet falls back to desktop, and mobile to tablet, wherever a height is left unset."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Slider Options"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Animation/Effect:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Autoplay"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Interval(ms)"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "How long each slide holds before the next one comes in, in milliseconds. 1000 is one second."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Pause on Mouse over"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Indicators"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Type"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Position:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Per Page"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Pagination Type"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Thumbnails"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Post"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Product"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #, js-format
 msgid "%s Query"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Product Categories:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Categories:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Product Tags:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Tags:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #, js-format
 msgid "%s Per Page:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Set -1 to show every post."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #, js-format
 msgid "%s Order By:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #, js-format
 msgid "%s Order:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #, js-format
 msgid "%s Offset:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Skips the first N posts. Ignored when `Per Page` is -1."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show Excerpt from Content"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Content Length:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "Price"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "Sale"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "— Featured image —"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "— Post default —"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "— Button panel text —"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Use ACF For"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "A field used here is hidden from the slide body. Its panel below carries the rest: whether every item uses it, which items differ, and putting it back on the slide as well."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Top left"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Top centre"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Top right"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Middle left"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Middle centre"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Middle right"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Bottom left"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Bottom centre"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Bottom right"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Position on the slide"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Chips"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Rows"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Card"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Outline"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Plain"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Ribbon"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Field style"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Stock"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "ACF"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Also show it on the slide"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "This field is used as the"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Turn this on to place it on the slide as well."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show label"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show on hover only"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Icon:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "An emoji or character shown before the value, e.g. 📍"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Prefix:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Suffix:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Offset X:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Offset Y:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "A plain number is px. Any CSS length works, e.g. 12px, -1em or 2rem."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Style:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Per Item:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Featured"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Fixed"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Use the ACF image for every item"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Use the ACF title for every item"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Use the ACF description for every item"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Use the ACF button label for every item"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Use the ACF link for every item"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Each field sits on one of nine points over the slide. Offsets nudge it from there — any CSS length, negative to pull it back."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Default Field Style:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Used by every field left on Default."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Pick a field above to place it on the slide and style it."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "No ACF fields are available for this post type. In ACF, add a field group whose location rules target it."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Advanced Custom Fields is not installed. Install and activate ACF, then create a field group for this post type."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "ACF Integration"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "See how it works (2 min)"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select ACF Fields:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #, js-format
 msgid "%d field selected."
 msgid_plural "%d fields selected."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/index.js:1
-msgid "Watch: slide content and badges"
-msgstr ""
-
-#: build/index.js:1
+#: build/index.js:2
 msgid "Post Badges"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Badges to Display:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Product Price"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Sale Badge"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Publish Date"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Author Name"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Search or select metadata like \"Product Price\" or \"Sale Badge\" to display them as customizable badges on top of your slides."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Search or select metadata like \"Publish Date\" or \"Author Name\" to display them as customizable badges on top of your slides."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "An emoji or character shown before the value."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show Discount Percentage"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show Sale Price Only"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Default Badges Style:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Effect"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Set my own delay"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Delay (s)"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Duration (s)"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Gap between badges (s)"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Video"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Popup enable"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Icon"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Repeat"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Autoplay might require muting based on the browser."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Muted"
 msgstr ""
 
-#: build/index.js:1
-#, js-format
-msgid "Premium %s"
-msgstr ""
-
-#: build/index.js:1
+#: build/index.js:2
 msgid "Source & Layout"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Source Type"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
+msgid "Switching away from Gutenberg Blocks will permanently delete all the slide content you've built here. Continue?"
+msgstr ""
+
+#: build/index.js:2
 msgid "Post Type"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Layout"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Slides"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Slide Content"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
+msgid "Watch: slide content and badges"
+msgstr ""
+
+#: build/index.js:2
 msgid "Show Title"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show Description"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show Button"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Text"
 msgstr ""
 
-#: build/index.js:1
-msgid "Open in a new tab"
-msgstr ""
-
-#: build/index.js:1
+#: build/index.js:2
 msgid "About the slide links"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Picture and button open in a new tab."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Show content on hover"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "About the slide content"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Content shows when you hover the picture."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Enable hover for:"
 msgstr ""
 
-#: build/index.js:1
-msgid "Button"
-msgstr ""
-
-#: build/index.js:1
+#: build/index.js:2
 msgid "Content background"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "About the content background"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Pick the colour on the Style tab."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Tint the whole picture"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Fade behind the text"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Picture on hover"
 msgstr ""
 
-#: build/index.js:1
-msgid "Nothing"
-msgstr ""
-
-#: build/index.js:1
+#: build/index.js:2
 msgid "Zoom in"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Zoom out"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Grey until pointed at"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "ACF Query"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Premium ACF Query"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Slider"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Laid over the image, under the title and description. Use a transparent colour to keep the image readable."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Typography:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Color"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Premium Button"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Arrow"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Icon Size"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Width:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Height:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Set per device. Tablet falls back to desktop, and mobile to tablet, wherever a size is left unset."
 msgstr ""
 
-#: build/index.js:1
-msgid "Background"
-msgstr ""
-
-#: build/index.js:1
+#: build/index.js:2
 msgid "Active Color"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Width"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Radius:"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Active Border"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Overlay Color"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Tints every thumbnail. Leave it empty to show the images untouched."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Thumbnails Active"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Premium Thumbnails Active"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Badges & ACF Fields"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "No products to show"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "No posts to show"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "Nothing matched this query. Widen the categories, tags or offset in the Product Query panel — or publish a product."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "Nothing matched this query. Widen the categories, tags or offset in the Post Query panel — or publish a post."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "There is nothing to show here yet. Please check back soon."
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #: build/view.js:1
 msgid "Loading..."
 msgstr ""
 
-#: build/index.js:1
-msgid "Social & external feeds are Pro only."
+#: build/index.js:2
+#, js-format
+msgid "Slide %d"
 msgstr ""
 
-#: build/index.js:1
-msgid "Display social & external feeds"
+#: build/index.js:2
+#, js-format
+msgid "Delete slide %d"
 msgstr ""
 
-#: build/index.js:1
-msgid "Upgrade to Pro to fetch, cache and display slides straight from YouTube, Instagram, RSS, or custom JSON feeds, auto-synced on your schedule."
+#: build/index.js:2
+msgid "Add Slide"
 msgstr ""
 
-#: build/index.js:1
-msgid "YouTube Feeds"
-msgstr ""
-
-#: build/index.js:1
-msgid "Instagram Feeds"
-msgstr ""
-
-#: build/index.js:1
-msgid "RSS & JSON Feeds"
-msgstr ""
-
-#: build/index.js:1
-msgid "Auto-sync Feeds"
-msgstr ""
-
-#: build/index.js:1
+#: build/index.js:2
 msgid "Posts"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Pages"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Back to Main Sources"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Step 1.5 of 2"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Post Type"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Choose which post type content you want to fetch and display in your slider"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 #, js-format
 msgid "Query all %s posts"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "WordPress blog posts"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Step 1 of 2"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Choose Content Source"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select the type of content you want to display in your slider"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Browse Post Types"
 msgstr ""
 
-#: build/index.js:1
+#: build/index.js:2
 msgid "Select Source"
 msgstr ""
 
@@ -1496,4 +1984,14 @@ msgstr ""
 #: build/block.json
 msgctxt "block keyword"
 msgid "carousel"
+msgstr ""
+
+#: build/Blocks/Slide/block.json
+msgctxt "block title"
+msgid "Slide"
+msgstr ""
+
+#: build/Blocks/Slide/block.json
+msgctxt "block description"
+msgid "A single slide inside a bSlider Gutenberg Blocks slider."
 msgstr ""

@@ -1,7 +1,44 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-call_user_func( function( $attributes ) {
+call_user_func( function( $attributes, $content ) {
+
+    if ( 'blocks' === ( isset( $attributes['sourceType'] ) ? $attributes['sourceType'] : '' ) ) {
+
+        // The slides reach the browser as a string that JS drops in with innerHTML, so nothing
+        // downstream expands shortcodes for us the way `the_content` would. A Shortcode block
+        // inside a slide is saved as its literal text, and without this it renders as that text.
+        $attributes['_blocksHtml'] = do_shortcode( $content );
+        if ( preg_match_all( '~font-family:\s*(?:\'|&\#039;|&quot;|")([A-Za-z][A-Za-z \-]{0,50})(?:\'|&\#039;|&quot;|")~', $content, $matches ) ) {
+
+            foreach ( array_unique( $matches[1] ) as $family ) {
+                $handle = 'bsb-font-' . sanitize_title( $family );
+
+                if ( ! wp_style_is( $handle, 'registered' ) ) {
+                    // phpcs:disable WordPress.WP.EnqueuedResourceParameters.MissingVersion
+                    wp_register_style(
+                        $handle,
+                        'https://fonts.googleapis.com/css2?family=' . str_replace( ' ', '+', $family ) . '&display=swap',
+                        [],
+                        null
+                    );
+                    // phpcs:enable WordPress.WP.EnqueuedResourceParameters.MissingVersion
+                }
+
+                wp_enqueue_style( $handle );
+            }
+        }
+        ?>
+        <div
+            <?php echo wp_kses_post( get_block_wrapper_attributes() ); ?>
+            id='bsbCarousel-<?php echo esc_attr( isset( $attributes['cId'] ) ? $attributes['cId'] : '' ); ?>'
+            data-attributes-b64='<?php echo esc_attr( base64_encode( wp_json_encode( $attributes ) ) ); ?>'
+            data-nonce='<?php echo esc_attr( wp_json_encode( wp_create_nonce( \B_SLIDER\PostsAjax::NONCE_ACTION ) ) ); ?>'
+            data-totalposts='0'
+        ></div>
+        <?php
+        return;
+    }
 
     $sliders = [];
     $posts_query = isset( $attributes['postsQuery'] ) ? $attributes['postsQuery'] : [];
@@ -39,4 +76,4 @@ call_user_func( function( $attributes ) {
         </pre>
     </div>
     <?php
-}, $attributes ); 
+}, $attributes, $content );

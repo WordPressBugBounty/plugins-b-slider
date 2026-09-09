@@ -3,20 +3,20 @@
  * Plugin Name: bSlider – Build Sliders That Bring Your Content to Life
  * Plugin URI: http://bplugins.com
  * Description: Simple slider with bootstrap.
- * Version: 2.1.1
+ * Version: 2.2.0
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: b-slider
  */
- 
+
     if (!defined('ABSPATH')) {exit;}
 
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.1.1');
+        define('B_SLIDER_PLUGIN_VERSION', '2.2.0');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));
@@ -39,7 +39,7 @@
                     'is_premium'          => false, 
                     'menu' => array(
                         'slug'           => 'edit.php?post_type=bsb',
-                        'first-path'     => 'edit.php?post_type=bsb&page=b-slider#/pricing',
+                        'first-path'     => 'edit.php?post_type=bsb&page=b-slider#/welcome',
                         'support'     => false,
                     )
                 ]);
@@ -66,6 +66,7 @@
             add_action('init', [$this, 'onInit']);
             add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2 );
             add_filter('plugin_row_meta', array($this, 'insert_plugin_row_meta'), 10, 2);
+            add_filter( 'register_block_type_args', [$this, 'registerBlockTypeArgs'], 10, 2 );
         }
 
         public static function get_instance() {
@@ -129,8 +130,25 @@
             }
         }
 
+        public function registerBlockTypeArgs( $args, $name ) {
+            $incapable = [ 'core/shortcode', 'core/html', 'core/freeform', 'core/missing' ];
+            if ( in_array( $name, $incapable, true ) ) {
+                return $args;
+            }
+
+            if ( ! isset( $args['attributes'] ) ) {
+                $args['attributes'] = [];
+            }
+            $args['attributes']['bsbLayer'] = [
+                'type'    => 'object',
+                'default' => [],
+            ];
+            return $args;
+        }
+
         public function onInit(){
             register_block_type( __DIR__ . '/build' );
+            register_block_type( __DIR__ . '/build/Blocks/Slide' );
         }
     }
     B_Slider::get_instance();

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bsb/slide",
+  "title": "Slide",
+  "category": "widgets",
+  "parent": [
+    "bsb/slider"
+  ],
+  "version": "2.2.0",
+  "description": "A single slide inside a bSlider Gutenberg Blocks slider.",
+  "textdomain": "b-slider",
+  "attributes": {
+    "bsbStagger": {
+      "type": "number",
+      "default": 0
+    },
+    "background": {
+      "type": "object",
+      "default": {}
+    },
+    "overlay": {
+      "type": "string",
+      "default": ""
+    },
+    "border": {
+      "type": "object",
+      "default": {}
+    },
+    "radius": {
+      "type": "object",
+      "default": {}
+    },
+    "padding": {
+      "type": "object",
+      "default": {}
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": ""
+    },
+    "wordWrap": {
+      "type": "boolean",
+      "default": true
+    },
+    "verticalAlign": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js"
+}

@@ -89,11 +89,20 @@ class CustomPost{
     public function displayContent( $post ){
         $blocks = parse_blocks( $post->post_content );
 
-        if ( empty( $blocks[0] ) ) {
-            return '';
+        $output = '';
+
+        foreach ( $blocks as $block ) {
+            // parse_blocks() hands back the whitespace between blocks as entries with no
+            // blockName. Rendering those emits stray text, and taking $blocks[0] blindly
+            // missed the slider whenever the content did not start on the block comment.
+            if ( empty( $block['blockName'] ) ) {
+                continue;
+            }
+
+            $output .= render_block( $block );
         }
 
-        return render_block( $blocks[0] );
+        return $output;
     }
 
 	function manageLPBPostsColumns( $defaults ) {
