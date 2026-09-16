@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.2.0\n"
+"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-09T07:00:29+00:00\n"
+"POT-Creation-Date: 2026-09-16T00:20:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-slider\n"
@@ -217,6 +217,46 @@ msgstr ""
 
 #: build/Blocks/Slide/index.js:2
 #: build/index.js:2
+msgid "Glass effect"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Button styling"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Caption typography"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Max width and height"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Gallery loop"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Custom caption"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Lightbox image per device"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Per-slide lightbox"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Slide Direction (Horizontal and Vertical)"
 msgstr ""
 
@@ -382,6 +422,21 @@ msgstr ""
 
 #: build/Blocks/Slide/index.js:2
 #: build/index.js:2
+msgid "Count-up Number Animation"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Prefix & Suffix"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Progress Ring"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
 msgid "Post/Product Binding"
 msgstr ""
 
@@ -398,6 +453,11 @@ msgstr ""
 #: build/Blocks/Slide/index.js:2
 #: build/index.js:2
 msgid "Decorative Shapes — Blob, Ring, Scribble, Wave, Confetti & more"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Ken Burns Effect"
 msgstr ""
 
 #: build/Blocks/Slide/index.js:2
@@ -766,6 +826,11 @@ msgid "Previous slide"
 msgstr ""
 
 #: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Open Lightbox"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
 #, js-format
 msgid "Delay for %s, in seconds"
 msgstr ""
@@ -885,6 +950,101 @@ msgid "The id or class of the section to scroll to."
 msgstr ""
 
 #: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Counter"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Thumbnail strip"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Zoom"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slideshow"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Rotate & Flip"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Caption"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Image caption"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Post title"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Product title"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slide title"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Caption Color"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Caption Background"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Background Color"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Caption Alignment"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Default (center)"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Caption Margin"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Backdrop"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Color"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Opacity (%)"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
 msgid "Font"
 msgstr ""
 
@@ -924,7 +1084,28 @@ msgid "Word by Word"
 msgstr ""
 
 #: build/Blocks/Slide/index.js:2
+msgid "Number Counter"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
 msgid "Hover & Click"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Lightbox"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Layout & Sizing"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Fit to Content"
+msgstr ""
+
+#: build/Blocks/Slide/index.js:2
+msgid "Shrinks the block background and container width to hug the inner content instead of stretching full width."
 msgstr ""
 
 #: build/Blocks/Slide/index.js:2
@@ -1256,6 +1437,10 @@ msgstr ""
 
 #: build/index.js:2
 msgid "Pause on Mouse over"
+msgstr ""
+
+#: build/index.js:2
+msgid "Lightbox on click"
 msgstr ""
 
 #: build/index.js:2
@@ -1798,10 +1983,6 @@ msgstr ""
 
 #: build/index.js:2
 msgid "Typography:"
-msgstr ""
-
-#: build/index.js:2
-msgid "Color"
 msgstr ""
 
 #: build/index.js:2

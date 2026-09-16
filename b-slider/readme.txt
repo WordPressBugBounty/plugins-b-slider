@@ -4,24 +4,24 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, bootstrap, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-bSlider is a WordPress slider plugin that lets you create responsive image, post, product, and video carousels using the Gutenberg block & shortcode.
+Responsive WordPress sliders from images, posts, WooCommerce products, videos or Gutenberg blocks — via the block editor or a shortcode.
 
 == Description ==
 
-**Create responsive sliders for images, posts, WooCommerce products, and videos with multiple layouts, animations, and customization options in WordPress. Design and display carousels, grids, and thumbnail sliders directly in the block editor with simple block and shortcode support.**
+**Create responsive sliders from images, posts, WooCommerce products, videos, or slides built out of Gutenberg blocks — with multiple layouts, animations, and styling controls, right in the block editor.**
 
-[bSlider](https://bplugins.com/products/b-slider/) | [Documentation](https://bplugins.com/docs/bslider) | [Pricing](https://bplugins.com/products/b-slider/pricing/) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/b-slider/#demos)
+[Documentation](https://bplugins.com/docs/bslider) | [Demo](https://bplugins.com/products/b-slider/#demos) | [Pricing](https://bplugins.com/products/b-slider/pricing/) | [Support](https://bplugins.com/support/)
 
 https://www.youtube.com/watch?v=DOvUG5ArWHE
 
-[bSlider](https://bplugins.com/products/b-slider/) makes it easy to build engaging sliders without coding. Choose from smooth transitions like fade, slide, or flip, and customize titles, buttons, indicators, and arrows. Add slides quickly, reorder them with drag-and-drop, and adjust settings per device for fully responsive layouts.
+bSlider makes it easy to build engaging sliders without coding. Choose transitions like fade, slide or flip, customize titles, buttons, indicators and arrows, reorder slides by drag-and-drop, and adjust settings per device.
 
-You can use bSlider for product showcases, portfolios, testimonials, or hero sections. It works with any WordPress theme. You can add sliders using the Gutenberg block or place them anywhere with a shortcode.
+Use it for product showcases, portfolios, testimonials or hero sections. It works with any theme — add the Gutenberg block, or place a shortcode anywhere.
 
 https://www.youtube.com/watch?v=Pj7veTzHbQk
 
@@ -79,6 +79,11 @@ https://www.youtube.com/watch?v=Pj7veTzHbQk
 - **Basic Video Controls**: A large play button and a restart option.
 - **Playback Settings**: Auto-play, loop and muted starts.
 - **Comprehensive Player Controls**: Play/Pause, Mute, Rewind, Fast-Forward, progress, current time and duration.
+- **Image Lightbox on Click**: Click a slide picture to open it full size — images, posts and products alike, on every layout.
+- **Lightbox Gallery**: The pictures of one slider open as a single gallery, with arrows, keyboard, swipe and pinch-to-zoom.
+- **Lightbox Caption**: Show the image caption, or the slide, post or product title, under the picture — with colour, background, margin and alignment.
+- **Lightbox Toolbar**: Counter, thumbnail strip, zoom, slideshow, fullscreen, rotate, flip and download, each its own switch.
+- **Lightbox Backdrop**: Set the colour and opacity behind the picture from the panel.
 
 === bSlider Pro – Unlock Premium Features ===
 [bSlider Pro](https://bplugins.com/products/b-slider/pricing/) gives you more design power and control. Add advanced effects, flexible layouts, and interactive options to create engaging, professional sliders.
@@ -136,92 +141,22 @@ https://www.youtube.com/watch?v=Pj7veTzHbQk
 - **Advanced Video Tools**: Mute, PIP, AirPlay, Download and Fullscreen.
 - **Video Reset On End**: Restart a video from the beginning once it finishes.
 - **Video Auto Hide Controls**: Hide the playback UI while the visitor is idle.
+- **Lightbox Glass Effect**: Frost the caption and the backdrop instead of tinting them flat — the picture behind stays visible through the blur.
+- **Lightbox Button Styling**: Colour, size, corner radius, spacing and edge distance for the close, arrow and toolbar buttons, gradients included.
+- **Lightbox Caption Typography**: Font, weight, size per device, style, transform, line height and letter spacing for the caption.
+- **Custom Lightbox Caption**: Type a caption per slide, separate from the title the slide already shows.
+- **Lightbox Image per Device**: Open a different file than the slide shows — the original on desktop, something lighter on a phone.
+- **Per-Slide Lightbox Control**: Decide picture by picture which ones open a lightbox, so a banner can sit out of a gallery of photographs.
+- **Lightbox Size and Loop**: Cap how large a picture opens, and choose whether the gallery wraps from the last back to the first.
 
 [Upgrade to Pro](https://bplugins.com/products/b-slider/pricing/) to unlock all premium features.
 
-=== How to Use bSlider – Quick Start Guide ===
+=== Getting Started ===
 
-Getting started is easy!
+Add the **bSlider** block, choose a source and layout, then publish — or paste the generated shortcode anywhere.
 
-https://www.youtube.com/watch?v=qgSBHjGdegg
+[Live Demo](https://bplugins.com/products/b-slider/#demos) | [Try Pro](https://bplugins.com/products/b-slider/pricing/) | [Tutorials](https://www.youtube.com/playlist?list=PLaYpMGTB1oSs)
 
-Follow these steps:
-
-===Step-by-Step Setup===
-1. Go to **Plugins → Add New**.
-2. Search for **bSlider**.
-3. Click **Install Now**, then **Activate**.
-4. In the block editor, add the **bSlider block**, choose a slider type and layout, configure settings, and publish.
-5. Or insert the provided **shortcode** anywhere to show your slider.
-
-Enjoy smooth, responsive sliders on your site!
-
-[Live Demo](https://bplugins.com/products/b-slider/#demos) | [Try the Pro Version](https://bplugins.com/products/b-slider/pricing/)
-
-* For installation help click on Installation Tab
-
-=== Video Tutorials ===
-
-Short walkthroughs of what the plugin can do. The first two cover this free version and are linked
-from inside the plugin, at the point each one is about. The rest cover the Social & External Feeds
-source, which is a [Pro](https://bplugins.com/products/b-slider/pricing/) feature — they are here so
-you can see how it works before deciding.
-
-**Works in this free version**
-
-* [Building slides out of Gutenberg blocks](https://www.youtube.com/watch?v=7KWplscyNhk&list=PLaYpMGTB1oSs&index=1)
-* [Slide content, post badges and WooCommerce badges](https://www.youtube.com/watch?v=ublq1N-Bc3o&list=PLaYpMGTB1oSs&index=2)
-
-**Pro only — [Social & External Feeds](https://bplugins.com/products/b-slider/pricing/)**
-
-* [Getting YouTube access for private and unlisted videos](https://www.youtube.com/watch?v=EqZXgw5PyKs&list=PLaYpMGTB1oSs&index=3)
-* [Creating a YouTube Data API key](https://www.youtube.com/watch?v=yFby1EJNUR4&list=PLaYpMGTB1oSs&index=4)
-* [Social feeds from start to finish](https://www.youtube.com/watch?v=AzpHDAbiHZI&list=PLaYpMGTB1oSs&index=5)
-* [Mapping a JSON feed onto slides](https://www.youtube.com/watch?v=6NngvNWhTSE&list=PLaYpMGTB1oSs&index=6)
-* [Getting an Instagram Access Token](https://www.youtube.com/watch?v=C3lNbKLdHM8&list=PLaYpMGTB1oSs&index=7)
-
-[Watch the whole playlist](https://www.youtube.com/playlist?list=PLaYpMGTB1oSs)
-
-### User Feedback
-
-#### ⭐⭐⭐⭐⭐ [Super easy to use, and responsive support](https://wordpress.org/support/topic/super-easy-to-use-and-responsive-support/)
-
-❛❛***Been very happy with our pro purchase. Did have a few issues, but the developer is very responsive and supports this plugin well.!***❜❜
-
-***-[sboutsource](https://wordpress.org/support/users/sboutsource/)***
-
-
-#### ⭐⭐⭐⭐⭐ [Just what I needed](https://wordpress.org/support/topic/just-what-i-needed-1237/)
-
-❛❛***Even better than some premium blocks!***❜❜
-
-***-[stlcodescape](https://wordpress.org/support/users/stlcodescape/)***
-
-
-#### ⭐⭐⭐⭐⭐ [easy-to-use page image + dynamic text configuration plug-in](https://wordpress.org/support/topic/easy-to-use-page-image-dynamic-text-configuration-plug-in/)
-
-❛❛***Hello:***
-
-***Gutenberg’s simple and easy-to-use page image + dynamic text configuration plug-in look terrific!***
-
-***Thank you!***❜❜
-
-***-[hlv356168](https://wordpress.org/support/users/hlv008/)***
-
-
-#### ⭐⭐⭐⭐⭐ [Excelente plugin](https://wordpress.org/support/topic/excelente-plugin-1255/)
-
-❛❛***Very easy to use!***❜❜
-
-***-[jsdeoleo](https://wordpress.org/support/users/jsdeoleo/)***
-
-#### - Did you like this plugin? Dislike it? Have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
-
-=== Check out our other WordPress Plugins ===
-- [HTML5 Audio Player](https://bplugins.com/products/html5-audio-player/) – Best audio player plugin for WordPress.
-- [PDF Poster](https://bplugins.com/products/pdf-poster/) – A fully-featured PDF Viewer Plugin for WordPress.
-- [StreamCast](https://bplugins.com/products/streamcast-radio-player/) – A fully-featured Radio Player Plugin for WordPress.
-- [3D Viewer](https://bplugins.com/products/3d-viewer/) – Display interactive 3D models on the webs.
 
 == Installation ==
 
@@ -279,6 +214,28 @@ WordPress, so there is a video for each.
 
 In Pro each of these is also linked inside the plugin, beside the field that asks for it.
 
+= Are there video tutorials? =
+
+Short walkthroughs of what the plugin can do. The first two cover this free version and are linked
+from inside the plugin, at the point each one is about. The rest cover the Social & External Feeds
+source, which is a [Pro](https://bplugins.com/products/b-slider/pricing/) feature — they are here so
+you can see how it works before deciding.
+
+**Works in this free version**
+
+* [Building slides out of Gutenberg blocks](https://www.youtube.com/watch?v=7KWplscyNhk&list=PLaYpMGTB1oSs&index=1)
+* [Slide content, post badges and WooCommerce badges](https://www.youtube.com/watch?v=ublq1N-Bc3o&list=PLaYpMGTB1oSs&index=2)
+
+**Pro only — [Social & External Feeds](https://bplugins.com/products/b-slider/pricing/)**
+
+* [Getting YouTube access for private and unlisted videos](https://www.youtube.com/watch?v=EqZXgw5PyKs&list=PLaYpMGTB1oSs&index=3)
+* [Creating a YouTube Data API key](https://www.youtube.com/watch?v=yFby1EJNUR4&list=PLaYpMGTB1oSs&index=4)
+* [Social feeds from start to finish](https://www.youtube.com/watch?v=AzpHDAbiHZI&list=PLaYpMGTB1oSs&index=5)
+* [Mapping a JSON feed onto slides](https://www.youtube.com/watch?v=6NngvNWhTSE&list=PLaYpMGTB1oSs&index=6)
+* [Getting an Instagram Access Token](https://www.youtube.com/watch?v=C3lNbKLdHM8&list=PLaYpMGTB1oSs&index=7)
+
+[Watch the whole playlist](https://www.youtube.com/playlist?list=PLaYpMGTB1oSs)
+
 = Where can I get support? =
 
 You can post your questions on the [support forum here](https://wordpress.org/support/plugin/b-slider/)
@@ -288,45 +245,80 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 Please report security bugs found in the source code of the bSlider plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fbc26-c6d5-4897-9a0e-866ad3861bd5). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 
+== Reviews ==
+
+#### ⭐⭐⭐⭐⭐ [Super easy to use, and responsive support](https://wordpress.org/support/topic/super-easy-to-use-and-responsive-support/)
+
+❛❛***Been very happy with our pro purchase. Did have a few issues, but the developer is very responsive and supports this plugin well.!***❜❜
+
+***-[sboutsource](https://wordpress.org/support/users/sboutsource/)***
+
+
+#### ⭐⭐⭐⭐⭐ [Just what I needed](https://wordpress.org/support/topic/just-what-i-needed-1237/)
+
+❛❛***Even better than some premium blocks!***❜❜
+
+***-[stlcodescape](https://wordpress.org/support/users/stlcodescape/)***
+
+
+#### ⭐⭐⭐⭐⭐ [easy-to-use page image + dynamic text configuration plug-in](https://wordpress.org/support/topic/easy-to-use-page-image-dynamic-text-configuration-plug-in/)
+
+❛❛***Hello:***
+
+***Gutenberg’s simple and easy-to-use page image + dynamic text configuration plug-in look terrific!***
+
+***Thank you!***❜❜
+
+***-[hlv356168](https://wordpress.org/support/users/hlv008/)***
+
+
+#### ⭐⭐⭐⭐⭐ [Excelente plugin](https://wordpress.org/support/topic/excelente-plugin-1255/)
+
+❛❛***Very easy to use!***❜❜
+
+***-[jsdeoleo](https://wordpress.org/support/users/jsdeoleo/)***
+
+#### - Did you like this plugin? Dislike it? Have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
+
+== Our Other Plugins ==
+
+- [HTML5 Audio Player](https://bplugins.com/products/html5-audio-player/) – Best audio player plugin for WordPress.
+- [PDF Poster](https://bplugins.com/products/pdf-poster/) – A fully-featured PDF Viewer Plugin for WordPress.
+- [StreamCast](https://bplugins.com/products/streamcast-radio-player/) – A fully-featured Radio Player Plugin for WordPress.
+- [3D Viewer](https://bplugins.com/products/3d-viewer/) – Display interactive 3D models on the webs.
+
 == Screenshots ==
 
 1. Choose Source Type
 2. Select Layout Type
-3. Settings 1
-4. Settings 2
-5. Settings 3
-6. Posts Carousel Layout Center Style
-7. Posts Carousel Layout 3D Style
-8. Posts Carousel Layout grid Style
-9. Posts Carousel Layout
-10. Woo Carousel Layout Center Style
-11. Post Thumbnails Layout
-12. Woo Carousel Layout Grid Style
-13. Woo Carousel Layout Ticker Style
-14. Woo Carousel Layout
-15. Woo Thumbnails Layout
-16. Video Carousel Layout 3D Style
-17. Video Carousel Layout
-18. Video Thumbnails Layout
-19. Video Default Layout Fade Effect
-20. Video Default Layout Image Indicators
-21. Video Default Layout
-22. Video Grid layout
-23. Posts Carousel Layout Ticker Style
-24. Default
-25. Default Content
-26. Customization
-27. Content Slider
-28. Full Width
-29. Image Indicator Right
-30. Image Slider
-31. Image Indicators 
-32. Image Indicators Left
-33. Vertical
-34. Shortcode Generator
-
+3. Demo-1: Movie Showcase Slider — Counters, Gallery & Trailer Lightbox
+4. Demo-2: Luxury Real Estate Lightbox Slider
+5. Demo-3: Business Intro to Contact
+6. Demo-4: Full Page Portfolio
+7. Demo-5: Shoppable Instagram Feed & Product Wall
+8. Demo-6: Shoppable Instagram Reels Wall
+9. Demo-7: Live Outfit Video Showcase
+10. Demo-8: Vogue Fashion Runway & Cinema Lounge
+11. Demo-9:  Tech Reviews Channel Hub & Subscribe Booster
+12. Demo-10: freeCodeCamp Developer Learning Portal
+13. Demo-11: Dynamic E-Commerce & Product Showcase Grid
+14. Demo-12: Featured Article & Multi-Column Magazine Layout
+15. Demo-13: Automated RSS News Digest & Magazine Grid
+16. Demo-14: Agency Portfolio — Full-Screen Cover Slides
+17. Demo-15: What Our Customers Say
+18. Demo-16: WooCommerce Products — Live Product Carousel
 
 == Changelog ==
+
+= 2.2.1 - 16 September, 2026 =
+* New: Image slides open in a lightbox on click — the engine was already bundled for video, and this is the setting that lets a photograph use it;
+* New: Post and WooCommerce slides open their featured image in the same lightbox, on every layout including the grids;
+* New: The pictures of one slider open as a single gallery, so the arrows walk the whole set instead of stopping at the first slide;
+* New: Caption under the picture, taken from the image caption or from the slide, post or product title;
+* New: Caption colour, background, margin and alignment, all from the panel — no CSS to write;
+* New: Lightbox toolbar switches — counter, thumbnail strip, zoom, slideshow and fullscreen, each on its own;
+* New: Rotate, flip and download buttons in the lightbox, off by default;
+* New: Backdrop colour and opacity;
 
 = 2.2.0 - 9 September, 2026 =
 * New: Gutenberg Blocks source type — build every slide from real WordPress blocks instead of a fixed title, image and button;
@@ -588,6 +580,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Initial Release
 
 == Upgrade Notice ==
+
+= 2.2.1 - 16 September, 2026 =
+* Adds the image lightbox — click a slide picture to open it full size, with a caption, a toolbar and gallery navigation. Post and product slides open the same way. Existing sliders are untouched: every new setting is off until you turn it on.
 
 = 2.2.0 - 9 September, 2026 =
 * Adds the Gutenberg Blocks source — build each slide from real WordPress blocks — with layer animations, a visual timeline, per-layer typography and responsive controls, badged words and hover colours.

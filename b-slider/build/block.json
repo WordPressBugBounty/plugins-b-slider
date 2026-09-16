@@ -425,6 +425,31 @@
         "link": "none"
       }
     },
+    "lightbox": {
+      "type": "object",
+      "default": {
+        "counter": true,
+        "thumbs": true,
+        "zoom": true,
+        "slideshow": true,
+        "fullscreen": true,
+        "rotate": false,
+        "download": false,
+        "caption": "none",
+        "captionColor": "",
+        "hasCaptionBg": false,
+        "captionBg": "",
+        "captionAlign": "",
+        "captionMargin": {
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": ""
+        },
+        "backdrop": "",
+        "backdropOpacity": 100
+      }
+    },
     "headerNameTypo": {
       "type": "object",
       "default": {
