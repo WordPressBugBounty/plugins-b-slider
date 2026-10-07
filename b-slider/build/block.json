@@ -4,7 +4,7 @@
   "name": "bsb/slider",
   "title": "Slider",
   "category": "widgets",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "description": "Display Amazing Gutenberg Responsive Image And Content Slider",
   "keywords": [
     "slider",
@@ -764,6 +764,37 @@
         "bottom": "3px",
         "left": "3px",
         "right": "3px"
+      }
+    },
+    "arrowOffset": {
+      "type": "string",
+      "default": "40px"
+    },
+    "arrowPlacement": {
+      "type": "string",
+      "default": "split"
+    },
+    "arrowGroupPosition": {
+      "type": "string",
+      "default": "center right"
+    },
+    "arrowGap": {
+      "type": "string",
+      "default": "10px"
+    },
+    "arrowGroupDirection": {
+      "type": "string",
+      "default": "auto"
+    },
+    "arrowOffsetY": {
+      "type": "string",
+      "default": ""
+    },
+    "arrowHideOn": {
+      "type": "object",
+      "default": {
+        "tablet": false,
+        "mobile": false
       }
     },
     "arrowBorder": {

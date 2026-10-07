@@ -7,7 +7,7 @@
   "parent": [
     "bsb/slider"
   ],
-  "version": "2.2.0",
+  "version": "2.2.2",
   "description": "A single slide inside a bSlider Gutenberg Blocks slider.",
   "textdomain": "b-slider",
   "attributes": {

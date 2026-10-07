@@ -3,7 +3,7 @@
  * Plugin Name: bSlider – Build Sliders That Bring Your Content to Life
  * Plugin URI: http://bplugins.com
  * Description: Simple slider with bootstrap.
- * Version: 2.2.1
+ * Version: 2.2.2
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
@@ -16,7 +16,7 @@
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.2.1');
+        define('B_SLIDER_PLUGIN_VERSION', '2.2.2');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));
@@ -54,6 +54,9 @@
     require_once plugin_dir_path(__FILE__) . '/includes/PostsAjax.php';
     require_once plugin_dir_path(__FILE__) . '/includes/AcfFields.php';
 
+    // The editor's Template Library modal: AJAX proxy to templates.bplugins.com.
+    require_once plugin_dir_path(__FILE__) . '/includes/Templates/Templates.php';
+
     class B_Slider{
 
         private static $instance;
@@ -63,6 +66,7 @@
             $this->load_classes();
             add_action('enqueue_block_assets', [$this, 'enqueueBlockAssets']);
             add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
+            add_action('enqueue_block_editor_assets', [$this, 'enqueueTemplateLibrary']);
             add_action('init', [$this, 'onInit']);
             add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2 );
             add_filter('plugin_row_meta', array($this, 'insert_plugin_row_meta'), 10, 2);
@@ -121,6 +125,50 @@
             wp_register_script('b-slider-plyr-script', B_SLIDER_ASSETS_DIR . 'js/plyr.min.js', [], B_SLIDER_PLUGIN_VERSION, true);
  
              
+        }
+
+        public function enqueueTemplateLibrary() {
+            if ( ! current_user_can( 'edit_posts' ) ) {
+                return;
+            }
+
+            $assetFile = B_SLIDER_DIR_PATH . 'build/template-library.asset.php';
+
+            if ( ! file_exists( $assetFile ) ) {
+                return;
+            }
+
+            $asset = require $assetFile;
+
+            // In the header, not the footer — the same as the reference implementation. The block
+            // editor prints its own scripts before the footer of the admin page is reached, and a
+            // footer-bound script enqueued from `enqueue_block_editor_assets` can miss that pass
+            // entirely: WordPress goes on reporting it as enqueued while the tag is never printed.
+            wp_enqueue_script(
+                'bsb-template-library',
+                B_SLIDER_DIR . 'build/template-library.js',
+                array_merge( $asset['dependencies'], [ 'wp-util' ] ),
+                $asset['version'],
+                false
+            );
+
+            wp_enqueue_style(
+                'bsb-template-library',
+                B_SLIDER_DIR . 'build/template-library.css',
+                [],
+                $asset['version']
+            );
+
+            wp_set_script_translations( 'bsb-template-library', 'b-slider', B_SLIDER_DIR_PATH . 'languages' );
+
+            // Only the nonce. The free plugin declares no `bsbpipecheck`, and `TemplateLibrary.js` reads
+            // it through `typeof`, so Pro templates show as locked here. Pro declares it on `wp-blocks`;
+            // declaring it here too would be a second `const` of the same name in global scope.
+            wp_add_inline_script(
+                'bsb-template-library',
+                'const bsbtemplatenonce = "' . esc_js( wp_create_nonce( 'bsb_template' ) ) . '";',
+                'before'
+            );
         }
 
         public function adminEnqueueScripts($hook){

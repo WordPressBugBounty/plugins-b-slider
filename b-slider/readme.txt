@@ -1,19 +1,19 @@
 === bSlider – Build Sliders That Bring Your Content to Life ===
 Contributors: bplugins, abuhayat, btechnologies, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, carousel, slider, bootstrap, Gutenberg block
+Tags: block, carousel, slider, templates, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Responsive WordPress sliders from images, posts, WooCommerce products, videos or Gutenberg blocks — via the block editor or a shortcode.
+Responsive sliders from images, posts, WooCommerce, videos or blocks — or start from 50+ ready-made templates. Block editor & shortcode.
 
 == Description ==
 
-**Create responsive sliders from images, posts, WooCommerce products, videos, or slides built out of Gutenberg blocks — with multiple layouts, animations, and styling controls, right in the block editor.**
+**Create responsive sliders from images, posts, WooCommerce products, videos, or slides built out of Gutenberg blocks or start from more than 50 ready-made templates with multiple layouts, animations, and styling controls, right in the block editor.**
 
 [Documentation](https://bplugins.com/docs/bslider) | [Demo](https://bplugins.com/products/b-slider/#demos) | [Pricing](https://bplugins.com/products/b-slider/pricing/) | [Support](https://bplugins.com/support/)
 
@@ -21,9 +21,23 @@ https://www.youtube.com/watch?v=DOvUG5ArWHE
 
 bSlider makes it easy to build engaging sliders without coding. Choose transitions like fade, slide or flip, customize titles, buttons, indicators and arrows, reorder slides by drag-and-drop, and adjust settings per device.
 
-Use it for product showcases, portfolios, testimonials or hero sections. It works with any theme — add the Gutenberg block, or place a shortcode anywhere.
+Use it for product showcases, portfolios, testimonials or hero sections. It works with any theme add the Gutenberg block, or place a shortcode anywhere.
+
+Start from a ready-made design. The Template Library, opened from the block editor toolbar, has more than 50 sliders for agencies, shops, restaurants, real estate, portfolios, video and social feeds. Pick one, click Import, and change anything you like:
+
+https://www.youtube.com/watch?v=y7jrdRujlpY
+
+In [bSlider Pro](https://bplugins.com/products/b-slider/pricing/), describe the look you want in one sentence and Style with AI sets the slider's colours, type, buttons and arrows. It also writes each slide's title, description, button label and alt text from its picture, using your own Google Gemini key:
+
+https://www.youtube.com/watch?v=wF-Jh-O3dig
+
+Show your Advanced Custom Fields on a slide choosing which fields appear, picking a display preset, and using a field for the slide image, title, description or button:
 
 https://www.youtube.com/watch?v=Pj7veTzHbQk
+
+Build each slide out of real Gutenberg blocks headings, images, buttons, columns, anything in your editor instead of a fixed title, image and button:
+
+https://www.youtube.com/watch?v=Zy23dW0uQDc
 
 === Key Features –  Free Version ===
 - **Shortcode Support**: Insert sliders anywhere, even outside Gutenberg.
@@ -82,6 +96,7 @@ https://www.youtube.com/watch?v=Pj7veTzHbQk
 - **Image Lightbox on Click**: Click a slide picture to open it full size — images, posts and products alike, on every layout.
 - **Lightbox Gallery**: The pictures of one slider open as a single gallery, with arrows, keyboard, swipe and pinch-to-zoom.
 - **Lightbox Caption**: Show the image caption, or the slide, post or product title, under the picture — with colour, background, margin and alignment.
+- **Lightbox Caption Typography**: Font, weight, size per device, style, transform, line height and letter spacing for the caption, and a switch between a box that hugs its text and one that spans the picture.
 - **Lightbox Toolbar**: Counter, thumbnail strip, zoom, slideshow, fullscreen, rotate, flip and download, each its own switch.
 - **Lightbox Backdrop**: Set the colour and opacity behind the picture from the panel.
 
@@ -135,7 +150,6 @@ https://www.youtube.com/watch?v=Pj7veTzHbQk
 - **Badge & Field Icon Library**: Icons from Font Awesome, Bootstrap or Lucide instead of emoji.
 - **Custom HTML Wrapper Tags**: Tags like h1–h6 for better structure and SEO.
 - **Left/Right Inner Gap**: Internal spacing between slider items.
-- **Move From Edge**: Control the spacing of content from the slider edges.
 - **Pagination Position**: Alignment for pagination buttons in grid layouts.
 - **Lazy Load Enable**: Defer offscreen images for faster pages.
 - **Advanced Video Tools**: Mute, PIP, AirPlay, Download and Fullscreen.
@@ -143,7 +157,6 @@ https://www.youtube.com/watch?v=Pj7veTzHbQk
 - **Video Auto Hide Controls**: Hide the playback UI while the visitor is idle.
 - **Lightbox Glass Effect**: Frost the caption and the backdrop instead of tinting them flat — the picture behind stays visible through the blur.
 - **Lightbox Button Styling**: Colour, size, corner radius, spacing and edge distance for the close, arrow and toolbar buttons, gradients included.
-- **Lightbox Caption Typography**: Font, weight, size per device, style, transform, line height and letter spacing for the caption.
 - **Custom Lightbox Caption**: Type a caption per slide, separate from the title the slide already shows.
 - **Lightbox Image per Device**: Open a different file than the slide shows — the original on desktop, something lighter on a phone.
 - **Per-Slide Lightbox Control**: Decide picture by picture which ones open a lightbox, so a banner can sit out of a gallery of photographs.
@@ -174,6 +187,12 @@ Add the **bSlider** block, choose a source and layout, then publish — or paste
 ### Manually:
 1. Download and upload the **b-Slider Block** plugin to the **`/wp-content/plugins/`** directory
 2. Activate the plugin through the Plugins menu in WordPress
+
+### Watch: your first slider in 2 minutes
+
+Recorded with bSlider Pro, so a few options in it, such as the AI features, are Pro only.
+
+https://www.youtube.com/watch?v=bZo16kmZiXE
 
 
 == Frequently Asked Questions ==
@@ -216,15 +235,18 @@ In Pro each of these is also linked inside the plugin, beside the field that ask
 
 = Are there video tutorials? =
 
-Short walkthroughs of what the plugin can do. The first two cover this free version and are linked
+Short walkthroughs of what the plugin can do. The first group covers this free version and is linked
 from inside the plugin, at the point each one is about. The rest cover the Social & External Feeds
 source, which is a [Pro](https://bplugins.com/products/b-slider/pricing/) feature — they are here so
 you can see how it works before deciding.
 
 **Works in this free version**
 
+* [Getting started: your first slider in 2 minutes](https://www.youtube.com/watch?v=bZo16kmZiXE) (shown with bSlider Pro)
 * [Building slides out of Gutenberg blocks](https://www.youtube.com/watch?v=7KWplscyNhk&list=PLaYpMGTB1oSs&index=1)
 * [Slide content, post badges and WooCommerce badges](https://www.youtube.com/watch?v=ublq1N-Bc3o&list=PLaYpMGTB1oSs&index=2)
+* [Setting up the lightbox](https://www.youtube.com/watch?v=elkAkihgH70&list=PLaYpMGTB1oSs&index=1)
+* [Importing a ready-made slider from the Template Library](https://www.youtube.com/watch?v=_69AgIdXM_U&list=PLaYpMGTB1oSs)
 
 **Pro only — [Social & External Feeds](https://bplugins.com/products/b-slider/pricing/)**
 
@@ -233,6 +255,10 @@ you can see how it works before deciding.
 * [Social feeds from start to finish](https://www.youtube.com/watch?v=AzpHDAbiHZI&list=PLaYpMGTB1oSs&index=5)
 * [Mapping a JSON feed onto slides](https://www.youtube.com/watch?v=6NngvNWhTSE&list=PLaYpMGTB1oSs&index=6)
 * [Getting an Instagram Access Token](https://www.youtube.com/watch?v=C3lNbKLdHM8&list=PLaYpMGTB1oSs&index=7)
+
+**Pro only — [Style with AI](https://bplugins.com/products/b-slider/pricing/)**
+
+* [Styling a slider and writing slide text with AI](https://www.youtube.com/watch?v=-Q-yWZ3pbEo&list=PLaYpMGTB1oSs)
 
 [Watch the whole playlist](https://www.youtube.com/playlist?list=PLaYpMGTB1oSs)
 
@@ -291,541 +317,124 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 1. Choose Source Type
 2. Select Layout Type
-3. Demo-1: Movie Showcase Slider — Counters, Gallery & Trailer Lightbox
-4. Demo-2: Luxury Real Estate Lightbox Slider
-5. Demo-3: Business Intro to Contact
-6. Demo-4: Full Page Portfolio
-7. Demo-5: Shoppable Instagram Feed & Product Wall
-8. Demo-6: Shoppable Instagram Reels Wall
-9. Demo-7: Live Outfit Video Showcase
-10. Demo-8: Vogue Fashion Runway & Cinema Lounge
-11. Demo-9:  Tech Reviews Channel Hub & Subscribe Booster
-12. Demo-10: freeCodeCamp Developer Learning Portal
-13. Demo-11: Dynamic E-Commerce & Product Showcase Grid
-14. Demo-12: Featured Article & Multi-Column Magazine Layout
-15. Demo-13: Automated RSS News Digest & Magazine Grid
-16. Demo-14: Agency Portfolio — Full-Screen Cover Slides
-17. Demo-15: What Our Customers Say
-18. Demo-16: WooCommerce Products — Live Product Carousel
+3. Style with AI (Pro) — describe the look in one sentence and the slider restyles itself
+4. Template Library — pick a ready-made slider and import it in one click
+5. Demo-1: Movie Showcase Slider — Counters, Gallery & Trailer Lightbox
+6. Demo-2: Luxury Real Estate Lightbox Slider
+7. Demo-3: Business Intro to Contact
+8. Demo-4: Full Page Portfolio
+9. Demo-5: Shoppable Instagram Feed & Product Wall
+10. Demo-6: Shoppable Instagram Reels Wall
+11. Demo-7: Live Outfit Video Showcase
+12. Demo-8: Vogue Fashion Runway & Cinema Lounge
+13. Demo-9:  Tech Reviews Channel Hub & Subscribe Booster
+14. Demo-10: freeCodeCamp Developer Learning Portal
+15. Demo-11: Dynamic E-Commerce & Product Showcase Grid
+16. Demo-12: Featured Article & Multi-Column Magazine Layout
+17. Demo-13: Automated RSS News Digest & Magazine Grid
+18. Demo-14: Agency Portfolio — Full-Screen Cover Slides
+19. Demo-15: What Our Customers Say
+20. Demo-16: WooCommerce Products — Live Product Carousel
 
 == Changelog ==
 
+= 2.2.2 - 5 October, 2026 =
+* New: Template Library — pick a ready-made slider from the editor toolbar and insert it in one click, its images brought into your media library;
+* New: Browse Templates button under the source cards, so a new slider can start from a template instead of an empty block;
+* New: Lightbox caption typography — font, weight, size per device, style, transform, line height and letter spacing;
+* Fix: Lightbox issues reported after 2.2.1;
+* Improvement: Smaller editor script — settings panels now load only the controls they use;
+
 = 2.2.1 - 16 September, 2026 =
-* New: Image slides open in a lightbox on click — the engine was already bundled for video, and this is the setting that lets a photograph use it;
-* New: Post and WooCommerce slides open their featured image in the same lightbox, on every layout including the grids;
-* New: The pictures of one slider open as a single gallery, so the arrows walk the whole set instead of stopping at the first slide;
-* New: Caption under the picture, taken from the image caption or from the slide, post or product title;
-* New: Caption colour, background, margin and alignment, all from the panel — no CSS to write;
-* New: Lightbox toolbar switches — counter, thumbnail strip, zoom, slideshow and fullscreen, each on its own;
-* New: Rotate, flip and download buttons in the lightbox, off by default;
-* New: Backdrop colour and opacity;
+* New: Image lightbox — click a slide picture to open it full size, as one gallery per slider, with caption, toolbar and backdrop settings;
+* New: Post and WooCommerce slides open their featured image in the same lightbox, on every layout;
 
 = 2.2.0 - 9 September, 2026 =
-* New: Gutenberg Blocks source type — build every slide from real WordPress blocks instead of a fixed title, image and button;
-* New: Layer animations on any block inside a slide, with entry effects, preset delays and a per-slide stagger;
-* New: Loop animations that keep a layer moving after it arrives (Pulse and Bounce free, Float/Flash/Shake/Swing in Pro);
-* New: Hover and click actions on a layer — grow, lift or fade on hover; open a link, scroll to a section, or move the slider on click;
-* New: Visual Timeline panel showing every animated layer on one scale, with the delay editable in place;
-* New: Typography panel on text layers, Google Fonts included;
-* New: Responsive panel — hide a layer on desktop, tablet or mobile, or let it show without animating;
-* New: Per-slide background, overlay, border, corner radius, padding and content alignment;
-* New: Auto word-wrap, so a long link breaks to fit the slide instead of spilling past its edge;
-* New: Empty slides now offer Heading, Image, Button and Two columns as one-click starting points;
-* New: Vertical and horizontal alignment per slide, so the content can sit top, middle or bottom;
-* New: Inner blocks in a slide now offer Wide and Full width, so a picture can reach the slide's edge;
-* New: A pattern dropped into a slide becomes ordinary editable blocks instead of a locked content-only group;
-* New: A bSlider cannot be placed inside a slide — blocked in the inserter, on paste and on drag, rather than failing quietly later;
-* New: Tutorial video for the Gutenberg Blocks source, linked under the Source Type tiles and on an empty slide;
-* New: Carousel layout for block-built slides — several on screen at once;
-* New: Dynamic Content — bind a post or product to a slide and place Post Field blocks in it;
-* New: Lottie animation layer, exit animations, fine-tuned delay and duration, and word-by-word text animation;
-* New: Badge a Word — one word inside a heading or paragraph given its own background, padding, corners and border;
-* New: Hover colour on any layer — text and background, on its own or alongside Grow, Lift and Fade;
+* New: Gutenberg Blocks source — build each slide from real WordPress blocks;
+* New: Layer animations, loop animations, hover and click actions, a visual timeline, and per-layer typography and responsive controls;
+* New: Per-slide background, overlay, border, padding and alignment;
 
 = 2.1.0 - 22 August, 2026 =
-* New: Social Feeds source type tile and upsell notice in the Source & Layout sidebar panel;
-* New: List Layout & premium presets upsell notice below the Select Layout grid;
-* New: Compact promotional notices for Social Feeds and List Layout in the editor sidebar;
-* Update: ACF field & query options text in the Custom Post Types promotion;
+* New: Social Feeds source and List layout shown in the editor as Pro options;
 
 = 2.0.20 - 19 August, 2026 =
-* New: The three-field limit on ACF fields is gone — a slide can now show every ACF field you pick, no upgrade needed;
+* New: No limit on the number of ACF fields per slide;
 
 = 2.0.19 - 17 August, 2026 =
-* New: Added promotional/upsell panel for the ACF Query premium features under the ACF Integration panel;
-* New: The ACF Integration and Post Badges panels now say that the icon library is a premium feature, alongside the character you can type in the free version;
-* New: The Style tab's badge typography and colours now apply to ACF fields as well, so badges and fields on one slide share a look, and the section appears for a slider that has fields but no badges;
-* Fix: An ACF field named price, date, author or sale could not be moved off its default corner — badge settings of the same name were taking over the field's position, icon and style;
-* Fix: An ACF field placed over a navigation arrow swallowed the click and the slider stopped advancing;
-* Fix: An ACF field named date or author could be forced to hover-only by a badge that was not on the slide;
-* Fix: A chosen badge colour overrode the outline, plain and ribbon presets even when no colour had been picked;
-* Fix: Cleaned up unused variables and resolved ESLint warnings in settings components;
+* New: Badge typography and colours now apply to ACF fields too;
+* Fix: ACF fields and badges with the same name no longer share position and style;
 
 = 2.0.18 - 11 August, 2026 =
-* New: Slide Content panel — one place to show or hide a slide's title, description and button, and to set the button label;
-* New: Show the slide content on hover only, so the picture stands on its own until it is pointed at;
-* New: Selective hover controls — when content appears on hover, pick which parts show (title, description, button, date, author, price, sale) independently;
-* New: Content background choice — tint the whole picture, fade the colour in behind the text, or use none;
-* New: Picture on hover — zoom in, zoom out, or grey until pointed at;
-* New: A slide's picture is now a link to the post or product wherever the button points, with an option to open both in a new tab;
-* New: Post Badges panel — show the publish date and the author name as badges over a slide, each with its own icon, prefix, suffix, corner, offset and style preset;
-* New: WooCommerce Product Price badge — display product prices (regular and sale) with a toggle to show only the sale price;
-* New: WooCommerce Sale badge — show "Sale!" text or the exact discount percentage (e.g. −25%) on products that are on sale;
-* New: Badge animation — pick the effect, let the badges follow the caption or set your own delay, and space them apart so several cascade;
-* New: Badges section on the Style tab for the typography and colours every badge shares;
-* Fix: Advanced Custom Fields link, url and email fields are now sanitised before they are used as a link;
-* Fix: Badges and ACF fields animated only the first time a slide was hovered when the content is revealed on hover, and afterwards simply appeared;
-* Fix: 42 control labels were tagged with the wrong text domain and never translated;
+* New: Slide Content panel, content on hover, picture hover effects and linked slide pictures;
+* New: Post date and author badges, WooCommerce price and sale badges, and badge animation;
+* Fix: ACF link fields are sanitised before use;
 
 = 2.0.17 - 02 August, 2026 =
-* New: Default Post Type support — build sliders using standard WordPress post types (Posts, Pages, and Products);
-* New: Locked custom post types (CPTs) behind Pro with a modern sidebar and wizard upgrade promotion;
-* New: Advanced Custom Fields (ACF) on slides with a limit of three fields per slide (Pro removes this limit);
-* New: Use an ACF field for the slide image, title, description, button label, or button link, and override it per item;
-* New: Six display presets for ACF fields, free placement on nine anchors, and a per-field icon, label, prefix, and suffix;
-* Fix: `Post Type`, `Order By`, `Order` and `Post Offset` are now applied to the editor preview, not only the front end;
-* Fix: Some control labels were tagged with the wrong text domain and never translated;
+* New: Sliders from Posts, Pages and Products, and Advanced Custom Fields on slides;
 
 = 2.0.15 - 17 July, 2026 =
-* Fixed: When adding a block from the block editor search, I was not getting CSS and JS, but now it is fixed.
+* Fix: CSS and JS now load when the block is added from the block search;
 
 = 2.0.14 - 24 June, 2026 =
-* Update: Added new modern dashboard.
-
+* Update: New dashboard;
 
 = 2.0.13 - 20 May, 2026 =
-* Fix: The backend defaults, carousel, and thumbnail layouts slides have been fixed and are now working properly.
+* Fix: Default, carousel and thumbnail layouts in the editor;
 
 = 2.0.12 - 13 May, 2026 =
-* Update: Fixed a security vulnerability through responsible disclosure.
+* Security: Fixed a vulnerability reported through responsible disclosure;
 
 = 2.0.11 - 9 May, 2026 =
-* Update: Removed restricted "Locked Fields" to improve user flexibility
-* New: Custom Slider Height: Easily define and set the perfect height for your sliders.
-* New: Dynamic Indicators: Fully customize indicator types, positioning, and direction (Horizontal or Vertical).
-* New: Carousel Enhancements: Toggle visibility for Navigation Arrows and Pagination Indicators with a single click.
-* New: Grid Flexibility: Set items per page and choose your preferred pagination style (Standard Button or Load More).
-* New: Post Per Page: Control the exact density of your content.
-* New: Advanced Sorting: Organize content by specific criteria (Order By) and direction (ASC/DESC).
-* New: Post Offset: Skip specific posts to create unique layouts and avoid duplication.
-* New: Playback Settings: New options for Auto-play, Loop/Repeat, and Muted starts.
-* New: Comprehensive Player Controls: Empower users with a full suite of controls including Play/Pause, Mute, Rewind/Fast-Forward, and real-time displays for Progress, Current Time, and Duration.
-* Improved: Overall code quality and strengthened security protocols.
+* New: Slider height, indicator, carousel, grid pagination, post query and video player options;
 
 = 2.0.10 - 5 April, 2026 =
-* Added a new modern dashboard;
+* New: Modern dashboard;
 
 = 2.0.9 - 7 Feb, 2026 =
-* The free plugin now supports shortcodes.
-
-= 2.0.8 - 22 Jan, 2026 =
-* There were some minor issues with the title and the query, but I have resolved them.
+* New: Shortcode support in the free plugin;
 
 = 2.0.7 - 18 Jan, 2026 =
-* Patchstack ( Cross Site Scripting) problem solved;
-
-= 2.0.6 - 1 Dec, 2025 =
-* offer link added;
-
-= 2.0.5 - 27 Nov, 2025 =
-* Some issues have been resolved.
-
-= 2.0.4 - 11 Nov, 2025 =
-* freemius sdk updated;
-
-= 2.0.3 - 18 Sept, 2025 =
-* Solved the image max-width and margin. 
-
-= 2.0.2 - 23 Aug, 2025 =
-* Resolved the conflict between Modula Image Gallery and bSlider.
+* Security: Fixed a cross-site scripting issue;
 
 = 2.0.1 - 12 Aug, 2025 =
-* Resolved all security vulnerabilities identified by Wordfence;
+* Security: Fixed issues reported by Wordfence;
 
 = 2.0.0 - 9 Aug, 2025 =
-* Fixed missing authorization check that allowed authenticated users (admin) to install arbitrary plugins;
-
-= 1.1.30 - 24 July, 2025 =
-* fixed defaultProps;
-
-= 1.1.29 - 23 July, 2025 =
-* Resolved dashboard target element issue;
-
-= 1.1.28 - 8 July, 2025 =
-* Added four source types: Image, Posts, WooCommerce, and Video;
-* Added four layout types: Slider, Carousel, Grid, and Thumbnails;
-
-= 1.1.27 - 18 April, 2025 =
-* Compatible with WordPress 6.8;
-
-= 1.1.26 - 11 April, 2025 =
-* Some problem fixed;
-
-= 1.1.25 - 1 March, 2025 =
-* Some problem fixed.
-
-= 1.1.24 - 26 Jan, 2025 =
-* Fixed a security issue through responsible disclosure.
-
-= 1.1.23 - 21 Dec, 2024 =
-* Code maintenance and removal of redundant code.
-
-= 1.1.22 - 17 Dec, 2024 =
-* SingleTon patterns and plugin actions hooks action hooks trigger.
-
-= 1.1.21 - 23 Nov, 2024 =
-* _load_textdomain_just_in_time notice solved
-
-= 1.1.20 - 6 Oct, 2024 =
-* Some issues fixed.
-
-= 1.1.19 - 18 August, 2024 =
-* Pro modal update
-
-= 1.1.18 - 9 July, 2024 =
-* Allows dragging and dropping of slide items (Pro Features).
-
-= 1.1.17 - 24 June, 2024 =
-* Remove extra code.
-
-= 1.1.16 - 5 May, 2024 =
-* Fixed security issues.
-
-= 1.1.15 - 20 March, 2024 =
-* Added option to include alt text for slider images
-
-= 1.1.14 - 5 March, 2024 =
-* Some mistakes improved.
-
-= 1.1.13 - 29 Feb, 24 =
-* Validated JS and HTML code.
-
-= 1.1.12 - 6 Dec, 23 =
-* An animation effect of fade-in has been added.
-
-= 1.1.11 - 24 Nov,23 =
-* Added an option to show/hide the title from the media image's caption or title.
-
-= 1.1.10 - 23 Nov,23 =
-* Automatically select the image caption or title to add as the slide title.
-
-= 1.1.9 - 14 Nov,23 =
-* Use responsive device settings for the left/right inner gap, arrow width, and height.
-
-= 1.1.8 – 9 NOV,23 =
-* WordPress version update
-
-= 1.1.7 – 25 OCT,23 =
-* The package is being used for lazy loading images
-
-= 1.1.6 - 5 Oct,23 =
-* Fixing the responsive issue with the image indicator
-
-= 1.1.5 - 20 sept 2023 =
-* Sdk some issues have been resolved
-
-= 1.1.4 =
-* Using Multiple Tags in Titles and Adding the admin.css File
-
-= 1.1.3 =
-* Some issues have been resolved
-
-= 1.1.2 =
-* Slider height can be set according to the device
-
-= 1.1.1 =
-* Pro license key properly working
-
-= 1.1.0 =
-* Title and Description responsive device added
-
-= 1.0.9 =
-* Bootstrap file update
-
-= 1.0.8 =
-* Pro version release
-
-= 1.0.7 =
-* Update arrow background and color option
-
-= 1.0.6 =
-* Space between the plugin class and additional classes
-
-= 1.0.5 =
-* BoxControl Components Problem fix.
-
-= 1.0.4 =
-* Slider Arrow size option added.
-* Slider Arrow height and width, Border Radius, color option added.
-
-= 1.0.3 =
-* Screenshot Update
-* Problem Fix
-
-= 1.0.2 =
-* Slider Animation Option.
-* Slider Content Default/Middle Option.
-* Title Typography.
-* Description Typography.
-
-= 1.0.1 =
-* Slider Height Option. 
-* Slider Border Radius Option.
-* Slider Full Responsive.
-* Slider Title And Description Animation.
-* Slider Content Middle.
-* Indicator Style Update.
-
-= 1.0.0 =
-* Initial Release
+* Security: Fixed a missing authorization check;
 
 == Upgrade Notice ==
 
-= 2.2.1 - 16 September, 2026 =
-* Adds the image lightbox — click a slide picture to open it full size, with a caption, a toolbar and gallery navigation. Post and product slides open the same way. Existing sliders are untouched: every new setting is off until you turn it on.
-
-= 2.2.0 - 9 September, 2026 =
-* Adds the Gutenberg Blocks source — build each slide from real WordPress blocks — with layer animations, a visual timeline, per-layer typography and responsive controls, badged words and hover colours.
-
-= 2.1.0 - 22 August, 2026 =
-* Adds the Social & External Feeds source (YouTube, Instagram, RSS, JSON) with feed presets, a profile header, a docking mini player, hover previews and a List layout.
-
-= 2.0.20 - 19 August, 2026 =
-* Removes the three-field cap on ACF fields — show as many custom fields per slide as you like.
-
-= 2.0.19 - 17 August, 2026 =
-* Adds the ACF Query Pro panel, extends badge styling to ACF fields, and fixes ACF fields named after a badge, fields blocking the navigation arrows, and preset colours being overridden.
-
-= 2.0.18 - 11 August, 2026 =
-* Adds slide content panel, WooCommerce price and sale badges, selective hover controls, linked slide pictures, and fixes badge animation on hover.
-
-= 2.0.17 - 02 August, 2026 =
-* Adds Advanced Custom Fields and Custom Post Type sliders, free shows three ACF fields per slide.
-
-= 2.0.15 - 17 July, 2026 =
-* Fixed: When adding a block from the block editor search, I was not getting CSS and JS, but now it is fixed.
-
-= 2.0.14 - 24 June, 2026 =
-* Update: Added new modern dashboard.
-
-= 2.0.10 - 5 April, 2026 =
-* Added a new modern dashboard;
-
-= 2.0.9 - 7 Feb, 2026 =
-* The free plugin now supports shortcodes.
-
-= 2.0.8 - 22 Jan, 2026 =
-* There were some minor issues with the title and the query, but I have resolved them.
-
-= 2.0.7 - 18 Jan, 2026 =
-* Patchstack ( Cross Site Scripting) problem solved;
-
-= 2.0.6 - 1 Dec, 2025 =
-* offer link added;
-
-= 2.0.5 - 27 Nov, 2025 =
-* Some issues have been resolved.
-
-= 2.0.4 - 11 Nov, 2025 =
-* freemius sdk updated;
-
-= 2.0.3 - 18 Sept, 2025 =
-* Solved the image max-width and margin. 
-
-= 2.0.2 - 23 Aug, 2025 =
-* Resolved the conflict between Modula Image Gallery and bSlider.
-
-= 2.0.1 - 12 Aug, 2025 =
-* Resolved all security vulnerabilities identified by Wordfence;
-
-= 2.0.0 - 9 Aug, 2025 =
-* Fixed missing authorization check that allowed authenticated users (admin) to install arbitrary plugins;
-
-= 1.1.30 - 24 July, 2025 =
-* fixed defaultProps;
-
-= 1.1.29 - 23 July, 2025 =
-* Resolved dashboard target element issue;
-
-= 1.1.28 - 8 July, 2025 =
-* Added four source types: Image, Posts, WooCommerce, and Video;
-* Added four layout types: Slider, Carousel, Grid, and Thumbnails;
-
-= 1.1.27 - 18 April, 2025 =
-* Compatible with WordPress 6.8;
-
-= 1.1.26 - 11 April, 2025 =
-* Some problem fixed;
-
-= 1.1.25 - 1 March, 2025 =
-* Some problem fixed.
-
-= 1.1.24 - 26 Jan, 2025 =
-* Fixed a security issue through responsible disclosure.
-
-= 1.1.23 - 21 Dec, 2024 =
-* Code maintenance and removal of redundant code.
-
-= 1.1.22 - 17 Dec, 2024 =
-* SingleTon patterns and plugin actions hooks action hooks trigger.
-
-= 1.1.21 - 23 Nov, 2024 =
-* _load_textdomain_just_in_time notice solved
-
-= 1.1.20 - 6 Oct, 2024 =
-* Some issues fixed.
-
-= 1.1.19 - 18 August, 2024 =
-* Pro modal update
-
-= 1.1.18 - 9 July, 2024 =
-* Allows dragging and dropping of slide items (Pro Features).
-
-= 1.1.17 - 24 June, 2024 =
-* Remove extra code.
-
-= 1.1.16 - 5 May, 2024 =
-* Fixed security issues.
-
-= 1.1.15 - 20 March, 2024 =
-* Added option to include alt text for slider images.
-
-= 1.1.14 - 5 March, 2024 =
-* Some mistakes improved.
-
-= 1.1.13 - 29 Feb, 24 =
-* Validated JS and HTML code.
-
-= 1.1.12 - 6 Dec, 23 =
-* An animation effect of fade-in has been added.
-
-= 1.1.11 - 24 Nov,23 =
-* Added an option to show/hide the title from the media image's caption or title.
-
-= 1.1.10 - 23 Nov,23 =
-* Automatically select the image caption or title to add as the slide title.
-
-= 1.1.9 - 14 Nov,23 = 
-* Use responsive device settings for the left/right inner gap, arrow width, and height.
-
-= 1.1.8 – 9 NOV,23 =
-* WordPress version update
-
-= 1.1.7 – 25 OCT,23 =
-* The package is being used for lazy loading images
-
-= 1.1.6 - 5 Oct,23 =
-* Fixing the responsive issue with the image indicator
-
-= 1.1.5 - 20 sept 2023 =
-* Sdk some issues have been resolved
-
-= 1.1.4 =
-* Using Multiple Tags in Titles and Adding the admin.css File 
-
-= 1.1.3 =
-* Some issues have been resolved
-
-= 1.1.2 =
-* Slider height can be set according to the device
-
-= 1.1.1 =
-* Pro license key properly working
-
-= 1.1.0 =
-* Title and Description responsive device added
-
-= 1.0.9 =
-* Bootstrap file update
-
-= 1.0.8 =
-* Pro version release
-
-= 1.0.7 =
-* Update arrow background and color option
-
-= 1.0.6 =
-* Space between the plugin class and additional classes.
-
-= 1.0.5 =
-* BoxControl Components Problem fix.
-
-= 1.0.4 =
-* Slider Arrow size option added.
-* Slider Arrow height and width, Border Radius, color option added.
-
-= 1.0.3 =
-* Screenshot Update
-* Problem Fix
-
-= 1.0.2 =
-* Slider Animation Option.
-* Slider Content Default/Middle Option.
-* Title Typography.
-* Description Typography.
-
-= 1.0.1 =
-* Slider Height Option. 
-* Slider Border Radius Option.
-* Slider Full Responsive.
-* Slider Title And Description Animation.
-* Slider Content Middle.
-* Indicator Style Update.
-
-= 1.0.0 =
-* Initial Release
-
+= 2.2.2 =
+Adds the Template Library: start a slider from a ready-made design in one click. Existing sliders are untouched.
 
 == Source Code ==
 
 You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository:
 [**BSlider on GitHub**](https://github.com/bPlugins/bslider-free)
 
+== External Services ==
+
+This plugin contacts one service outside your site, and only while you use the feature that needs it.
+
+= bPlugins Template Library =
+Used when you open the Template Library from the block editor toolbar or the source picker.
+
+* **What is sent:** the template type, category, page number and any search words you choose, and this plugin's name. WordPress also adds your site's address to every request it sends. Nothing about your posts, your users or your visitors is sent.
+* **When:** only while you browse the library in the editor, and when you click Import. Importing downloads the template's images from `https://templates.bplugins.com` into your Media Library. Requests are made by your server, not by your visitors' browsers.
+* **Endpoint:** `https://templates.bplugins.com/wp-json/gutenberg-templates/v1/`
+* **Terms of Service:** https://bplugins.com/terms-of-service/ — **Privacy Policy:** https://bplugins.com/privacy-policy/
+
 == Third-Party Libraries ==
 
-This plugin bundles the following third-party JavaScript/PHP libraries.
+This plugin bundles the following libraries.
 
-= Bootstrap = 
-* **Source:** https://getbootstrap.com/
-* **GitHub:** https://github.com/twbs/bootstrap
-* **License:** MIT – https://github.com/twbs/bootstrap/blob/main/LICENSE
-* **Purpose:** Provides responsive carousel/slider functionality, grid layout, and UI components used in the slider interface.
-
-= Plyr = 
-* **Source:** https://plyr.io/
-* **GitHub:** https://github.com/sampotts/plyr
-* **License:** MIT – https://github.com/sampotts/plyr/blob/master/LICENSE.md
-* **Purpose:** A simple, accessible HTML5 media player used for video slide playback with customizable controls.
-
-= LazyLoad = 
-* **Source:** https://github.com/verlok/vanilla-lazyload
-* **GitHub:** https://github.com/verlok/vanilla-lazyload
-* **License:** MIT – https://github.com/verlok/vanilla-lazyload/blob/master/LICENSE
-* **Purpose:** Enables lazy loading of slide images to improve page performance by deferring off-screen image loading.
-
-= Swiper = 
-* **Source:** https://swiperjs.com/
-* **GitHub:** https://github.com/nolimits4web/swiper
-* **License:** MIT – https://github.com/nolimits4web/swiper/blob/master/LICENSE
-* **Purpose:** Powers the Carousel, Grid and Thumbnails layouts, including their transition effects.
-
-= animate.css = 
-* **Source:** https://animate.style/
-* **GitHub:** https://github.com/animate-css/animate.css
-* **License:** MIT – https://github.com/animate-css/animate.css/blob/main/LICENSE
-* **Purpose:** Provides the entry and loop animations applied to slide content and layers.
-
-= Font Awesome = 
-* **Source:** https://fontawesome.com/
-* **GitHub:** https://github.com/FortAwesome/Font-Awesome
-* **License:** SIL OFL 1.1 (Fonts), MIT (CSS) – https://fontawesome.com/license/free
-* **Purpose:** Provides scalable vector icons used for slider navigation arrows and UI elements.
-
-= bpl-tools =
-* Source / GitHub: https://github.com/bPlugins/bpl-tools
-* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
-* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
-* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+* **Bootstrap** (MIT): carousel, grid and UI components. https://github.com/twbs/bootstrap
+* **Plyr** (MIT): video player for video slides. https://github.com/sampotts/plyr
+* **LazyLoad** (MIT): lazy loading of slide images. https://github.com/verlok/vanilla-lazyload
+* **Swiper** (MIT): the Carousel, Grid and Thumbnails layouts and their transitions. https://github.com/nolimits4web/swiper
+* **animate.css** (MIT): entry and loop animations on slide content and layers. https://github.com/animate-css/animate.css
+* **Font Awesome** (SIL OFL 1.1 fonts, MIT CSS): icons for arrows and UI. https://fontawesome.com/license/free
+* **bpl-tools** (GPL-2.0-or-later): dashboard components and shared editor controls. It may contact bPlugins, WordPress.org and Freemius for product data and checkout; details at https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
 
 = Freemius Lite SDK =
 
