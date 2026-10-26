@@ -99,15 +99,14 @@ class Templates {
 		$pageNumber = max( 1, absint( wp_unslash( $_POST['pageNumber'] ?? 1 ) ) );
 		$perPage    = max( 1, absint( wp_unslash( $_POST['perPage'] ?? 9 ) ) );
 		$search     = sanitize_text_field( wp_unslash( $_POST['search'] ?? '' ) );
-		$start      = $pageNumber - 1;
 		$plugin     = self::PLUGIN_SLUG;
 
 		$url = add_query_arg(
 			[
 				'type'     => $type,
-				'start'    => $start,
-				'end'      => $pageNumber,
-				'limit'    => $perPage,
+				'start'    => 0,
+				'end'      => 10000,
+				'limit'    => 10000,
 				'plugin'   => $plugin,
 				'category' => $category,
 				'keywords' => $search,
@@ -122,7 +121,36 @@ class Templates {
 			wp_send_json_error( $response->get_error_message() );
 		}
 
-		wp_send_json_success( json_decode( wp_remote_retrieve_body( $response ) ) );
+		wp_send_json_success( self::freeFirst( json_decode( wp_remote_retrieve_body( $response ) ), $pageNumber, $perPage ) );
+	}
+
+	/**
+	 * Every match is fetched and paged here, free templates first: the modal's Free filter works on each page, so mixed pages came out half empty.
+	 * Titles arrive HTML-encoded ("&amp;"); the modal prints them as text.
+	 */
+	private static function freeFirst( $body, $pageNumber, $perPage ) {
+		if ( ! $body || ! isset( $body->patterns ) || ! is_array( $body->patterns ) ) {
+			return $body;
+		}
+
+		$free = [];
+		$pro  = [];
+		foreach ( $body->patterns as $item ) {
+			if ( isset( $item->title ) ) {
+				$item->title = html_entity_decode( $item->title, ENT_QUOTES, 'UTF-8' );
+			}
+
+			if ( isset( $item->category ) && is_array( $item->category ) && in_array( 'pro', $item->category, true ) ) {
+				$pro[] = $item;
+			} else {
+				$free[] = $item;
+			}
+		}
+
+		$body->count    = count( $body->patterns );
+		$body->patterns = array_slice( array_merge( $free, $pro ), ( $pageNumber - 1 ) * $perPage, $perPage );
+
+		return $body;
 	}
 
 	public function templateImport() {
@@ -204,8 +232,8 @@ class Templates {
 	public function templateFavorites() {
 		self::guard( check_ajax_referer( 'bsb_template', '_wpnonce', false ) );
 
-		$prefix    = sanitize_key( wp_unslash( $_POST['prefix'] ?? 'bsb' ) );
-		$optionKey = $prefix . 'FavoritesTemplates';
+		// Fixed, so a request cannot make the handler create or write some other `…FavoritesTemplates` option.
+		$optionKey = 'bsbFavoritesTemplates';
 
 		if ( isset( $_POST['favorites'] ) ) {
 			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- a JSON string, and every decoded value is hard-cast through absint() below.

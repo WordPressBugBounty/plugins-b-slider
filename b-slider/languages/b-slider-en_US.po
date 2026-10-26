@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.2.2\n"
+"Project-Id-Version: bSlider – Build Sliders That Bring Your Content to Life 2.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-06T10:58:34+00:00\n"
+"POT-Creation-Date: 2026-10-26T05:33:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-slider\n"
@@ -35,23 +35,23 @@ msgstr ""
 msgid "bPlugins"
 msgstr ""
 
-#: b-slider.php:98
-#: b-slider/b-slider.php:94
+#: b-slider.php:100
+#: b-slider/b-slider.php:98
 msgid "Go Pro!"
 msgstr ""
 
-#: b-slider.php:101
-#: b-slider/b-slider.php:97
+#: b-slider.php:103
+#: b-slider/b-slider.php:101
 msgid "Dashboard!"
 msgstr ""
 
-#: b-slider.php:112
-#: b-slider/b-slider.php:108
+#: b-slider.php:114
+#: b-slider/b-slider.php:112
 msgid "Docs & FAQs"
 msgstr ""
 
-#: b-slider.php:114
-#: b-slider/b-slider.php:110
+#: b-slider.php:116
+#: b-slider/b-slider.php:114
 msgid "Demos"
 msgstr ""
 
@@ -199,6 +199,20 @@ msgstr ""
 #: build/Blocks/Slide/index.js:2
 #: build/index.js:2
 msgid "Open In New Tab"
+msgstr ""
+
+#: b-slider/build/Blocks/Slide/index.js:2
+#: b-slider/build/index.js:2
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Slides from many pictures at once"
+msgstr ""
+
+#: b-slider/build/Blocks/Slide/index.js:2
+#: b-slider/build/index.js:2
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "AI-written slide text"
 msgstr ""
 
 #: b-slider/build/Blocks/Slide/index.js:2
@@ -371,12 +385,6 @@ msgstr ""
 
 #: b-slider/build/Blocks/Slide/index.js:2
 #: b-slider/build/index.js:2
-#: build/index.js:2
-msgid "Move From Edge"
-msgstr ""
-
-#: b-slider/build/Blocks/Slide/index.js:2
-#: b-slider/build/index.js:2
 #: build/Blocks/Slide/index.js:2
 #: build/index.js:2
 msgid "Position (Left, Right, Center)"
@@ -436,6 +444,20 @@ msgstr ""
 #: build/Blocks/Slide/index.js:2
 #: build/index.js:2
 msgid "Fullscreen"
+msgstr ""
+
+#: b-slider/build/Blocks/Slide/index.js:2
+#: b-slider/build/index.js:2
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "Styling the slider from one sentence"
+msgstr ""
+
+#: b-slider/build/Blocks/Slide/index.js:2
+#: b-slider/build/index.js:2
+#: build/Blocks/Slide/index.js:2
+#: build/index.js:2
+msgid "AI-written slide text and alt text"
 msgstr ""
 
 #: b-slider/build/Blocks/Slide/index.js:2
@@ -1830,6 +1852,11 @@ msgstr ""
 
 #: b-slider/build/index.js:2
 #: build/index.js:2
+msgid "Watch: import a ready-made slider"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
 msgid "Show Indicators/Pagination"
 msgstr ""
 
@@ -1956,6 +1983,16 @@ msgstr ""
 #: b-slider/build/index.js:2
 #: build/index.js:2
 msgid "Position:"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Move From Edge"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Use a negative or positive value to move in or out."
 msgstr ""
 
 #: b-slider/build/index.js:2
@@ -2492,6 +2529,11 @@ msgstr ""
 
 #: b-slider/build/index.js:2
 #: build/index.js:2
+msgid "Slides with AI"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
 msgid "Slide Content"
 msgstr ""
 
@@ -2652,6 +2694,71 @@ msgstr ""
 
 #: b-slider/build/index.js:2
 #: build/index.js:2
+msgid "Edge Spacing"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Position"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Split (opposite edges)"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Grouped together"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Group Position"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Gap Between Arrows"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Arrow Direction"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Auto (follow slide direction)"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Side by side"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Stacked"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Top/Bottom Spacing"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Hide on Tablet"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Hide on Mobile"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
 msgid "Active Color"
 msgstr ""
 
@@ -2693,6 +2800,26 @@ msgstr ""
 #: b-slider/build/index.js:2
 #: build/index.js:2
 msgid "Badges & ACF Fields"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Style with AI"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Browse Templates"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "New: Template Library"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
+msgid "Start a slider from 50+ ready-made designs, then change what you like."
 msgstr ""
 
 #: b-slider/build/index.js:2
@@ -2756,6 +2883,11 @@ msgstr ""
 
 #: b-slider/build/index.js:2
 #: build/index.js:2
+msgid "Not sure where to start? Pick a ready-made slider and change what you like."
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
 msgid "Posts"
 msgstr ""
 
@@ -2812,6 +2944,11 @@ msgstr ""
 
 #: b-slider/build/index.js:2
 #: build/index.js:2
+msgid "Watch: your first slider in 2 minutes (shown with bSlider Pro)"
+msgstr ""
+
+#: b-slider/build/index.js:2
+#: build/index.js:2
 msgid "Browse Post Types"
 msgstr ""
 
@@ -2820,118 +2957,12 @@ msgstr ""
 msgid "Select Source"
 msgstr ""
 
-#: build/Blocks/Slide/index.js:2
-#: build/index.js:2
-msgid "Slides from many pictures at once"
-msgstr ""
-
-#: build/Blocks/Slide/index.js:2
-#: build/index.js:2
-msgid "AI-written slide text"
-msgstr ""
-
-#: build/Blocks/Slide/index.js:2
-#: build/index.js:2
-msgid "Styling the slider from one sentence"
-msgstr ""
-
-#: build/Blocks/Slide/index.js:2
-#: build/index.js:2
-msgid "AI-written slide text and alt text"
-msgstr ""
-
-#: build/index.js:2
-msgid "Watch: import a ready-made slider"
-msgstr ""
-
-#: build/index.js:2
-msgid "Use a negative or positive value to move in or out."
-msgstr ""
-
-#: build/index.js:2
-msgid "Slides with AI"
-msgstr ""
-
-#: build/index.js:2
-msgid "Edge Spacing"
-msgstr ""
-
-#: build/index.js:2
-msgid "Position"
-msgstr ""
-
-#: build/index.js:2
-msgid "Split (opposite edges)"
-msgstr ""
-
-#: build/index.js:2
-msgid "Grouped together"
-msgstr ""
-
-#: build/index.js:2
-msgid "Group Position"
-msgstr ""
-
-#: build/index.js:2
-msgid "Gap Between Arrows"
-msgstr ""
-
-#: build/index.js:2
-msgid "Arrow Direction"
-msgstr ""
-
-#: build/index.js:2
-msgid "Auto (follow slide direction)"
-msgstr ""
-
-#: build/index.js:2
-msgid "Side by side"
-msgstr ""
-
-#: build/index.js:2
-msgid "Stacked"
-msgstr ""
-
-#: build/index.js:2
-msgid "Top/Bottom Spacing"
-msgstr ""
-
-#: build/index.js:2
-msgid "Hide on Tablet"
-msgstr ""
-
-#: build/index.js:2
-msgid "Hide on Mobile"
-msgstr ""
-
-#: build/index.js:2
-msgid "Style with AI"
-msgstr ""
-
-#: build/index.js:2
-msgid "Browse Templates"
-msgstr ""
-
-#: build/index.js:2
-msgid "New: Template Library"
-msgstr ""
-
-#: build/index.js:2
-msgid "Start a slider from 50+ ready-made designs, then change what you like."
-msgstr ""
-
-#: build/index.js:2
-msgid "Not sure where to start? Pick a ready-made slider and change what you like."
-msgstr ""
-
-#: build/index.js:2
-msgid "Watch: your first slider in 2 minutes (shown with bSlider Pro)"
-msgstr ""
-
+#: b-slider/build/template-library.js:1
 #: build/template-library.js:1
 msgid "Template Library"
 msgstr ""
 
+#: b-slider/build/template-library.js:1
 #: build/template-library.js:1
 msgid "Templates Library"
 msgstr ""

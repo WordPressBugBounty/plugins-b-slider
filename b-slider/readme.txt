@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, templates, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.2.2 
+Stable tag: 2.2.4
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Responsive sliders from images, posts, WooCommerce, videos or blocks — or star
 
 == Description ==
 
-**Create responsive sliders from images, posts, WooCommerce products, videos, or slides built out of Gutenberg blocks or start from more than 50 ready-made templates with multiple layouts, animations, and styling controls, right in the block editor.**
+**Create responsive sliders from images, posts, WooCommerce products, videos, or slides built out of Gutenberg blocks — or start from more than 50 ready-made templates — with multiple layouts, animations, and styling controls, right in the block editor.**
 
 [Documentation](https://bplugins.com/docs/bslider) | [Demo](https://bplugins.com/products/b-slider/#demos) | [Pricing](https://bplugins.com/products/b-slider/pricing/) | [Support](https://bplugins.com/support/)
 
@@ -338,6 +338,12 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Changelog ==
 
+= 2.2.4 - 26 October, 2026 =
+* Security: Fixed a stored cross-site scripting (XSS) issue in slider settings (reported by V1T via Patchstack);
+* Security: Hardened arrow settings, video and image lightbox links, ACF field loading and Template Library image import;
+* Fix: Template Library lists free templates before Pro ones, so filtered pages are no longer half empty;
+* Update: Screenshots for Style with AI and Template Library;
+
 = 2.2.2 - 5 October, 2026 =
 * New: Template Library — pick a ready-made slider from the editor toolbar and insert it in one click, its images brought into your media library;
 * New: Browse Templates button under the source cards, so a new slider can start from a template instead of an empty block;
@@ -403,6 +409,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Security: Fixed a missing authorization check;
 
 == Upgrade Notice ==
+
+= 2.2.4 =
+Security release. Please update. Existing sliders are untouched.
 
 = 2.2.2 =
 Adds the Template Library: start a slider from a ready-made design in one click. Existing sliders are untouched.

@@ -25,6 +25,23 @@ if(!class_exists( __NAMESPACE__ . '\PostsAjax' )){
             return $postsQuery;
         }
 
+        // The ACF field names come from the browser, so they only count when render.php signed that exact list.
+        private function verifiedAcfQuery( $postsQuery ){
+            $sig = isset( $postsQuery['acfSig'] ) ? (string) $postsQuery['acfSig'] : '';
+            $post_type = Posts::query( [ 'postsQuery' => $postsQuery ] )['post_type'];
+
+            if ( '' !== $sig && hash_equals( Posts::acfFieldsSignature( Posts::acfFieldsToFetch( $postsQuery, $post_type ), $post_type ), $sig ) ) {
+                return $postsQuery;
+            }
+
+            unset( $postsQuery['selectedAcfFields'] );
+            foreach ( Posts::ACF_ROLE_KEYS as $key ) {
+                unset( $postsQuery[ $key ] );
+            }
+
+            return $postsQuery;
+        }
+
         public function bsbPosts(){
             $nonce = isset( $_POST['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) : '';
 
@@ -37,7 +54,7 @@ if(!class_exists( __NAMESPACE__ . '\PostsAjax' )){
             $pageNumber = isset( $_POST['pageNumber'] ) ? (int) sanitize_text_field( wp_unslash( $_POST['pageNumber'] ) ) : 1;
             $pageNumber = max( 1, $pageNumber );
 
-            wp_send_json_success( Posts::getPosts( [ 'postsQuery' => $this->cappedQuery( $postsQuery ) ], $pageNumber ) );
+            wp_send_json_success( Posts::getPosts( [ 'postsQuery' => $this->verifiedAcfQuery( $this->cappedQuery( $postsQuery ) ) ], $pageNumber ) );
         }
     }
     new PostsAjax();

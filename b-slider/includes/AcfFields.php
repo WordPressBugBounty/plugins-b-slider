@@ -362,7 +362,8 @@ class AcfFields {
                 $out['value'] = self::stringify( $raw );
         }
 
-        $out['value'] = trim( (string) $out['value'] );
+        $out['value'] = wp_kses_post( trim( (string) $out['value'] ) );
+        $out['url']   = esc_url_raw( trim( (string) $out['url'] ) );
 
         return $out;
     }

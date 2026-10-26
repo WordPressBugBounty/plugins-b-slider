@@ -7,6 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Image {
+	const MAX_IMAGES = 30;
+
 	private $already_imported_ids = array();
 
 	private static $instance = null;
@@ -43,7 +45,7 @@ class Image {
 		}
 
 		if ( ! empty( $image_links ) ) {
-			foreach ( $image_links as $key => $image_url ) {
+			foreach ( array_slice( $image_links, 0, self::MAX_IMAGES ) as $key => $image_url ) {
 				$image = array(
 					'url'	=> $image_url,
 					'id'	=> 0,
@@ -69,13 +71,13 @@ class Image {
 
 		global $wpdb;
 
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- lookup by meta value, no core API for it; must be uncached so a just-imported image is found.
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Runs once per image on import; no core API finds an attachment by this meta.
 		$post_id = $wpdb->get_var( $wpdb->prepare( 'SELECT `post_id` FROM `' . $wpdb->postmeta . '` WHERE `meta_key` = \'_bsb_templates_image_hash\' AND `meta_value` = %s;', $this->get_hash_image( $attachment['url'] ) ) );
 
 		if ( empty( $post_id ) ) {
-			$filename = basename( $attachment['url'] );
-			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- LIKE match on the attached file path, no core API for it; must be uncached.
-			$post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key = '_wp_attached_file' AND meta_value LIKE %s", '%/' . $filename . '%' ) );
+			$filename = basename( (string) wp_parse_url( $attachment['url'], PHP_URL_PATH ) );
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Runs once per image on import; no core API finds an attachment by file name.
+			$post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key = '_wp_attached_file' AND meta_value LIKE %s", '%/' . $wpdb->esc_like( $filename ) . '%' ) );
 		}
 
 		if ( $post_id ) {
@@ -105,53 +107,36 @@ class Image {
 			return $saved_image['attachment'];
 		}
 
-		$filename = basename( $attachment['url'] );
+		$filename = sanitize_file_name( basename( (string) wp_parse_url( $attachment['url'], PHP_URL_PATH ) ) );
 
-		if ( isset( $attachment['engine'] ) && 'unsplash' === $attachment['engine'] ) {
-			$filename = 'unsplash-photo-' . $attachment['id'] . '.jpg';
-		}
+		require_once ABSPATH . 'wp-admin/includes/file.php';
+		require_once ABSPATH . 'wp-admin/includes/media.php';
+		require_once ABSPATH . 'wp-admin/includes/image.php';
 
-		$file_content = wp_remote_retrieve_body(
-			wp_safe_remote_get(
-				$attachment['url'],
-				array(
-					'timeout'	=> '60',
-				)
-			)
-		);
+		$tmp = download_url( $attachment['url'], 30 );
 
-		if ( empty( $file_content ) ) {
+		if ( is_wp_error( $tmp ) ) {
 			return $attachment;
 		}
 
-		$upload = wp_upload_bits( $filename, null, $file_content );
-
-		$post = array(
-			'post_title'	=> $filename,
-			'guid'			=> $upload['url'],
+		$post_id = media_handle_sideload(
+			array(
+				'name'     => $filename,
+				'tmp_name' => $tmp,
+			),
+			0
 		);
 
-		$info = wp_check_filetype( $upload['file'] );
-		if ( $info ) {
-			$post['post_mime_type'] = $info['type'];
-		} else {
+		if ( is_wp_error( $post_id ) ) {
+			wp_delete_file( $tmp );
 			return $attachment;
 		}
 
-		if ( ! function_exists( 'wp_generate_attachment_metadata' ) ) {
-			include ABSPATH . 'wp-admin/includes/image.php';
-		}
-
-		$post_id = wp_insert_attachment( $post, $upload['file'] );
-		wp_update_attachment_metadata(
-			$post_id,
-			wp_generate_attachment_metadata( $post_id, $upload['file'] )
-		);
 		update_post_meta( $post_id, '_bsb_templates_image_hash', $this->get_hash_image( $attachment['url'] ) );
 
 		$new_attachment = array(
 			'id'	=> $post_id,
-			'url'	=> $upload['url'],
+			'url'	=> wp_get_attachment_url( $post_id ),
 		);
 
 		$this->already_imported_ids[] = $post_id;
@@ -171,7 +156,14 @@ class Image {
 	}
 
 	public function is_valid_image( $link = '' ) {
-		return preg_match( '/^((https?:\/\/)|(www\.))([a-z0-9-].?)+(:[0-9]+)?\/[\w\-]+\.(jpg|png|gif|jpeg)\/?$/i', $link );
+		$host = strtolower( (string) wp_parse_url( $link, PHP_URL_HOST ) );
+		$path = (string) wp_parse_url( $link, PHP_URL_PATH );
+
+		if ( 'bplugins.com' !== $host && '.bplugins.com' !== substr( $host, -13 ) ) {
+			return false;
+		}
+
+		return (bool) preg_match( '/\.(jpe?g|png|gif)$/i', $path );
 	}
 }
 new Image();

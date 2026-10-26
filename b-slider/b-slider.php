@@ -3,7 +3,7 @@
  * Plugin Name: bSlider – Build Sliders That Bring Your Content to Life
  * Plugin URI: http://bplugins.com
  * Description: Simple slider with bootstrap.
- * Version: 2.2.2
+ * Version: 2.2.4
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
@@ -16,11 +16,13 @@
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.2.2');
+        define('B_SLIDER_PLUGIN_VERSION', '2.2.4');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));
     define('B_SLIDER_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
+
+    define( 'BSB_JSON_IN_HTML', JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT );
 
     if(!function_exists('b_slider_fs')) {
         

@@ -92,6 +92,17 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
             return $fields;
         }
 
+        static function acfFieldsSignature( $fields, $post_type ) {
+            $names = array_map( function( $field ) {
+                return trim( (string) ( is_array( $field ) ? ( $field['name'] ?? '' ) : $field ) );
+            }, is_array( $fields ) ? $fields : [] );
+
+            $names = array_values( array_unique( array_filter( $names, 'strlen' ) ) );
+            sort( $names );
+
+            return $names ? wp_hash( 'bsb_acf_fields|' . $post_type . '|' . implode( ',', $names ) ) : '';
+        }
+
         static function allowedAcfFields( $fields, $post_type ) {
             if ( ! class_exists( __NAMESPACE__ . '\AcfFields' ) ) {
                 return [];
@@ -217,7 +228,8 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
             if ( ! self::isPostTypePublic( $post_type ) ) {
                 $post_type = 'post';
             }
-            $per_page             = (int) ( $postsQuery['per_page'] ?? $attributes['per_page'] ?? 10 );
+            // -1 is the panel's "all posts"; anything above the AJAX cap is not a value the panel can set.
+            $per_page             = min( (int) ( $postsQuery['per_page'] ?? $attributes['per_page'] ?? 10 ), PostsAjax::MAX_PER_PAGE );
             $orderby              = $postsQuery['orderby'] ?? $attributes['orderby'] ?? 'date';
             $order                = $postsQuery['order'] ?? $attributes['order'] ?? 'DESC';
             $offset               = (int) ( $postsQuery['offset'] ?? $attributes['offset'] ?? 0 );
