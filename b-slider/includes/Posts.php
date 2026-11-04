@@ -92,15 +92,26 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
             return $fields;
         }
 
-        static function acfFieldsSignature( $fields, $post_type ) {
+        // An empty or missing length is the panel's default; `(int) ''` would make it 0 words on one side only.
+        static function excerptLengthOf( $postsQuery ) {
+            $length = is_array( $postsQuery ) ? ( $postsQuery['excerptLength'] ?? '' ) : '';
+
+            return ( '' === $length || null === $length || ! is_scalar( $length ) ) ? 25 : (int) $length;
+        }
+
+        // What a public request may not choose for itself: the post type it resolves to, the ACF fields and the excerpt length.
+        static function querySignature( $postsQuery ) {
+            $postsQuery = is_array( $postsQuery ) ? $postsQuery : [];
+            $post_type  = self::query( [ 'postsQuery' => $postsQuery ] )['post_type'];
+
             $names = array_map( function( $field ) {
                 return trim( (string) ( is_array( $field ) ? ( $field['name'] ?? '' ) : $field ) );
-            }, is_array( $fields ) ? $fields : [] );
+            }, self::acfFieldsToFetch( $postsQuery, $post_type ) );
 
             $names = array_values( array_unique( array_filter( $names, 'strlen' ) ) );
             sort( $names );
 
-            return $names ? wp_hash( 'bsb_acf_fields|' . $post_type . '|' . implode( ',', $names ) ) : '';
+            return wp_hash( 'bsb_posts_query|' . $post_type . '|' . self::excerptLengthOf( $postsQuery ) . '|' . implode( ',', $names ) );
         }
 
         static function allowedAcfFields( $fields, $post_type ) {
@@ -315,7 +326,7 @@ if(!class_exists( __NAMESPACE__ . '\Posts' )){
             $fImgSize             = $postsQuery['fImgSize'] ?? $attributes['fImgSize'] ?? 'full';
             $metaDateFormat       = $postsQuery['metaDateFormat'] ?? $attributes['metaDateFormat'] ?? 'M j, Y';
             $isExcerptFromContent = $postsQuery['isExcerptFromContent'] ?? $attributes['isExcerptFromContent'] ?? true;
-            $excerptLength        = $postsQuery['excerptLength'] ?? $attributes['excerptLength'] ?? 25;
+            $excerptLength        = self::excerptLengthOf( $postsQuery );
             $isExcludeCurrent     = $postsQuery['isExcludeCurrent'] ?? $attributes['isExcludeCurrent'] ?? false;
             $isExcludeCurrent     = $isExcludeCurrent || 'true' === $isExcludeCurrent;
             $newArgs = self::query( $attributes );

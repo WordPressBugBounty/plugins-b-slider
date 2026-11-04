@@ -25,12 +25,11 @@ if(!class_exists( __NAMESPACE__ . '\PostsAjax' )){
             return $postsQuery;
         }
 
-        // The ACF field names come from the browser, so they only count when render.php signed that exact list.
-        private function verifiedAcfQuery( $postsQuery ){
-            $sig = isset( $postsQuery['acfSig'] ) ? (string) $postsQuery['acfSig'] : '';
-            $post_type = Posts::query( [ 'postsQuery' => $postsQuery ] )['post_type'];
+        // ACF fields and excerpt length come from the browser, so they only count when render.php signed them.
+        private function verifiedQuery( $postsQuery ){
+            $sig = isset( $postsQuery['querySig'] ) && is_string( $postsQuery['querySig'] ) ? $postsQuery['querySig'] : '';
 
-            if ( '' !== $sig && hash_equals( Posts::acfFieldsSignature( Posts::acfFieldsToFetch( $postsQuery, $post_type ), $post_type ), $sig ) ) {
+            if ( '' !== $sig && hash_equals( Posts::querySignature( $postsQuery ), $sig ) ) {
                 return $postsQuery;
             }
 
@@ -38,6 +37,7 @@ if(!class_exists( __NAMESPACE__ . '\PostsAjax' )){
             foreach ( Posts::ACF_ROLE_KEYS as $key ) {
                 unset( $postsQuery[ $key ] );
             }
+            $postsQuery['excerptLength'] = 25;
 
             return $postsQuery;
         }
@@ -54,7 +54,7 @@ if(!class_exists( __NAMESPACE__ . '\PostsAjax' )){
             $pageNumber = isset( $_POST['pageNumber'] ) ? (int) sanitize_text_field( wp_unslash( $_POST['pageNumber'] ) ) : 1;
             $pageNumber = max( 1, $pageNumber );
 
-            wp_send_json_success( Posts::getPosts( [ 'postsQuery' => $this->verifiedAcfQuery( $this->cappedQuery( $postsQuery ) ) ], $pageNumber ) );
+            wp_send_json_success( Posts::getPosts( [ 'postsQuery' => $this->verifiedQuery( $this->cappedQuery( $postsQuery ) ) ], $pageNumber ) );
         }
     }
     new PostsAjax();

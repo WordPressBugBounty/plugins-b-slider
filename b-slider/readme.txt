@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, carousel, slider, templates, Gutenberg block
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.2.4
+Stable tag: 2.2.5
 Requires PHP: 7.2
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -338,6 +338,28 @@ Please report security bugs found in the source code of the bSlider plugin throu
 
 == Changelog ==
 
+= 2.2.5 - 4 November, 2026 =
+* New: Absolute Position for Gutenberg Blocks layers (Position panel): place any block anywhere on the slide by X and Y, in px or %, from one of 9 anchors.
+* New: Drag layers on the canvas, with smart guides, snapping and arrow-key nudge (Shift moves 10px).
+* New: Resize and rotate layers with handles, or type an exact width, height and rotation.
+* New: Z-Index and Layer Order buttons, to choose which layer sits on top.
+* New: Select several layers with Shift-click, then align them or space them evenly.
+* New: Lock position and Hide on canvas for layers.
+* New: Show on all slides (a logo on every slide) and Full slide (ignore the slide padding).
+* New: Separate Tablet and Mobile places and font sizes for each layer.
+* New: Auto-scale layers (Layers panel): the whole slide design shrinks evenly on smaller screens.
+* New: Breakpoints panel: choose the widths where Tablet and Mobile settings begin.
+* New: Absolute Position for the Title, Description and Button of Image, Posts and WooCommerce sliders, with Tablet and Mobile places, Auto-scale placed parts and Z-Index.
+* New (Pro): Rulers & Guides: drag out your own guide lines, and layers snap to them.
+* New (Pro): Group layers, so they move, rotate and animate as one.
+* New (Pro): Follow layer: pin a layer to a point of another layer.
+* New (Pro): Parallax depth: layers drift with the mouse, the page scroll or a phone's tilt.
+* New (Pro): 3D tilt and Background parallax (Layers panel).
+* New (Pro): Image indicators for Gutenberg Blocks sliders: round thumbnails of each slide's first picture.
+* Improvement: Layers hidden on the current device stay visible, faded, on the editor canvas.
+* Fix: A button set to Next slide, Previous slide or Scroll to a section no longer also follows its own link.
+* Fix: Layer fonts now load in the weight you pick, so bold and semi-bold text no longer shows as regular.
+
 = 2.2.4 - 26 October, 2026 =
 * Security: Fixed a stored cross-site scripting (XSS) issue in slider settings (reported by V1T via Patchstack);
 * Security: Hardened arrow settings, video and image lightbox links, ACF field loading and Template Library image import;
@@ -409,6 +431,9 @@ Please report security bugs found in the source code of the bSlider plugin throu
 * Security: Fixed a missing authorization check;
 
 == Upgrade Notice ==
+
+= 2.2.5 =
+Adds absolute positioning: place slide layers, and the title, description and button of Image, Posts and WooCommerce sliders, anywhere on the slide, with separate places for tablet and mobile. Existing sliders keep their settings; bold Google Fonts in layers now show bold as set.
 
 = 2.2.4 =
 Security release. Please update. Existing sliders are untouched.

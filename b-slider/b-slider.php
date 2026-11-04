@@ -3,7 +3,7 @@
  * Plugin Name: bSlider – Build Sliders That Bring Your Content to Life
  * Plugin URI: http://bplugins.com
  * Description: Simple slider with bootstrap.
- * Version: 2.2.4
+ * Version: 2.2.5
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
@@ -16,7 +16,7 @@
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('B_SLIDER_PLUGIN_VERSION', time());
     } else {
-        define('B_SLIDER_PLUGIN_VERSION', '2.2.4');
+        define('B_SLIDER_PLUGIN_VERSION', '2.2.5');
     }
     define('B_SLIDER_DIR', plugin_dir_url(__FILE__));
     define('B_SLIDER_DIR_PATH', plugin_dir_path(__FILE__));
@@ -73,6 +73,7 @@
             add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2 );
             add_filter('plugin_row_meta', array($this, 'insert_plugin_row_meta'), 10, 2);
             add_filter( 'register_block_type_args', [$this, 'registerBlockTypeArgs'], 10, 2 );
+            add_filter( 'safe_style_css', [$this, 'allowLayerStyles'] );
         }
 
         public static function get_instance() {
@@ -178,6 +179,10 @@
                 wp_enqueue_style('b-slider-admin', B_SLIDER_ASSETS_DIR . 'css/admin.css', [], B_SLIDER_PLUGIN_VERSION);
                 wp_enqueue_script('b-slider-admin', B_SLIDER_ASSETS_DIR . 'js/admin.js', ['wp-i18n'], B_SLIDER_PLUGIN_VERSION, true);
             }
+        }
+
+        public function allowLayerStyles( $properties ) {
+            return array_merge( $properties, [ 'rotate', 'translate', 'box-sizing' ] );
         }
 
         public function registerBlockTypeArgs( $args, $name ) {
